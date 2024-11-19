@@ -40,7 +40,9 @@ body {
 }
 
 header.header {
+  display: block !important;
   height: 550px !important;
+  position: relative !important;
   @include smallMobile {
     padding: 0 !important;
   }
@@ -205,6 +207,7 @@ header.header {
         justify-content: center;
         align-items: center;
         text-align: center;
+        height: auto !important;
         padding-top: 60px;
         @include smallMobile {
           padding: 40px 16px;
@@ -344,164 +347,172 @@ header.header {
     }
   }
 }
+.footer {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100%;
+  .footers {
+    width: 100% !important;
 
-.footers {
-  width: 100%;
-  padding: 48px 0;
-  background-color: rgba(27, 29, 62, 1);
-  position: relative;
-  top: 40px;
-  .footer-content {
-    width: 100%;
-    max-width: 1150px;
-    margin: 0px auto;
-    padding: 0 80px;
-    @include smallMobile {
-      padding: 0 50px;
-    }
-    @include largeMobile {
+    padding: 48px 0;
+    background-color: rgba(27, 29, 62, 1) !important;
+
+    position: relative;
+    top: 40px;
+    margin-bottom: 40px;
+    .footer-content {
+      width: 100% !important;
+      max-width: 1150px !important;
+      margin: 0px auto;
       padding: 0 80px;
-    }
-    @include tablet_768 {
-      padding: 0 20px; /* Adjust padding for tablet screens and above */
-    }
-
-    @include tablet_900 {
-      padding: 0 20px;
-      max-width: 850px;
-    }
-    @include tabletAndAbove {
-      max-width: 970px;
-      padding: 0 20px;
-    }
-    @include laptop {
-      max-width: 1150px;
-      padding: 0 20px; /* Narrower padding for laptops and larger screens */
-    }
-    @include largerLaptop {
-      max-width: 1350px;
-      padding: 0 20px;
-    }
-  }
-
-  .footer-header {
-    display: flex;
-    justify-content: space-between;
-
-    @include smallMobile {
-      flex-direction: column;
-    }
-    @include tablet_768 {
-      flex-direction: row;
-    }
-
-    .footer-logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .socials {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-
       @include smallMobile {
-        justify-content: center;
-        margin-top: 20px;
+        padding: 0 50px;
+        // max-width:  850px !important;
+      }
+      @include largeMobile {
+        padding: 0 80px;
       }
       @include tablet_768 {
-        position: relative;
-        left: 10px;
+        padding: 0 20px; /* Adjust padding for tablet screens and above */
       }
-      & img {
-        display: inline-block;
-        border-radius: 50%;
-        background-color: transparent;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        padding: 5px;
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.744);
-          transform: scale(1.1);
+
+      @include tablet_900 {
+        padding: 0 20px;
+        max-width: 850px !important;
+      }
+      @include tabletAndAbove {
+        max-width: 970px !important;
+        padding: 0 20px;
+      }
+      @include laptop {
+        max-width: 1150px !important;
+        padding: 0 20px; /* Narrower padding for laptops and larger screens */
+      }
+      @include largerLaptop {
+        max-width: 1350px !important;
+        padding: 0 20px;
+      }
+    }
+
+    .footer-header {
+      display: flex;
+      justify-content: space-between;
+
+      @include smallMobile {
+        flex-direction: column;
+      }
+      @include tablet_768 {
+        flex-direction: row;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .socials {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        @include smallMobile {
+          justify-content: center;
+          margin-top: 20px;
+        }
+        @include tablet_768 {
+          position: relative;
+          left: 10px;
+        }
+        & img {
+          display: inline-block;
+          border-radius: 50%;
+          background-color: transparent;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+          padding: 5px;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.744);
+            transform: scale(1.1);
+          }
         }
       }
     }
-  }
 
-  .footer-line {
-    padding-top: 30px;
-
-    @include smallMobile {
-      padding-top: 20px;
-    }
-    @include tablet_768 {
+    .footer-line {
       padding-top: 30px;
-    }
-  }
-
-  .footer-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 40px;
-    color: rgba(203, 204, 208, 1);
-    @include smallMobile {
-      padding-top: 20px;
-    }
-    @include tablet_768 {
-      flex-wrap: nowrap;
-      padding-top: 40px;
-    }
-
-    p {
-      text-align: left;
-      margin: 0;
 
       @include smallMobile {
-        width: 100%;
-        max-width: 200px;
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: 10px;
+        padding-top: 20px;
       }
       @include tablet_768 {
+        padding-top: 30px;
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+      color: rgba(203, 204, 208, 1);
+      @include smallMobile {
+        padding-top: 20px;
+      }
+      @include tablet_768 {
+        flex-wrap: nowrap;
+        padding-top: 40px;
+      }
+
+      p {
         text-align: left;
         margin: 0;
-        width: 100%;
-        max-width: 500px;
-      }
-    }
 
-    .footer-bottom-socials {
-      display: flex;
-      gap: 16px;
-
-      @include smallMobile {
-        justify-content: center;
-        width: 100%;
-
-        text-wrap: nowrap;
-      }
-      @include tablet_768 {
-        width: auto;
-      }
-      span {
-        position: relative;
-        cursor: pointer;
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
+        @include smallMobile {
           width: 100%;
-          height: 0;
-          background-color: rgba(203, 204, 208, 1);
-          transition: height 0.3s linear;
+          max-width: 200px;
+          text-align: center;
+          margin: 0 auto;
+          margin-bottom: 10px;
         }
+        @include tablet_768 {
+          text-align: left;
+          margin: 0;
+          width: 100%;
+          max-width: 500px;
+        }
+      }
 
-        &:hover::after {
-          height: 1px;
+      .footer-bottom-socials {
+        display: flex;
+        gap: 16px;
+
+        @include smallMobile {
+          justify-content: center;
+          width: 100%;
+
+          text-wrap: nowrap;
+        }
+        @include tablet_768 {
+          width: auto;
+        }
+        span {
+          position: relative;
+          cursor: pointer;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: rgba(203, 204, 208, 1);
+            transition: height 0.3s linear;
+          }
+
+          &:hover::after {
+            height: 1px;
+          }
         }
       }
     }

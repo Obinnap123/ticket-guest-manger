@@ -192,7 +192,9 @@ body {
 }
 
 header.header {
+  display: block !important;
   height: 550px !important;
+  position: relative !important;
 }
 @media only screen and (min-width: 320px) {
   header.header {
@@ -358,6 +360,7 @@ header.header .header-container .headers .hero-section {
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: auto !important;
   padding-top: 60px;
 }
 @media only screen and (min-width: 320px) {
@@ -512,118 +515,124 @@ header.header .header-container .headers .hero-section .hero-action button {
   }
 }
 
-.footers {
-  width: 100%;
+.footer {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100%;
+}
+.footer .footers {
+  width: 100% !important;
   padding: 48px 0;
-  background-color: rgb(27, 29, 62);
+  background-color: rgb(27, 29, 62) !important;
   position: relative;
   top: 40px;
+  margin-bottom: 40px;
 }
-.footers .footer-content {
-  width: 100%;
-  max-width: 1150px;
+.footer .footers .footer-content {
+  width: 100% !important;
+  max-width: 1150px !important;
   margin: 0px auto;
   padding: 0 80px;
 }
 @media only screen and (min-width: 320px) {
-  .footers .footer-content {
+  .footer .footers .footer-content {
     padding: 0 50px;
   }
 }
 @media only screen and (min-width: 425px) {
-  .footers .footer-content {
+  .footer .footers .footer-content {
     padding: 0 80px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .footers .footer-content {
+  .footer .footers .footer-content {
     padding: 0 20px; /* Adjust padding for tablet screens and above */
   }
 }
 @media only screen and (min-width: 900px) {
-  .footers .footer-content {
+  .footer .footers .footer-content {
     padding: 0 20px;
-    max-width: 850px;
+    max-width: 850px !important;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .footers .footer-content {
-    max-width: 970px;
+  .footer .footers .footer-content {
+    max-width: 970px !important;
     padding: 0 20px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .footers .footer-content {
-    max-width: 1150px;
+  .footer .footers .footer-content {
+    max-width: 1150px !important;
     padding: 0 20px; /* Narrower padding for laptops and larger screens */
   }
 }
 @media only screen and (min-width: 1440px) {
-  .footers .footer-content {
-    max-width: 1350px;
+  .footer .footers .footer-content {
+    max-width: 1350px !important;
     padding: 0 20px;
   }
 }
-.footers .footer-header {
+.footer .footers .footer-header {
   display: flex;
   justify-content: space-between;
 }
 @media only screen and (min-width: 320px) {
-  .footers .footer-header {
+  .footer .footers .footer-header {
     flex-direction: column;
   }
 }
 @media only screen and (min-width: 768px) {
-  .footers .footer-header {
+  .footer .footers .footer-header {
     flex-direction: row;
   }
 }
-.footers .footer-header .footer-logo {
+.footer .footers .footer-header .footer-logo {
   display: flex;
   align-items: center;
 }
-.footers .footer-header .socials {
+.footer .footers .footer-header .socials {
   display: flex;
   gap: 16px;
   align-items: center;
 }
 @media only screen and (min-width: 320px) {
-  .footers .footer-header .socials {
+  .footer .footers .footer-header .socials {
     justify-content: center;
     margin-top: 20px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .footers .footer-header .socials {
+  .footer .footers .footer-header .socials {
     position: relative;
     left: 10px;
   }
 }
-.footers .footer-header .socials img {
+.footer .footers .footer-header .socials img {
   display: inline-block;
   border-radius: 50%;
   background-color: transparent;
   transition: background-color 0.3s ease, transform 0.3s ease;
   padding: 5px;
 }
-.footers .footer-header .socials img:hover {
+.footer .footers .footer-header .socials img:hover {
   background-color: rgba(255, 255, 255, 0.744);
   transform: scale(1.1);
 }
-.footers .footer-line {
+.footer .footers .footer-line {
   padding-top: 30px;
 }
 @media only screen and (min-width: 320px) {
-  .footers .footer-line {
+  .footer .footers .footer-line {
     padding-top: 20px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .footers .footer-line {
+  .footer .footers .footer-line {
     padding-top: 30px;
   }
 }
-.footers .footer-bottom {
+.footer .footers .footer-bottom {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -632,22 +641,22 @@ header.header .header-container .headers .hero-section .hero-action button {
   color: rgb(203, 204, 208);
 }
 @media only screen and (min-width: 320px) {
-  .footers .footer-bottom {
+  .footer .footers .footer-bottom {
     padding-top: 20px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .footers .footer-bottom {
+  .footer .footers .footer-bottom {
     flex-wrap: nowrap;
     padding-top: 40px;
   }
 }
-.footers .footer-bottom p {
+.footer .footers .footer-bottom p {
   text-align: left;
   margin: 0;
 }
 @media only screen and (min-width: 320px) {
-  .footers .footer-bottom p {
+  .footer .footers .footer-bottom p {
     width: 100%;
     max-width: 200px;
     text-align: center;
@@ -656,34 +665,34 @@ header.header .header-container .headers .hero-section .hero-action button {
   }
 }
 @media only screen and (min-width: 768px) {
-  .footers .footer-bottom p {
+  .footer .footers .footer-bottom p {
     text-align: left;
     margin: 0;
     width: 100%;
     max-width: 500px;
   }
 }
-.footers .footer-bottom .footer-bottom-socials {
+.footer .footers .footer-bottom .footer-bottom-socials {
   display: flex;
   gap: 16px;
 }
 @media only screen and (min-width: 320px) {
-  .footers .footer-bottom .footer-bottom-socials {
+  .footer .footers .footer-bottom .footer-bottom-socials {
     justify-content: center;
     width: 100%;
     text-wrap: nowrap;
   }
 }
 @media only screen and (min-width: 768px) {
-  .footers .footer-bottom .footer-bottom-socials {
+  .footer .footers .footer-bottom .footer-bottom-socials {
     width: auto;
   }
 }
-.footers .footer-bottom .footer-bottom-socials span {
+.footer .footers .footer-bottom .footer-bottom-socials span {
   position: relative;
   cursor: pointer;
 }
-.footers .footer-bottom .footer-bottom-socials span::after {
+.footer .footers .footer-bottom .footer-bottom-socials span::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -693,6 +702,6 @@ header.header .header-container .headers .hero-section .hero-action button {
   background-color: rgb(203, 204, 208);
   transition: height 0.3s linear;
 }
-.footers .footer-bottom .footer-bottom-socials span:hover::after {
+.footer .footers .footer-bottom .footer-bottom-socials span:hover::after {
   height: 1px;
 }/*# sourceMappingURL=global.css.map */
