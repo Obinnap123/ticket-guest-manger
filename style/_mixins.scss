@@ -1,0 +1,60 @@
+@mixin flex($direction: row, $justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+  }
+  
+  @mixin smallMobile {
+    @media only screen and (min-width: $smallMobile) {
+      @content;
+    }
+  }
+  @mixin mediumMobile {
+    @media only screen and (min-width: $mediumMobile) {
+      @content;
+    }
+  }
+  @mixin largeMobile {
+    @media only screen and (min-width: $largeMobile) {
+      @content;
+    }
+  }
+  @mixin smallTablet {
+    @media only screen and (min-width: $smallTablet) {
+      @content;
+    }
+  }
+  @mixin tablet_768 {
+    @media only screen and (min-width: $tablet_768) {
+      @content;
+    }
+  }
+  
+  // @mixin screen768to1024 {
+  //   @media only screen and (min-width: $tablet_768) and (max-width: $tabletAndBelow) {
+  //     @content;
+  //   }
+  // }
+  @mixin tablet_900 {
+    @media only screen and (min-width: $tablet_900) {
+      @content;
+    }
+  }
+  
+  @mixin tabletAndAbove {
+    @media only screen and (min-width: $tabletAndBelow) {
+      @content;
+    }
+  }
+  @mixin laptop {
+    @media only screen and (min-width: $laptop) {
+      @content;
+    }
+  }
+  @mixin largerLaptop {
+    @media only screen and (min-width: $largerLaptop) {
+      @content;
+    }
+  }
+  
