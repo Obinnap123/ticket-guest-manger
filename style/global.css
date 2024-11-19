@@ -216,7 +216,7 @@ header.header .header-container .headers {
 }
 @media only screen and (min-width: 768px) {
   header.header .header-container .headers {
-    height: 550px !important;
+    height: 700px !important;
   }
 }
 header.header .header-container .headers .nav-bar {
@@ -376,8 +376,9 @@ header.header .header-container .headers .hero-section {
 header.header .header-container .headers .hero-section .hero-section-text .hero-title h1 {
   width: 60%;
   margin: 0 auto;
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
+  font-weight: 700;
   color: rgb(255, 255, 255);
 }
 @media only screen and (min-width: 320px) {
@@ -425,18 +426,14 @@ header.header .header-container .headers .hero-section .hero-section-text .hero-
 }
 @media only screen and (min-width: 768px) {
   header.header .header-container .headers .hero-section .hero-section-text .hero-subtitle p {
-    font-size: 17px;
+    width: 80%;
+    font-size: 22px;
     line-height: 27px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  header.header .header-container .headers .hero-section .hero-section-text .hero-subtitle p {
-    font-size: 20px;
   }
 }
 @media only screen and (min-width: 1440px) {
   header.header .header-container .headers .hero-section .hero-section-text .hero-subtitle p {
-    font-size: 28px;
+    font-size: 30px;
     line-height: 33.6px;
   }
 }
@@ -514,9 +511,52 @@ header.header .header-container .headers .hero-section .hero-action button {
     line-height: 27px;
   }
 }
+header.header .header-container .headers .device img {
+  position: relative !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-55%, 0) !important;
+  bottom: 20px;
+}
+@media only screen and (min-width: 320px) {
+  header.header .header-container .headers .device img {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 425px) {
+  header.header .header-container .headers .device img {
+    bottom: 0;
+  }
+}
+@media only screen and (min-width: 540px) {
+  header.header .header-container .headers .device img {
+    bottom: 20px;
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header.header .header-container .headers .device img {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  header.header .header-container .headers .device img {
+    width: 700px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header.header .header-container .headers .device img {
+    width: 850px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  header.header .header-container .headers .device img {
+    width: 1000px;
+  }
+}
 
 .footer {
-  margin: 0 !important;
+  margin-top: 500px !important;
   width: 100% !important;
   max-width: 100%;
 }

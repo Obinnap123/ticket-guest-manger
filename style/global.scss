@@ -67,8 +67,11 @@ header.header {
         height: 500px;
       }
       @include tablet_768 {
-        height: 550px !important;
+        height: 700px !important;
       }
+      // @include laptop {
+      //   height: 700px !important;
+      // }
       .nav-bar {
         width: 100%;
         max-width: 1150px;
@@ -220,8 +223,9 @@ header.header {
             h1 {
               width: 60%;
               margin: 0 auto;
-              font-size: 50px;
+              font-size: 45px;
               text-align: center;
+              font-weight: 700;
               color: rgba(255, 255, 255, 1);
               // font-style:  Disaplay Large/Bold;
               @include smallMobile {
@@ -251,6 +255,7 @@ header.header {
             p {
               font-size: 22px;
               padding-top: 10px;
+
               color: rgba(255, 255, 255, 1);
               @include smallMobile {
                 width: 80%;
@@ -262,19 +267,21 @@ header.header {
                 width: 60%;
               }
               @include tablet_768 {
-                font-size: 17px;
+                width: 80%;
+                font-size: 22px;
                 line-height: 27px;
+                // text-wrap: nowrap;
               }
               // @include tabletAndAbove {
               //   font-size: 17px;
 
               // }
               @include laptop {
-                font-size: 20px;
+                // font-size: 22px;
                 // line-height: 27px;
               }
               @include largerLaptop {
-                font-size: 28px;
+                font-size: 30px;
                 line-height: 33.6px;
               }
             }
@@ -344,11 +351,44 @@ header.header {
           }
         }
       }
+      .device {
+        img {
+          position: relative !important;
+          top: 50% !important;
+          left: 50% !important;
+          transform: translate(-55%, 0) !important;
+          // margin-bottom: 100px;
+          bottom: 20px;
+          @include smallMobile {
+            width: 300px;
+          }
+          @include largeMobile{
+            bottom: 0;
+          }
+          @include smallTablet{
+            bottom: 20px;
+            width: 400px;
+          }
+          @include tablet_768 {
+            width: 600px;
+          }
+          @include tablet_900 {
+            width: 700px;
+          }
+          @include laptop {
+            width: 850px;
+          }
+          @include largerLaptop {
+            width: 1000px;
+          }
+        }
+      }
     }
   }
 }
 .footer {
-  margin: 0 !important;
+  margin-top: 500px !important;
+  // margin-top: 1000px !important;
   width: 100% !important;
   max-width: 100%;
   .footers {
