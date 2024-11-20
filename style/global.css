@@ -555,10 +555,230 @@ header.header .header-container .headers .device img {
   }
 }
 
+main {
+  padding: 0 16px !important;
+}
+main .first-section {
+  position: relative;
+  top: 500px;
+}
+@media only screen and (min-width: 320px) {
+  main .first-section {
+    top: 100px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .first-section {
+    top: 370px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .first-section {
+    top: 450px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .first-section {
+    top: 600px;
+  }
+}
+main .first-section .first-section-div .first-section-title {
+  text-align: center;
+}
+main .first-section .first-section-div .first-section-title h2 {
+  font-size: 40px !important;
+  width: 400px;
+  margin: 0px auto 40px;
+}
+@media only screen and (min-width: 320px) {
+  main .first-section .first-section-div .first-section-title h2 {
+    font-size: 20px !important;
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .first-section .first-section-div .first-section-title h2 {
+    font-size: 40px !important;
+    width: 400px;
+    margin: 0px auto 40px;
+  }
+}
+main .first-section .first-section-div .first-section-cards {
+  margin-bottom: 200px;
+}
+@media only screen and (min-width: 320px) {
+  main .first-section .first-section-div .first-section-cards img {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .first-section .first-section-div .first-section-cards img {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .first-section .first-section-div .first-section-cards img {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .first-section .first-section-div .first-section-cards img {
+    width: 430px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .first-section .first-section-div .first-section-cards img {
+    width: 525px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .first-section .first-section-div .first-section-cards img {
+    width: 624px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .first-section .first-section-div .first-section-cards {
+    max-width: 970px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .first-section .first-section-div .first-section-cards {
+    max-width: 1150px !important;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .first-section .first-section-div .first-section-cards {
+    max-width: 1350px !important;
+  }
+}
+main .first-section .first-section-div .first-section-cards .first-cards {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 64px;
+}
+@media only screen and (min-width: 320px) {
+  main .first-section .first-section-div .first-section-cards .first-cards {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .first-section .first-section-div .first-section-cards .first-cards {
+    flex-direction: row;
+    gap: 64px;
+  }
+}
+main .first-section .first-section-div .first-section-cards .first-cards h3,
+main .first-section .first-section-div .first-section-cards .first-cards p {
+  width: 500px;
+  padding-top: 20px;
+}
+@media only screen and (min-width: 320px) {
+  main .first-section .first-section-div .first-section-cards .first-cards h3,
+  main .first-section .first-section-div .first-section-cards .first-cards p {
+    width: 300px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .first-section .first-section-div .first-section-cards .first-cards h3,
+  main .first-section .first-section-div .first-section-cards .first-cards p {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .first-section .first-section-div .first-section-cards .first-cards h3,
+  main .first-section .first-section-div .first-section-cards .first-cards p {
+    width: 500px;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .first-section .first-section-div .first-section-cards .first-cards h3,
+  main .first-section .first-section-div .first-section-cards .first-cards p {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .first-section .first-section-div .first-section-cards .first-cards h3,
+  main .first-section .first-section-div .first-section-cards .first-cards p {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  main .first-section .first-section-div .first-section-cards .first-cards .paragraph {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .first-section .first-section-div .first-section-cards .first-cards .paragraph {
+    margin-bottom: 0;
+  }
+}
+main .first-section .first-section-div .first-section-cards .second-cards {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 64px;
+}
+@media only screen and (min-width: 320px) {
+  main .first-section .first-section-div .first-section-cards .second-cards {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .first-section .first-section-div .first-section-cards .second-cards {
+    flex-direction: row;
+    gap: 64px;
+  }
+}
+main .first-section .first-section-div .first-section-cards .second-cards h3,
+main .first-section .first-section-div .first-section-cards .second-cards p {
+  width: 500px;
+  padding-top: 20px;
+}
+@media only screen and (min-width: 320px) {
+  main .first-section .first-section-div .first-section-cards .second-cards h3,
+  main .first-section .first-section-div .first-section-cards .second-cards p {
+    width: 300px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 320px) and (min-width: 540px) {
+  main .first-section .first-section-div .first-section-cards .second-cards h3,
+  main .first-section .first-section-div .first-section-cards .second-cards p {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 320px) and (min-width: 768px) {
+  main .first-section .first-section-div .first-section-cards .second-cards h3,
+  main .first-section .first-section-div .first-section-cards .second-cards p {
+    width: 500px;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 320px) and (min-width: 1024px) {
+  main .first-section .first-section-div .first-section-cards .second-cards h3,
+  main .first-section .first-section-div .first-section-cards .second-cards p {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 320px) and (min-width: 1200px) {
+  main .first-section .first-section-div .first-section-cards .second-cards h3,
+  main .first-section .first-section-div .first-section-cards .second-cards p {
+    width: 500px;
+  }
+}
+
 .footer {
-  margin-top: 500px !important;
+  margin: 0px !important;
   width: 100% !important;
   max-width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .footer {
+    margin-top: 400px !important;
+  }
 }
 .footer .footers {
   width: 100% !important;
@@ -633,8 +853,8 @@ header.header .header-container .headers .device img {
 }
 .footer .footers .footer-header .socials {
   display: flex;
-  gap: 16px;
   align-items: center;
+  justify-content: center;
 }
 @media only screen and (min-width: 320px) {
   .footer .footers .footer-header .socials {
