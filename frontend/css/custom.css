@@ -821,7 +821,7 @@
 }
 .grid-option p {
   display: inline-block;
-  /* float: left; */
+  float: left;
   font-size: 16px;
 }
 .stripe-button-el span {
