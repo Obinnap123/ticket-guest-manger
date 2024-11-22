@@ -109,6 +109,10 @@ html {
   margin-left: 20px;
 }
 
+.mt-0 {
+  margin-top: 0 !important;
+}
+
 .mt-1 {
   margin-top: 4px;
 }
@@ -189,6 +193,9 @@ body {
   font-family: "Neue Regrade", sans-serif;
   font-weight: 400;
   font-style: normal;
+  width: 100% !important;
+  background-color: rgb(233, 235, 248);
+  overflow-x: hidden !important;
 }
 
 header.header {
@@ -200,6 +207,9 @@ header.header {
   header.header {
     padding: 0 !important;
   }
+}
+header.header .header-container {
+  width: 100% !important;
 }
 header.header .header-container .headers {
   width: 100% !important;
@@ -223,13 +233,16 @@ header.header .header-container .headers .nav-bar {
   width: 100%;
   max-width: 1150px;
   margin: 0px auto;
-  position: relative;
+  position: fixed !important;
   top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 15px 16px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.05);
   background-color: rgb(255, 255, 255);
+  z-index: 100;
 }
 @media only screen and (min-width: 320px) {
   header.header .header-container .headers .nav-bar {
@@ -361,16 +374,12 @@ header.header .header-container .headers .hero-section {
   align-items: center;
   text-align: center;
   height: auto !important;
-  padding-top: 60px;
+  position: relative;
+  top: 150px;
 }
 @media only screen and (min-width: 320px) {
   header.header .header-container .headers .hero-section {
-    padding: 40px 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  header.header .header-container .headers .hero-section {
-    padding-top: 60px;
+    top: 120px;
   }
 }
 header.header .header-container .headers .hero-section .hero-section-text .hero-title h1 {
@@ -481,10 +490,17 @@ header.header .header-container .headers .hero-section .feature-highlight span {
 header.header .header-container .headers .hero-section .hero-action {
   padding-top: 20px;
   display: flex;
+  padding-bottom: 50px;
 }
 @media only screen and (min-width: 320px) {
   header.header .header-container .headers .hero-section .hero-action {
     gap: 12px;
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 425px) {
+  header.header .header-container .headers .hero-section .hero-action {
+    padding-bottom: 30px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -511,16 +527,26 @@ header.header .header-container .headers .hero-section .hero-action button {
     line-height: 27px;
   }
 }
+header.header .header-container .headers .device {
+  position: static;
+}
+header.header .header-container .headers .device::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 header.header .header-container .headers .device img {
   position: relative !important;
   top: 50% !important;
   left: 50% !important;
   transform: translate(-55%, 0) !important;
   bottom: 20px;
+  padding-top: 150px;
 }
 @media only screen and (min-width: 320px) {
   header.header .header-container .headers .device img {
     width: 300px;
+    padding: 120px 16px 0;
   }
 }
 @media only screen and (min-width: 425px) {
@@ -531,7 +557,8 @@ header.header .header-container .headers .device img {
 @media only screen and (min-width: 540px) {
   header.header .header-container .headers .device img {
     bottom: 20px;
-    width: 400px;
+    width: 450px;
+    padding: 150px 0 0;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -555,219 +582,237 @@ header.header .header-container .headers .device img {
   }
 }
 
-main {
-  padding: 0 16px !important;
-}
-main .first-section {
+.first-section {
   position: relative;
   top: 500px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section {
-    top: 100px;
+  .first-section {
+    top: 70px;
+    padding: 0 16px !important;
+  }
+}
+@media only screen and (min-width: 540px) {
+  .first-section {
+    top: 160px;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .first-section {
-    top: 370px;
+  .first-section {
+    top: 390px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section {
+  .first-section {
     top: 450px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .first-section {
+  .first-section {
     top: 600px;
   }
 }
-main .first-section .first-section-div .first-section-title {
+.first-section .first-section-div .first-section-title {
   text-align: center;
 }
-main .first-section .first-section-div .first-section-title h2 {
+.first-section .first-section-div .first-section-title h2 {
   font-size: 40px !important;
   width: 400px;
   margin: 0px auto 40px;
+  color: rgb(27, 29, 62);
+  margin-top: 0 !important;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-title h2 {
+  .first-section .first-section-div .first-section-title h2 {
     font-size: 20px !important;
     width: 200px;
+    margin: -60px auto 40px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  .first-section .first-section-div .first-section-title h2 {
+    margin: 80px auto 40px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .first-section .first-section-div .first-section-title h2 {
+  .first-section .first-section-div .first-section-title h2 {
     font-size: 40px !important;
     width: 400px;
     margin: 0px auto 40px;
   }
 }
-main .first-section .first-section-div .first-section-cards {
+.first-section .first-section-div .first-section-cards {
   margin-bottom: 200px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards img {
+  .first-section .first-section-div .first-section-cards img {
     width: 300px;
   }
 }
 @media only screen and (min-width: 540px) {
-  main .first-section .first-section-div .first-section-cards img {
+  .first-section .first-section-div .first-section-cards img {
     width: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .first-section .first-section-div .first-section-cards img {
+  .first-section .first-section-div .first-section-cards img {
     width: 600px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards img {
+  .first-section .first-section-div .first-section-cards img {
     width: 430px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .first-section .first-section-div .first-section-cards img {
+  .first-section .first-section-div .first-section-cards img {
     width: 525px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .first-section .first-section-div .first-section-cards img {
+  .first-section .first-section-div .first-section-cards img {
     width: 624px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards {
+  .first-section .first-section-div .first-section-cards {
     max-width: 970px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .first-section .first-section-div .first-section-cards {
+  .first-section .first-section-div .first-section-cards {
     max-width: 1150px !important;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .first-section .first-section-div .first-section-cards {
+  .first-section .first-section-div .first-section-cards {
     max-width: 1350px !important;
   }
 }
-main .first-section .first-section-div .first-section-cards .first-cards {
+.first-section .first-section-div .first-section-cards .first-cards {
   display: flex !important;
   justify-content: center !important;
   gap: 64px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .first-cards {
+  .first-section .first-section-div .first-section-cards .first-cards {
     flex-direction: column;
     gap: 32px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .first-cards {
+  .first-section .first-section-div .first-section-cards .first-cards {
     flex-direction: row;
     gap: 64px;
   }
 }
-main .first-section .first-section-div .first-section-cards .first-cards h3,
-main .first-section .first-section-div .first-section-cards .first-cards p {
+.first-section .first-section-div .first-section-cards .first-cards h3,
+.first-section .first-section-div .first-section-cards .first-cards p {
   width: 500px;
   padding-top: 20px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  .first-section .first-section-div .first-section-cards .first-cards h3,
+  .first-section .first-section-div .first-section-cards .first-cards p {
     width: 300px;
     text-align: center;
   }
 }
 @media only screen and (min-width: 540px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  .first-section .first-section-div .first-section-cards .first-cards h3,
+  .first-section .first-section-div .first-section-cards .first-cards p {
     width: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  .first-section .first-section-div .first-section-cards .first-cards h3,
+  .first-section .first-section-div .first-section-cards .first-cards p {
     width: 500px;
     text-align: left;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  .first-section .first-section-div .first-section-cards .first-cards h3,
+  .first-section .first-section-div .first-section-cards .first-cards p {
     width: 400px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  .first-section .first-section-div .first-section-cards .first-cards h3,
+  .first-section .first-section-div .first-section-cards .first-cards p {
     width: 500px;
   }
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .first-cards .paragraph {
+  .first-section .first-section-div .first-section-cards .first-cards .paragraph {
     margin-bottom: 40px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .first-cards .paragraph {
+  .first-section .first-section-div .first-section-cards .first-cards .paragraph {
     margin-bottom: 0;
   }
 }
-main .first-section .first-section-div .first-section-cards .second-cards {
+.first-section .first-section-div .first-section-cards .second-cards {
   display: flex !important;
   justify-content: center !important;
   gap: 64px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .second-cards {
+  .first-section .first-section-div .first-section-cards .second-cards {
     flex-direction: column;
     gap: 32px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .second-cards {
+  .first-section .first-section-div .first-section-cards .second-cards {
     flex-direction: row;
     gap: 64px;
   }
 }
-main .first-section .first-section-div .first-section-cards .second-cards h3,
-main .first-section .first-section-div .first-section-cards .second-cards p {
+.first-section .first-section-div .first-section-cards .second-cards h3,
+.first-section .first-section-div .first-section-cards .second-cards p {
   width: 500px;
   padding-top: 20px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  .first-section .first-section-div .first-section-cards .second-cards h3,
+  .first-section .first-section-div .first-section-cards .second-cards p {
     width: 300px;
     text-align: center;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 540px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  .first-section .first-section-div .first-section-cards .second-cards h3,
+  .first-section .first-section-div .first-section-cards .second-cards p {
     width: 500px;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 768px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  .first-section .first-section-div .first-section-cards .second-cards h3,
+  .first-section .first-section-div .first-section-cards .second-cards p {
     width: 500px;
     text-align: left;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  .first-section .first-section-div .first-section-cards .second-cards h3,
+  .first-section .first-section-div .first-section-cards .second-cards p {
     width: 400px;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 1200px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  .first-section .first-section-div .first-section-cards .second-cards h3,
+  .first-section .first-section-div .first-section-cards .second-cards p {
     width: 500px;
   }
+}
+.first-section .first-section-div .first-section-cards .second-cards h3 {
+  color: rgb(27, 29, 62);
+}
+.first-section .first-section-div .first-section-cards .second-cards p {
+  color: rgb(87, 90, 102);
 }
 
 .footer {
@@ -791,7 +836,9 @@ main .first-section .first-section-div .first-section-cards .second-cards p {
 .footer .footers .footer-content {
   width: 100% !important;
   max-width: 1150px !important;
-  margin: 0px auto;
+  position: relative !important;
+  left: 50%;
+  transform: translate(-50%);
   padding: 0 80px;
 }
 @media only screen and (min-width: 320px) {
@@ -818,19 +865,19 @@ main .first-section .first-section-div .first-section-cards .second-cards p {
 @media only screen and (min-width: 1024px) {
   .footer .footers .footer-content {
     max-width: 970px !important;
-    padding: 0 20px;
+    padding: 0 17px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .footer .footers .footer-content {
     max-width: 1150px !important;
-    padding: 0 20px; /* Narrower padding for laptops and larger screens */
+    padding: 0 16px; /* Narrower padding for laptops and larger screens */
   }
 }
 @media only screen and (min-width: 1440px) {
   .footer .footers .footer-content {
     max-width: 1350px !important;
-    padding: 0 20px;
+    padding: 0 17px;
   }
 }
 .footer .footers .footer-header {
@@ -865,7 +912,7 @@ main .first-section .first-section-div .first-section-cards .second-cards p {
 @media only screen and (min-width: 768px) {
   .footer .footers .footer-header .socials {
     position: relative;
-    left: 10px;
+    left: 12px;
   }
 }
 .footer .footers .footer-header .socials img {

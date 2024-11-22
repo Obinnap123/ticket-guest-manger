@@ -36,6 +36,9 @@ body {
   font-family: "Neue Regrade", sans-serif;
   font-weight: 400;
   font-style: normal;
+  width: 100% !important;
+  background-color: rgba(233, 235, 248, 1);
+  overflow-x: hidden !important;
   // padding-top: 70px;
 }
 
@@ -49,6 +52,7 @@ header.header {
   .header-container {
     // position: fixed;
     // height: 550px;
+    width: 100% !important;
     .headers {
       // position: fixed;
       width: 100% !important;
@@ -63,6 +67,7 @@ header.header {
       background-size: cover;
       background-position: center;
       background-color: rgba(255, 255, 255, 1);
+      // overflow-y: hidden;
       @include smallMobile {
         height: 500px;
       }
@@ -76,13 +81,16 @@ header.header {
         width: 100%;
         max-width: 1150px;
         margin: 0px auto;
-        position: relative;
+        position: fixed !important;
         top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 15px 16px;
         border: 1px solid rgba(0, 0, 0, 0.05);
         border-radius: 12px;
         box-shadow: rgba(0, 0, 0, 0.05);
         background-color: rgba(255, 255, 255, 1);
+        z-index: 100;
         //   background-color: black;
         // position: fixed;
         @include smallMobile {
@@ -211,13 +219,16 @@ header.header {
         align-items: center;
         text-align: center;
         height: auto !important;
-        padding-top: 60px;
+        // padding-top: 60px;
+        position: relative;
+        top: 150px;
         @include smallMobile {
-          padding: 40px 16px;
+          // padding: 40px 16px;
+          top: 120px;
         }
-        @include tablet_768 {
-          padding-top: 60px;
-        }
+        // @include tablet_768 {
+        //   padding-top: 60px;
+        // }
         .hero-section-text {
           .hero-title {
             h1 {
@@ -323,9 +334,13 @@ header.header {
         .hero-action {
           padding-top: 20px;
           display: flex;
-
+          padding-bottom: 50px;
           @include smallMobile {
             gap: 12px;
+            padding-bottom: 50px;
+          }
+          @include largeMobile {
+            padding-bottom: 30px;
           }
           @include tablet_768 {
             gap: 32px;
@@ -352,22 +367,32 @@ header.header {
         }
       }
       .device {
+        position: static;
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
         img {
           position: relative !important;
           top: 50% !important;
           left: 50% !important;
           transform: translate(-55%, 0) !important;
           // margin-bottom: 100px;
+          // z-index: 100;
           bottom: 20px;
+          padding-top: 150px;
           @include smallMobile {
             width: 300px;
+            padding: 120px 16px 0;
           }
           @include largeMobile {
             bottom: 0;
           }
           @include smallTablet {
             bottom: 20px;
-            width: 400px;
+            width: 450px;
+            padding: 150px 0 0;
           }
           @include tablet_768 {
             width: 600px;
@@ -386,103 +411,167 @@ header.header {
     }
   }
 }
-main {
-  padding: 0 16px !important;
-  .first-section {
-    position: relative;
-    top: 500px;
-    @include smallMobile {
-      top: 100px;
-    }
-    @include tablet_768 {
-      top: 370px;
-    }
-    @include tabletAndAbove {
-      top: 450px;
-    }
-    @include largerLaptop {
-      top: 600px;
-    }
-    .first-section-div {
-      .first-section-title {
-        text-align: center;
-        h2 {
+
+.first-section {
+  position: relative;
+  top: 500px;
+
+  @include smallMobile {
+    top: 70px;
+    padding: 0 16px !important;
+  }
+  @include smallTablet {
+    top: 160px;
+    padding: 0;
+  }
+  @include tablet_768 {
+    top: 390px;
+  }
+  @include tabletAndAbove {
+    top: 450px;
+  }
+  @include largerLaptop {
+    top: 600px;
+  }
+  .first-section-div {
+    // background-color:rgba(233, 235, 248, 1);
+    .first-section-title {
+      text-align: center;
+      h2 {
+        font-size: 40px !important;
+        width: 400px;
+        margin: 0px auto 40px;
+        color: rgba(27, 29, 62, 1);
+        margin-top: 0 !important;
+        @include smallMobile {
+          font-size: 20px !important;
+          width: 200px;
+          margin: -60px auto 40px;
+        }
+        @include smallTablet {
+          margin: 80px auto 40px;
+        }
+        @include tablet_768 {
           font-size: 40px !important;
           width: 400px;
           margin: 0px auto 40px;
-          @include smallMobile {
-            font-size: 20px !important;
-            width: 200px;
-          }
-          @include tablet_768 {
-            font-size: 40px !important;
-            width: 400px;
-            margin: 0px auto 40px;
-          }
         }
       }
-      .first-section-cards {
-        img {
+    }
+    .first-section-cards {
+      img {
+        @include smallMobile {
+          width: 300px;
+        }
+        @include smallTablet {
+          width: 500px;
+        }
+        @include tablet_768 {
+          width: 600px;
+        }
+        @include tabletAndAbove {
+          width: 430px;
+        }
+        @include laptop {
+          width: 525px;
+        }
+        @include largerLaptop {
+          width: 624px;
+        }
+      }
+      // display: flex;
+      // gap: 64px;
+      margin-bottom: 200px;
+      @include tabletAndAbove {
+        max-width: 970px;
+      }
+      @include laptop {
+        max-width: 1150px !important;
+      }
+      @include largerLaptop {
+        max-width: 1350px !important;
+      }
+      .first-cards {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 64px;
+        @include smallMobile {
+          flex-direction: column;
+          gap: 32px;
+        }
+        @include tabletAndAbove {
+          flex-direction: row;
+          gap: 64px;
+        }
+        // .first-cards-div-one,
+        // .first-cards-div-two {
+        //   @include tablet_768 {
+        //     margin: 0 auto;
+        //   }
+        //   @include tabletAndAbove {
+        //     margin: 0;
+        //   }
+        // }
+        h3,
+        p {
+          width: 500px;
+          padding-top: 20px;
           @include smallMobile {
             width: 300px;
+            text-align: center;
           }
           @include smallTablet {
             width: 500px;
           }
           @include tablet_768 {
-            width: 600px;
+            width: 500px;
+            text-align: left;
           }
           @include tabletAndAbove {
-            width: 430px;
+            width: 400px;
+            // text-align: left;
           }
           @include laptop {
-            width: 525px;
-          }
-          @include largerLaptop {
-            width: 624px;
+            width: 500px;
           }
         }
-        // display: flex;
-        // gap: 64px;
-        margin-bottom: 200px;
-        @include tabletAndAbove {
-          max-width: 970px;
-        }
-        @include laptop {
-          max-width: 1150px !important;
-        }
-        @include largerLaptop {
-          max-width: 1350px !important;
-        }
-        .first-cards {
-          display: flex !important;
-          justify-content: center !important;
-          gap: 64px;
+        .paragraph {
           @include smallMobile {
-            flex-direction: column;
-            gap: 32px;
+            margin-bottom: 40px;
           }
           @include tabletAndAbove {
-            flex-direction: row;
-            gap: 64px;
+            margin-bottom: 0;
           }
-          // .first-cards-div-one,
-          // .first-cards-div-two {
-          //   @include tablet_768 {
-          //     margin: 0 auto;
-          //   }
-          //   @include tabletAndAbove {
-          //     margin: 0;
-          //   }
-          // }
-          h3,
-          p {
-            width: 500px;
-            padding-top: 20px;
-            @include smallMobile {
-              width: 300px;
-              text-align: center;
-            }
+        }
+      }
+      .second-cards {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 64px;
+        @include smallMobile {
+          flex-direction: column;
+          gap: 32px;
+        }
+        @include tabletAndAbove {
+          flex-direction: row;
+          gap: 64px;
+        }
+        // .second-cards-div-one,
+        // .second-cards-div-two {
+        //   @include tablet_768 {
+        //     margin: 0 auto;
+        //   }
+        //   @include tabletAndAbove {
+        //     margin: 0;
+        //   }
+        // }
+        h3,
+        p {
+          width: 500px;
+          padding-top: 20px;
+          @include smallMobile {
+            width: 300px;
+            text-align: center;
             @include smallTablet {
               width: 500px;
             }
@@ -498,64 +587,18 @@ main {
               width: 500px;
             }
           }
-          .paragraph {
-            @include smallMobile {
-              margin-bottom: 40px;
-            }
-            @include tabletAndAbove {
-              margin-bottom: 0;
-            }
-          }
         }
-        .second-cards {
-          display: flex !important;
-          justify-content: center !important;
-          gap: 64px;
-          @include smallMobile {
-            flex-direction: column;
-            gap: 32px;
-          }
-          @include tabletAndAbove {
-            flex-direction: row;
-            gap: 64px;
-          }
-          // .second-cards-div-one,
-          // .second-cards-div-two {
-          //   @include tablet_768 {
-          //     margin: 0 auto;
-          //   }
-          //   @include tabletAndAbove {
-          //     margin: 0;
-          //   }
-          // }
-          h3,
-          p {
-            width: 500px;
-            padding-top: 20px;
-            @include smallMobile {
-              width: 300px;
-              text-align: center;
-              @include smallTablet {
-                width: 500px;
-              }
-              @include tablet_768 {
-                width: 500px;
-                text-align: left;
-              }
-              @include tabletAndAbove {
-                width: 400px;
-                // text-align: left;
-              }
-              @include laptop {
-                width: 500px;
-              }
-            }
-          }
+        h3 {
+          color: rgba(27, 29, 62, 1);
+        }
+        p {
+          color: rgba(87, 90, 102, 1);
         }
       }
     }
   }
 }
+
 .footer {
   margin: 0px !important;
   // margin-top: 1000px !important;
@@ -576,7 +619,10 @@ main {
     .footer-content {
       width: 100% !important;
       max-width: 1150px !important;
-      margin: 0px auto;
+      // margin: 0px auto;
+      position: relative !important;
+      left: 50%;
+      transform: translate(-50%);
       padding: 0 80px;
       @include smallMobile {
         padding: 0 50px;
@@ -595,15 +641,15 @@ main {
       }
       @include tabletAndAbove {
         max-width: 970px !important;
-        padding: 0 20px;
+        padding: 0 17px;
       }
       @include laptop {
         max-width: 1150px !important;
-        padding: 0 20px; /* Narrower padding for laptops and larger screens */
+        padding: 0 16px; /* Narrower padding for laptops and larger screens */
       }
       @include largerLaptop {
         max-width: 1350px !important;
-        padding: 0 20px;
+        padding: 0 17px;
       }
     }
 
@@ -634,7 +680,7 @@ main {
         }
         @include tablet_768 {
           position: relative;
-          left: 10px;
+          left: 12px;
         }
         & img {
           display: inline-block;
