@@ -38,7 +38,9 @@ body {
   font-style: normal;
   width: 100% !important;
   background-color: rgba(233, 235, 248, 1);
+
   overflow-x: hidden !important;
+  height: 100% !important;
   // padding-top: 70px;
 }
 
@@ -411,167 +413,139 @@ header.header {
     }
   }
 }
-
-.first-section {
-  position: relative;
-  top: 500px;
-
-  @include smallMobile {
-    top: 70px;
-    padding: 0 16px !important;
-  }
+main {
+  position: relative !important;
+  min-height: 3000px !important;
   @include smallTablet {
-    top: 160px;
-    padding: 0;
+    min-height: 3500px !important;
+    top: 30px !important;
   }
   @include tablet_768 {
-    top: 390px;
+    min-height: 4000px !important;
+    top: 180px !important;
   }
   @include tabletAndAbove {
-    top: 450px;
+    min-height: 2500px !important;
+    top: 40px !important;
+  }
+  @include laptop {
+    top: 120px !important;
   }
   @include largerLaptop {
-    top: 600px;
+    min-height: 3000px !important;
+    top: 100px !important;
   }
-  .first-section-div {
-    // background-color:rgba(233, 235, 248, 1);
-    .first-section-title {
-      text-align: center;
-      h2 {
-        font-size: 40px !important;
-        width: 400px;
-        margin: 0px auto 40px;
-        color: rgba(27, 29, 62, 1);
-        margin-top: 0 !important;
-        @include smallMobile {
-          font-size: 20px !important;
-          width: 200px;
-          margin: -60px auto 40px;
-        }
-        @include smallTablet {
-          margin: 80px auto 40px;
-        }
-        @include tablet_768 {
+  &.mt-5 {
+    margin-top: 0 !important;
+  }
+  .first-section {
+    position: relative;
+    top: 70px;
+
+    @include smallMobile {
+      top: 80px;
+      padding: 0 16px !important;
+    }
+    @include smallTablet {
+      // top: 160px;
+      padding: 0;
+    }
+    @include tablet_768 {
+      top: 60px;
+    }
+    @include tabletAndAbove {
+      // top: 450px;
+    }
+    @include largerLaptop {
+      // top: 600px;
+    }
+    .first-section-div {
+      // background-color:rgba(233, 235, 248, 1);
+      .first-section-title {
+        text-align: center;
+        h2 {
           font-size: 40px !important;
           width: 400px;
           margin: 0px auto 40px;
+          color: rgba(27, 29, 62, 1);
+          margin-top: 0 !important;
+          @include smallMobile {
+            font-size: 20px !important;
+            width: 200px;
+            margin: 0px auto 30px;
+          }
+          @include smallTablet {
+            margin: 80px auto 40px;
+          }
+          @include tablet_768 {
+            font-size: 40px !important;
+            width: 400px;
+            margin: 0px auto 40px;
+          }
         }
       }
-    }
-    .first-section-cards {
-      img {
-        @include smallMobile {
-          width: 300px;
-        }
-        @include smallTablet {
-          width: 500px;
-        }
-        @include tablet_768 {
-          width: 600px;
-        }
-        @include tabletAndAbove {
-          width: 430px;
-        }
-        @include laptop {
-          width: 525px;
-        }
-        @include largerLaptop {
-          width: 624px;
-        }
-      }
-      // display: flex;
-      // gap: 64px;
-      margin-bottom: 200px;
-      @include tabletAndAbove {
-        max-width: 970px;
-      }
-      @include laptop {
-        max-width: 1150px !important;
-      }
-      @include largerLaptop {
-        max-width: 1350px !important;
-      }
-      .first-cards {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 64px;
-        @include smallMobile {
-          flex-direction: column;
-          gap: 32px;
-        }
-        @include tabletAndAbove {
-          flex-direction: row;
-          gap: 64px;
-        }
-        // .first-cards-div-one,
-        // .first-cards-div-two {
-        //   @include tablet_768 {
-        //     margin: 0 auto;
-        //   }
-        //   @include tabletAndAbove {
-        //     margin: 0;
-        //   }
-        // }
-        h3,
-        p {
-          width: 500px;
-          padding-top: 20px;
+      .first-section-cards {
+        img {
           @include smallMobile {
             width: 300px;
-            text-align: center;
           }
           @include smallTablet {
             width: 500px;
           }
           @include tablet_768 {
-            width: 500px;
-            text-align: left;
+            width: 600px;
           }
           @include tabletAndAbove {
-            width: 400px;
-            // text-align: left;
+            width: 430px;
           }
           @include laptop {
-            width: 500px;
+            width: 525px;
+          }
+          @include largerLaptop {
+            width: 624px;
           }
         }
-        .paragraph {
+        // display: flex;
+        // gap: 64px;
+        margin-bottom: 100px;
+        @include tabletAndAbove {
+          max-width: 970px;
+        }
+        @include laptop {
+          max-width: 1150px !important;
+        }
+        @include largerLaptop {
+          max-width: 1350px !important;
+        }
+        .first-cards {
+          display: flex !important;
+          justify-content: center !important;
+          gap: 64px;
           @include smallMobile {
-            margin-bottom: 40px;
+            flex-direction: column;
+            gap: 32px;
           }
           @include tabletAndAbove {
-            margin-bottom: 0;
+            flex-direction: row;
+            gap: 64px;
           }
-        }
-      }
-      .second-cards {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 64px;
-        @include smallMobile {
-          flex-direction: column;
-          gap: 32px;
-        }
-        @include tabletAndAbove {
-          flex-direction: row;
-          gap: 64px;
-        }
-        // .second-cards-div-one,
-        // .second-cards-div-two {
-        //   @include tablet_768 {
-        //     margin: 0 auto;
-        //   }
-        //   @include tabletAndAbove {
-        //     margin: 0;
-        //   }
-        // }
-        h3,
-        p {
-          width: 500px;
-          padding-top: 20px;
-          @include smallMobile {
-            width: 300px;
-            text-align: center;
+          // .first-cards-div-one,
+          // .first-cards-div-two {
+          //   @include tablet_768 {
+          //     margin: 0 auto;
+          //   }
+          //   @include tabletAndAbove {
+          //     margin: 0;
+          //   }
+          // }
+          h3,
+          p {
+            width: 500px;
+            padding-top: 20px;
+            @include smallMobile {
+              width: 300px;
+              text-align: center;
+            }
             @include smallTablet {
               width: 500px;
             }
@@ -587,18 +561,104 @@ header.header {
               width: 500px;
             }
           }
+          .paragraph {
+            @include smallMobile {
+              margin-bottom: 40px;
+            }
+            @include tabletAndAbove {
+              margin-bottom: 0;
+            }
+          }
         }
-        h3 {
-          color: rgba(27, 29, 62, 1);
-        }
-        p {
-          color: rgba(87, 90, 102, 1);
+        .second-cards {
+          display: flex !important;
+          justify-content: center !important;
+          gap: 64px;
+          @include smallMobile {
+            flex-direction: column;
+            gap: 32px;
+          }
+          @include tabletAndAbove {
+            flex-direction: row;
+            gap: 64px;
+          }
+          // .second-cards-div-one,
+          // .second-cards-div-two {
+          //   @include tablet_768 {
+          //     margin: 0 auto;
+          //   }
+          //   @include tabletAndAbove {
+          //     margin: 0;
+          //   }
+          // }
+          h3,
+          p {
+            width: 500px;
+            padding-top: 20px;
+            @include smallMobile {
+              width: 300px;
+              text-align: center;
+              @include smallTablet {
+                width: 500px;
+              }
+              @include tablet_768 {
+                width: 500px;
+                text-align: left;
+              }
+              @include tabletAndAbove {
+                width: 400px;
+                // text-align: left;
+              }
+              @include laptop {
+                width: 500px;
+              }
+            }
+          }
+          h3 {
+            color: rgba(27, 29, 62, 1);
+          }
+          p {
+            color: rgba(87, 90, 102, 1);
+          }
         }
       }
     }
   }
-}
+  .second-section {
+    .spotlight{
+      display: flex;
+      // flex-direction: column; /* Stack items vertically */
+      // align-items: center;
 
+   .content-slider{
+    display: flex;
+    flex-wrap: nowrap; /* Ensure items are in a single row unless you want wrapping */
+    gap: 20px; /* Add spacing between items */
+    justify-content: center; /* Center the slider items */
+    align-items: center;
+   }
+    .content-slider-item {
+      position: relative;
+      width: 50px; /* Adjust width as needed */
+      height: 50px; /* Adjust height as needed */
+
+      .first-half-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(0deg); /* No rotation needed */
+      }
+
+      .second-half-circle {
+        position: absolute;
+        top: 5px; /* Adjust as needed for the slant */
+        left: 1px; /* Adjust as needed for alignment */
+        // transform: rotate(180deg); /* Flips the second half-circle */
+      }
+    }
+  }
+}
+}
 .footer {
   margin: 0px !important;
   // margin-top: 1000px !important;
