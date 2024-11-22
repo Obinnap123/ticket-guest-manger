@@ -414,26 +414,31 @@ header.header {
   }
 }
 main {
+  display: flex;
   position: relative !important;
   min-height: 3000px !important;
+  @include smallMobile{
+    min-height: 0 !important;
+    top: 40px !important;
+  }
   @include smallTablet {
-    min-height: 3500px !important;
-    top: 30px !important;
+    min-height: 3200px !important;
+    // top: 30px !important;
   }
   @include tablet_768 {
     min-height: 4000px !important;
-    top: 180px !important;
+    top: 60px !important;
   }
   @include tabletAndAbove {
     min-height: 2500px !important;
-    top: 40px !important;
+    top: 0px !important;
   }
   @include laptop {
-    top: 120px !important;
+    top: 80px !important;
   }
   @include largerLaptop {
     min-height: 3000px !important;
-    top: 100px !important;
+    // top: 100px !important;
   }
   &.mt-5 {
     margin-top: 0 !important;
@@ -625,39 +630,45 @@ main {
     }
   }
   .second-section {
-    .spotlight{
+    .spotlight {
       display: flex;
       // flex-direction: column; /* Stack items vertically */
       // align-items: center;
 
-   .content-slider{
-    display: flex;
-    flex-wrap: nowrap; /* Ensure items are in a single row unless you want wrapping */
-    gap: 20px; /* Add spacing between items */
-    justify-content: center; /* Center the slider items */
-    align-items: center;
-   }
-    .content-slider-item {
-      position: relative;
-      width: 50px; /* Adjust width as needed */
-      height: 50px; /* Adjust height as needed */
+      .content-slider {
+        display: flex;
+        flex-wrap: nowrap; /* Ensure items are in a single row unless you want wrapping */
+        gap: 20px; /* Add spacing between items */
+        justify-content: center; /* Center the slider items */
+        align-items: center;
+        .content-slider-track {
+          display: flex;
+        }
 
-      .first-half-circle {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: rotate(0deg); /* No rotation needed */
-      }
+        .content-slider-item {
+          position: relative;
+          width: 50px; /* Adjust width as needed */
+          height: 50px; /* Adjust height as needed */
+          span {
+            display: inline-block;
+          }
+          .first-half-circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(0deg); /* No rotation needed */
+          }
 
-      .second-half-circle {
-        position: absolute;
-        top: 5px; /* Adjust as needed for the slant */
-        left: 1px; /* Adjust as needed for alignment */
-        // transform: rotate(180deg); /* Flips the second half-circle */
+          .second-half-circle {
+            position: absolute;
+            top: 5px; /* Adjust as needed for the slant */
+            left: 1px; /* Adjust as needed for alignment */
+            // transform: rotate(180deg); /* Flips the second half-circle */
+          }
+        }
       }
     }
   }
-}
 }
 .footer {
   margin: 0px !important;

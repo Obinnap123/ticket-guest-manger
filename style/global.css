@@ -584,36 +584,41 @@ header.header .header-container .headers .device img {
 }
 
 main {
+  display: flex;
   position: relative !important;
   min-height: 3000px !important;
 }
+@media only screen and (min-width: 320px) {
+  main {
+    min-height: 0 !important;
+    top: 40px !important;
+  }
+}
 @media only screen and (min-width: 540px) {
   main {
-    min-height: 3500px !important;
-    top: 30px !important;
+    min-height: 3200px !important;
   }
 }
 @media only screen and (min-width: 768px) {
   main {
     min-height: 4000px !important;
-    top: 180px !important;
+    top: 60px !important;
   }
 }
 @media only screen and (min-width: 1024px) {
   main {
     min-height: 2500px !important;
-    top: 40px !important;
+    top: 0px !important;
   }
 }
 @media only screen and (min-width: 1200px) {
   main {
-    top: 120px !important;
+    top: 80px !important;
   }
 }
 @media only screen and (min-width: 1440px) {
   main {
     min-height: 3000px !important;
-    top: 100px !important;
   }
 }
 main.mt-5 {
@@ -850,18 +855,24 @@ main .second-section .spotlight .content-slider {
   justify-content: center; /* Center the slider items */
   align-items: center;
 }
-main .second-section .spotlight .content-slider-item {
+main .second-section .spotlight .content-slider .content-slider-track {
+  display: flex;
+}
+main .second-section .spotlight .content-slider .content-slider-item {
   position: relative;
   width: 50px; /* Adjust width as needed */
   height: 50px; /* Adjust height as needed */
 }
-main .second-section .spotlight .content-slider-item .first-half-circle {
+main .second-section .spotlight .content-slider .content-slider-item span {
+  display: inline-block;
+}
+main .second-section .spotlight .content-slider .content-slider-item .first-half-circle {
   position: absolute;
   top: 0;
   left: 0;
   transform: rotate(0deg); /* No rotation needed */
 }
-main .second-section .spotlight .content-slider-item .second-half-circle {
+main .second-section .spotlight .content-slider .content-slider-item .second-half-circle {
   position: absolute;
   top: 5px; /* Adjust as needed for the slant */
   left: 1px; /* Adjust as needed for alignment */
