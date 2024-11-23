@@ -36,11 +36,12 @@ body {
   font-family: "Neue Regrade", sans-serif;
   font-weight: 400;
   font-style: normal;
-  width: 100% !important;
   background-color: rgba(233, 235, 248, 1);
+  width: 100% !important;
 
   overflow-x: hidden !important;
-  height: 100% !important;
+  height: auto !important; /* Use a height that suits your needs */
+  min-height: 100vh;
   // padding-top: 70px;
 }
 
@@ -224,6 +225,7 @@ header.header {
         // padding-top: 60px;
         position: relative;
         top: 150px;
+
         @include smallMobile {
           // padding: 40px 16px;
           top: 120px;
@@ -369,6 +371,7 @@ header.header {
         }
       }
       .device {
+        // background-color: rgba(233, 235, 248, 1);
         position: static;
         &::after {
           content: "";
@@ -380,6 +383,7 @@ header.header {
           top: 50% !important;
           left: 50% !important;
           transform: translate(-55%, 0) !important;
+
           // margin-bottom: 100px;
           // z-index: 100;
           bottom: 20px;
@@ -416,30 +420,32 @@ header.header {
 main {
   display: flex;
   position: relative !important;
-  min-height: 3000px !important;
-  @include smallMobile{
-    min-height: 0 !important;
-    top: 40px !important;
-  }
-  @include smallTablet {
-    min-height: 3200px !important;
-    // top: 30px !important;
-  }
-  @include tablet_768 {
-    min-height: 4000px !important;
-    top: 60px !important;
-  }
-  @include tabletAndAbove {
-    min-height: 2500px !important;
-    top: 0px !important;
-  }
-  @include laptop {
-    top: 80px !important;
-  }
-  @include largerLaptop {
-    min-height: 3000px !important;
-    // top: 100px !important;
-  }
+  min-height: 100vh !important;
+
+  top: 400px;
+  // @include smallMobile {
+  //   min-height: 0 !important;
+  //   top: 40px !important;
+  // }
+  // @include smallTablet {
+  //   min-height: 3200px !important;
+  //   // top: 30px !important;
+  // }
+  // @include tablet_768 {
+  //   min-height: 4000px !important;
+  //   top: 60px !important;
+  // }
+  // @include tabletAndAbove {
+  //   min-height: 2500px !important;
+  //   top: 0px !important;
+  // }
+  // @include laptop {
+  //   top: 80px !important;
+  // }
+  // @include largerLaptop {
+  //   min-height: 3000px !important;
+  //   // top: 100px !important;
+  // }
   &.mt-5 {
     margin-top: 0 !important;
   }
@@ -629,41 +635,74 @@ main {
       }
     }
   }
-  .second-section {
-    .spotlight {
-      display: flex;
+  & .second-section {
+    display: flex;
+    justify-content: flex-start !important;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 50px;
+    & .spotlight {
+      display: flex !important;
+      gap: 24px;
+      @include largerLaptop {
+        max-width: 1350px;
+        padding: 0 19px;
+      }
+      // gap: 20px;
       // flex-direction: column; /* Stack items vertically */
       // align-items: center;
-
+      h3 {
+        padding-top: 5px;
+        margin-block-end: 0 !important;
+        margin-block-start: 0 !important;
+        margin-bottom: 0 !important;
+        @include largerLaptop {
+          width: 350px;
+        }
+      }
       .content-slider {
-        display: flex;
-        flex-wrap: nowrap; /* Ensure items are in a single row unless you want wrapping */
-        gap: 20px; /* Add spacing between items */
-        justify-content: center; /* Center the slider items */
-        align-items: center;
+        // display: flex;
+        // flex-wrap: nowrap; /* Ensure items are in a single row unless you want wrapping */
+        // gap: 20px; /* Add spacing between items */
+        // justify-content: center; /* Center the slider items */
+        // align-items: center;
+        overflow: hidden; /* Hides the horizontal scrollbar */
+        white-space: nowrap; /* Prevents items from wrapping */
+        width: 100%;
+        // height: 60vh; /* Adjusts the height */
+        position: relative;
         .content-slider-track {
           display: flex;
+          gap: 70px;
+          animation: scroll 15s linear infinite;
+          transform: translateY(20%);
         }
 
         .content-slider-item {
-          position: relative;
-          width: 50px; /* Adjust width as needed */
-          height: 50px; /* Adjust height as needed */
-          span {
-            display: inline-block;
-          }
-          .first-half-circle {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: rotate(0deg); /* No rotation needed */
-          }
+          // display: flex;
+          display: flex; /* Align children side by side */
+          align-items: center; /* Vertically center images and text */
+          gap: 8px; /* Add spacing between elements */
+          // flex: 0 0 auto;
+          // width: 200px;
+          // margin-right: 10px;
+          // background-color: #eee;
+          // padding: 20px;
+          text-align: center;
 
-          .second-half-circle {
-            position: absolute;
-            top: 5px; /* Adjust as needed for the slant */
-            left: 1px; /* Adjust as needed for alignment */
-            // transform: rotate(180deg); /* Flips the second half-circle */
+          span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 20px;
+          }
+          @keyframes scroll {
+            0% {
+              transform: translateX(0) translateY(20%);
+            }
+            100% {
+              transform: translateX(-50%) translateY(20%);
+            }
           }
         }
       }
@@ -675,9 +714,10 @@ main {
   // margin-top: 1000px !important;
   width: 100% !important;
   max-width: 100%;
-  @include tablet_768 {
-    margin-top: 300px !important;
-  }
+  // @include tablet_768 {
+  //   margin-top: 300px !important;
+  position:  relative !important;
+  // }
   .footers {
     width: 100% !important;
 

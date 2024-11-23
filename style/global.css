@@ -193,10 +193,11 @@ body {
   font-family: "Neue Regrade", sans-serif;
   font-weight: 400;
   font-style: normal;
-  width: 100% !important;
   background-color: rgb(233, 235, 248);
+  width: 100% !important;
   overflow-x: hidden !important;
-  height: 100% !important;
+  height: auto !important; /* Use a height that suits your needs */
+  min-height: 100vh;
 }
 
 header.header {
@@ -586,40 +587,8 @@ header.header .header-container .headers .device img {
 main {
   display: flex;
   position: relative !important;
-  min-height: 3000px !important;
-}
-@media only screen and (min-width: 320px) {
-  main {
-    min-height: 0 !important;
-    top: 40px !important;
-  }
-}
-@media only screen and (min-width: 540px) {
-  main {
-    min-height: 3200px !important;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main {
-    min-height: 4000px !important;
-    top: 60px !important;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  main {
-    min-height: 2500px !important;
-    top: 0px !important;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  main {
-    top: 80px !important;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  main {
-    min-height: 3000px !important;
-  }
+  min-height: 100vh !important;
+  top: 400px;
 }
 main.mt-5 {
   margin-top: 0 !important;
@@ -845,48 +814,72 @@ main .first-section .first-section-div .first-section-cards .second-cards h3 {
 main .first-section .first-section-div .first-section-cards .second-cards p {
   color: rgb(87, 90, 102);
 }
-main .second-section .spotlight {
+main .second-section {
   display: flex;
+  justify-content: flex-start !important;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 50px;
+}
+main .second-section .spotlight {
+  display: flex !important;
+  gap: 24px;
+}
+@media only screen and (min-width: 1440px) {
+  main .second-section .spotlight {
+    max-width: 1350px;
+    padding: 0 19px;
+  }
+}
+main .second-section .spotlight h3 {
+  padding-top: 5px;
+  margin-block-end: 0 !important;
+  margin-block-start: 0 !important;
+  margin-bottom: 0 !important;
+}
+@media only screen and (min-width: 1440px) {
+  main .second-section .spotlight h3 {
+    width: 350px;
+  }
 }
 main .second-section .spotlight .content-slider {
-  display: flex;
-  flex-wrap: nowrap; /* Ensure items are in a single row unless you want wrapping */
-  gap: 20px; /* Add spacing between items */
-  justify-content: center; /* Center the slider items */
-  align-items: center;
+  overflow: hidden; /* Hides the horizontal scrollbar */
+  white-space: nowrap; /* Prevents items from wrapping */
+  width: 100%;
+  position: relative;
 }
 main .second-section .spotlight .content-slider .content-slider-track {
   display: flex;
+  gap: 70px;
+  animation: scroll 15s linear infinite;
+  transform: translateY(20%);
 }
 main .second-section .spotlight .content-slider .content-slider-item {
-  position: relative;
-  width: 50px; /* Adjust width as needed */
-  height: 50px; /* Adjust height as needed */
+  display: flex; /* Align children side by side */
+  align-items: center; /* Vertically center images and text */
+  gap: 8px; /* Add spacing between elements */
+  text-align: center;
 }
 main .second-section .spotlight .content-slider .content-slider-item span {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
 }
-main .second-section .spotlight .content-slider .content-slider-item .first-half-circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(0deg); /* No rotation needed */
-}
-main .second-section .spotlight .content-slider .content-slider-item .second-half-circle {
-  position: absolute;
-  top: 5px; /* Adjust as needed for the slant */
-  left: 1px; /* Adjust as needed for alignment */
+@keyframes scroll {
+  0% {
+    transform: translateX(0) translateY(20%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(20%);
+  }
 }
 
 .footer {
   margin: 0px !important;
   width: 100% !important;
   max-width: 100%;
-}
-@media only screen and (min-width: 768px) {
-  .footer {
-    margin-top: 300px !important;
-  }
+  position: relative !important;
 }
 .footer .footers {
   width: 100% !important;
