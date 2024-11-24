@@ -189,6 +189,11 @@ html {
   font-weight: 700;
   font-style: normal;
 }
+html {
+  height: auto !important;
+  min-height: 100% !important;
+}
+
 body {
   font-family: "Neue Regrade", sans-serif;
   font-weight: 400;
@@ -196,8 +201,8 @@ body {
   background-color: rgb(233, 235, 248);
   width: 100% !important;
   overflow-x: hidden !important;
-  height: auto !important; /* Use a height that suits your needs */
-  min-height: 100vh;
+  min-height: 100vh !important;
+  height: auto !important;
 }
 
 header.header {
@@ -382,6 +387,11 @@ header.header .header-container .headers .hero-section {
 @media only screen and (min-width: 320px) {
   header.header .header-container .headers .hero-section {
     top: 120px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  header.header .header-container .headers .hero-section {
+    top: 150px;
   }
 }
 header.header .header-container .headers .hero-section .hero-section-text .hero-title h1 {
@@ -613,6 +623,11 @@ main .first-section {
     top: 60px;
   }
 }
+@media only screen and (min-width: 1440px) {
+  main .first-section {
+    top: 230px !important;
+  }
+}
 main .first-section .first-section-div .first-section-title {
   text-align: center;
 }
@@ -672,7 +687,7 @@ main .first-section .first-section-div .first-section-cards {
 }
 @media only screen and (min-width: 1440px) {
   main .first-section .first-section-div .first-section-cards img {
-    width: 624px;
+    width: 643px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -816,51 +831,56 @@ main .first-section .first-section-div .first-section-cards .second-cards p {
 }
 main .second-section {
   display: flex;
-  justify-content: flex-start !important;
-  padding: 50px;
+  justify-content: center !important;
+  padding: 50px 140px;
   background-color: rgb(255, 255, 255);
-  margin-bottom: 50px;
+  position: relative;
+  width: 100%;
 }
-main .second-section .spotlight {
+@media only screen and (min-width: 1440px) {
+  main .second-section {
+    top: 200px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .second-section .second-section-div {
+    max-width: 1350px;
+  }
+}
+main .second-section .second-section-div .spotlight {
   display: flex !important;
   gap: 24px;
 }
-@media only screen and (min-width: 1440px) {
-  main .second-section .spotlight {
-    max-width: 1350px;
-    padding: 0 19px;
-  }
-}
-main .second-section .spotlight h3 {
+main .second-section .second-section-div .spotlight h3 {
   padding-top: 5px;
   margin-block-end: 0 !important;
   margin-block-start: 0 !important;
   margin-bottom: 0 !important;
 }
 @media only screen and (min-width: 1440px) {
-  main .second-section .spotlight h3 {
+  main .second-section .second-section-div .spotlight h3 {
     width: 350px;
   }
 }
-main .second-section .spotlight .content-slider {
+main .second-section .second-section-div .spotlight .content-slider {
   overflow: hidden; /* Hides the horizontal scrollbar */
   white-space: nowrap; /* Prevents items from wrapping */
   width: 100%;
   position: relative;
 }
-main .second-section .spotlight .content-slider .content-slider-track {
+main .second-section .second-section-div .spotlight .content-slider .content-slider-track {
   display: flex;
   gap: 70px;
   animation: scroll 15s linear infinite;
   transform: translateY(20%);
 }
-main .second-section .spotlight .content-slider .content-slider-item {
+main .second-section .second-section-div .spotlight .content-slider .content-slider-item {
   display: flex; /* Align children side by side */
   align-items: center; /* Vertically center images and text */
   gap: 8px; /* Add spacing between elements */
   text-align: center;
 }
-main .second-section .spotlight .content-slider .content-slider-item span {
+main .second-section .second-section-div .spotlight .content-slider .content-slider-item span {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -880,13 +900,15 @@ main .second-section .spotlight .content-slider .content-slider-item span {
   width: 100% !important;
   max-width: 100%;
   position: relative !important;
+  height: auto;
+  min-height: 1000px;
 }
 .footer .footers {
   width: 100% !important;
   padding: 48px 0;
   background-color: rgb(27, 29, 62) !important;
   position: relative;
-  top: 40px;
+  top: 700px;
   margin-bottom: 40px;
 }
 .footer .footers .footer-content {
@@ -895,45 +917,25 @@ main .second-section .spotlight .content-slider .content-slider-item span {
   position: relative !important;
   left: 50%;
   transform: translate(-50%);
-  padding: 0 80px;
-}
-@media only screen and (min-width: 320px) {
-  .footer .footers .footer-content {
-    padding: 0 50px;
-  }
-}
-@media only screen and (min-width: 425px) {
-  .footer .footers .footer-content {
-    padding: 0 80px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .footer .footers .footer-content {
-    padding: 0 20px; /* Adjust padding for tablet screens and above */
-  }
 }
 @media only screen and (min-width: 900px) {
   .footer .footers .footer-content {
-    padding: 0 20px;
     max-width: 850px !important;
   }
 }
 @media only screen and (min-width: 1024px) {
   .footer .footers .footer-content {
     max-width: 970px !important;
-    padding: 0 17px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .footer .footers .footer-content {
     max-width: 1150px !important;
-    padding: 0 16px; /* Narrower padding for laptops and larger screens */
   }
 }
 @media only screen and (min-width: 1440px) {
   .footer .footers .footer-content {
     max-width: 1350px !important;
-    padding: 0 17px;
   }
 }
 .footer .footers .footer-header {
