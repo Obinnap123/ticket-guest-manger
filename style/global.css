@@ -205,6 +205,12 @@ body {
   height: auto !important;
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
 header.header {
   display: block !important;
   height: 550px !important;
@@ -669,7 +675,6 @@ main .first-section .first-section-div .first-section-title {
 }
 main .first-section .first-section-div .first-section-title h2 {
   font-size: 40px !important;
-  font-weight: 600;
   width: 400px;
   margin: 0px auto 40px;
   color: rgb(27, 29, 62);
