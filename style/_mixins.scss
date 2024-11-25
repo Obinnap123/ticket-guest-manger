@@ -36,6 +36,11 @@
   //     @content;
   //   }
   // }
+  @mixin tablet_867 {
+    @media only screen and (min-width: $tablet_867) {
+      @content;
+    }
+  }
   @mixin tablet_900 {
     @media only screen and (min-width: $tablet_900) {
       @content;
