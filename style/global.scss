@@ -652,7 +652,7 @@ main {
     width: 100%;
     @include smallMobile {
       justify-content: flex-start !important;
-      padding: 16px 16px 30px !important;
+      padding: 16px 0 30px !important;
     }
     @include tablet_768 {
       padding: 16px 0px !important;
@@ -667,6 +667,9 @@ main {
       top: 200px;
     }
     .second-section-div {
+      @include smallMobile {
+        max-width: 100%;
+      }
       @include tablet_900 {
         max-width: 850px;
       }
@@ -702,9 +705,10 @@ main {
           margin-block-start: 0 !important;
           margin-bottom: 0 !important;
           @include smallMobile {
-            font-size: 25px;
-            width: 30%;
+            font-size: 20px;
+            width: 300px;
             text-align: center;
+            margin: 0 auto;
           }
           @include tablet_768 {
             padding-left: 16px;
@@ -760,6 +764,12 @@ main {
               align-items: center;
               gap: 8px;
               font-size: 20px;
+              @include smallMobile {
+                font-size: 16px;
+              }
+              @include tablet_768 {
+                font-size: 20px;
+              }
             }
             @keyframes scroll {
               0% {

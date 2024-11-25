@@ -850,7 +850,7 @@ main .second-section {
 @media only screen and (min-width: 320px) {
   main .second-section {
     justify-content: flex-start !important;
-    padding: 16px 16px 30px !important;
+    padding: 16px 0 30px !important;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -871,6 +871,11 @@ main .second-section {
 @media only screen and (min-width: 1440px) {
   main .second-section {
     top: 200px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  main .second-section .second-section-div {
+    max-width: 100%;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -917,9 +922,10 @@ main .second-section .second-section-div .spotlight h3 {
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .spotlight h3 {
-    font-size: 25px;
-    width: 30%;
+    font-size: 20px;
+    width: 300px;
     text-align: center;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -972,6 +978,16 @@ main .second-section .second-section-div .spotlight .content-slider .content-sli
   align-items: center;
   gap: 8px;
   font-size: 20px;
+}
+@media only screen and (min-width: 320px) {
+  main .second-section .second-section-div .spotlight .content-slider .content-slider-item span {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .second-section .second-section-div .spotlight .content-slider .content-slider-item span {
+    font-size: 20px;
+  }
 }
 @keyframes scroll {
   0% {
