@@ -433,18 +433,18 @@ main {
   min-height: 100vh !important;
 
   top: 400px;
-  // @include smallMobile {
-  //   min-height: 0 !important;
-  //   top: 40px !important;
-  // }
+  @include smallMobile {
+    // min-height: 0 !important;
+    top: 40px !important;
+  }
   // @include smallTablet {
   //   min-height: 3200px !important;
   //   // top: 30px !important;
   // }
-  // @include tablet_768 {
-  //   min-height: 4000px !important;
-  //   top: 60px !important;
-  // }
+  @include tablet_768 {
+    // min-height: 4000px !important;
+    top: 400px !important;
+  }
   // @include tabletAndAbove {
   //   min-height: 2500px !important;
   //   top: 0px !important;
@@ -514,10 +514,10 @@ main {
             width: 600px;
           }
           @include tabletAndAbove {
-            width: 430px;
+            width: 453px;
           }
           @include laptop {
-            width: 525px;
+            width: 543px;
           }
           @include largerLaptop {
             width: 643px;
@@ -645,15 +645,38 @@ main {
   & .second-section {
     display: flex;
     justify-content: center !important;
-    padding: 50px 140px;
+    padding: 50px;
     background-color: rgba(255, 255, 255, 1);
     // margin-bottom: 50px;
     position: relative;
     width: 100%;
+    @include smallMobile {
+      justify-content: flex-start !important;
+      padding: 16px 16px 30px !important;
+    }
+    @include tablet_768 {
+      padding: 16px 0px !important;
+    }
+    @include tablet_900 {
+      justify-content: center !important;
+    }
+    @include tabletAndAbove {
+      padding: 50px !important;
+    }
     @include largerLaptop {
       top: 200px;
     }
     .second-section-div {
+      @include tablet_900 {
+        max-width: 850px;
+      }
+      @include tabletAndAbove {
+        max-width: 970px;
+      }
+
+      @include laptop {
+        max-width: 1150px;
+      }
       @include largerLaptop {
         max-width: 1350px;
         // padding: 0 19px;
@@ -662,7 +685,14 @@ main {
       & .spotlight {
         display: flex !important;
         gap: 24px;
-
+        @include smallMobile {
+          flex-direction: column;
+          gap: 20px;
+        }
+        @include tablet_768 {
+          flex-direction: row;
+          gap: 24px;
+        }
         // gap: 20px;
         // flex-direction: column; /* Stack items vertically */
         // align-items: center;
@@ -671,7 +701,21 @@ main {
           margin-block-end: 0 !important;
           margin-block-start: 0 !important;
           margin-bottom: 0 !important;
-          @include largerLaptop {
+          @include smallMobile {
+            font-size: 25px;
+            width: 30%;
+            text-align: center;
+          }
+          @include tablet_768 {
+            padding-left: 16px;
+            width: 400px;
+            text-align: left;
+          }
+          @include tablet_900 {
+            padding-left: 0;
+          }
+
+          @include laptop {
             width: 350px;
           }
         }
@@ -686,6 +730,12 @@ main {
           width: 100%;
           // height: 60vh; /* Adjusts the height */
           position: relative;
+          @include smallMobile {
+            overflow: visible;
+          }
+          @include tablet_768 {
+            overflow: hidden;
+          }
           .content-slider-track {
             display: flex;
             gap: 70px;
@@ -735,8 +785,19 @@ main {
   //   margin-top: 300px !important;
   position: relative !important;
   height: auto;
-  min-height: 1000px;
-  // }
+  @include smallMobile {
+    min-height: 600px;
+  }
+  @include tablet_768 {
+    min-height: 900px;
+  }
+  @include tabletAndAbove {
+    min-height: 1200px;
+  }
+  @include largerLaptop {
+    min-height: 1500px;
+  }
+
   .footers {
     width: 100% !important;
 
@@ -744,8 +805,22 @@ main {
     background-color: rgba(27, 29, 62, 1) !important;
 
     position: relative;
-    top: 700px;
-    margin-bottom: 40px;
+    @include smallMobile {
+      top: 200px;
+    }
+    @include tablet_768 {
+      top: 600px;
+    }
+    // @include tabletAndAbove {
+    //   top: 600px;
+    // }
+    @include laptop {
+      top: 800px;
+    }
+    @include largerLaptop {
+      top: 1000px;
+    }
+    // margin-bottom: 40px;
     .footer-content {
       width: 100% !important;
       max-width: 1150px !important;
@@ -762,11 +837,11 @@ main {
         // padding: 0 80px;
       }
       @include tablet_768 {
-        // padding: 0 20px; /* Adjust padding for tablet screens and above */
+        padding: 0 20px; /* Adjust padding for tablet screens and above */
       }
 
       @include tablet_900 {
-        // padding: 0 20px;
+        padding: 0;
         max-width: 850px !important;
       }
       @include tabletAndAbove {
