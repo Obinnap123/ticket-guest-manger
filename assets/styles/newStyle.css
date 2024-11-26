@@ -103,7 +103,7 @@ nav ul li a:hover {
 .dropdown:hover .dropdown-content {
   display: block !important;
 }
-/* .hero-section {
+.hero-section {
     background-image: linear-gradient(
             rgba(255, 255, 255, 0),
             rgba(255, 255, 255, 0)
@@ -115,12 +115,12 @@ nav ul li a:hover {
     background-size: cover !important;
     margin-top: 50px !important;
     margin-bottom: 30px !important;
-} */
-/* .hero {
+} 
+.hero {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-} */
+}
 .hero-text {
   width: 50% !important;
   color: white !important;

@@ -15,22 +15,24 @@
 //   attributeFilter: ["style"],
 // });
 
-const style = document.createElement("style");
-style.textContent = `
-  html, body {
-    height: auto !important;
-    min-height: 100vh !important;
-   
-  }
-`;
-document.head.appendChild(style);
+document.querySelectorAll("button").forEach((button) => {
+  button.disabled = false; // Removes the disabled state
+  button.style.pointerEvents = "auto"; // Ensures pointer interactions
+  button.style.opacity = ""; // Resets any visual "disabled" styles
+});
 
 setInterval(() => {
-  document.body.style.height = "auto";
-  document.body.style.minHeight = "100vh";
-}, 100);
+  document.querySelectorAll("button").forEach((button) => {
+    button.disabled = false; // Undisable
+    button.style.pointerEvents = "auto";
+  });
+}, 500);
 
-Object.defineProperty(document.body.style, "height", { set: () => {} });
+document.querySelectorAll("button").forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log("Button clicked:", button.textContent);
+  });
+});
 
 const hamburger = document.querySelector(".hamburger");
 const menuIcon = document.querySelector(".img-hamburger");

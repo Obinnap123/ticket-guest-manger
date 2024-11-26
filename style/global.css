@@ -227,10 +227,10 @@ header.header .header-container {
 header.header .header-container .headers {
   width: 100% !important;
   height: 550px !important;
-  background: linear-gradient(to right, rgba(227, 149, 76, 0.8), rgba(58, 64, 135, 0.8)), url("https://s3-alpha-sig.figma.com/img/fbd9/6413/4145d90a9562b3eff6ef5c97a10cad3e?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J-e~Px~~oBVy5e41cykZ8aBoP3uqFg1l6MTIdeZ-0WXDLb-uO2O3t0xKKIiz483OSSlw0jExFLXy0G4gikxFRxYdMPDstsQZAbM6jxM~C86QZIfJEOJ6GuHJICeihFqhZr9iRtfSjp-krOtzKeKZ-2ULFXIpHi28SN8wYzoaD4jCrZYxCksy1lhjxW7~VoS-g3R69t1r9yGUTlQuJx0aCOZvI2uK2JfM4PuI8f6seWRCw1zLT1Ec7ty2VOHN9eI0istnUahrDpYojiDibJ0SQkvI3swyOeeJ4Lr9HIOMDx0FLwdTWjDZWYXC5nAbn70ouq9mpx~AAiAbAqc7k4IKEg__");
-  background-size: cover;
-  background-position: center;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(to right, rgba(227, 149, 76, 0.8), rgba(58, 64, 135, 0.8)), url("https://s3-alpha-sig.figma.com/img/fbd9/6413/4145d90a9562b3eff6ef5c97a10cad3e?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J-e~Px~~oBVy5e41cykZ8aBoP3uqFg1l6MTIdeZ-0WXDLb-uO2O3t0xKKIiz483OSSlw0jExFLXy0G4gikxFRxYdMPDstsQZAbM6jxM~C86QZIfJEOJ6GuHJICeihFqhZr9iRtfSjp-krOtzKeKZ-2ULFXIpHi28SN8wYzoaD4jCrZYxCksy1lhjxW7~VoS-g3R69t1r9yGUTlQuJx0aCOZvI2uK2JfM4PuI8f6seWRCw1zLT1Ec7ty2VOHN9eI0istnUahrDpYojiDibJ0SQkvI3swyOeeJ4Lr9HIOMDx0FLwdTWjDZWYXC5nAbn70ouq9mpx~AAiAbAqc7k4IKEg__") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 @media only screen and (min-width: 320px) {
   header.header .header-container .headers {
@@ -255,7 +255,7 @@ header.header .header-container .headers .nav-bar {
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.05);
   background-color: rgb(255, 255, 255);
-  z-index: 100;
+  z-index: 10;
 }
 @media only screen and (min-width: 320px) {
   header.header .header-container .headers .nav-bar {
@@ -284,6 +284,10 @@ header.header .header-container .headers .nav-bar {
   header.header .header-container .headers .nav-bar {
     max-width: 1350px;
   }
+}
+header.header .header-container .headers .nav-bar .nav-bar-logo {
+  width: 100%;
+  max-width: 100px;
 }
 header.header .header-container .headers .nav-bar .nav-bar-ul {
   display: flex;
@@ -389,6 +393,12 @@ header.header .header-container .headers .hero-section {
   height: auto !important;
   position: relative;
   top: 150px;
+  background-image: none !important;
+  max-height: none !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 @media only screen and (min-width: 320px) {
   header.header .header-container .headers .hero-section {
@@ -764,6 +774,9 @@ main .first-section .first-section-div .first-section-cards .first-cards {
     gap: 64px;
   }
 }
+main .first-section .first-section-div .first-section-cards .first-cards img {
+  border-radius: 10px;
+}
 main .first-section .first-section-div .first-section-cards .first-cards h3,
 main .first-section .first-section-div .first-section-cards .first-cards p {
   width: 500px;
@@ -809,6 +822,21 @@ main .first-section .first-section-div .first-section-cards .first-cards p {
 @media only screen and (min-width: 1024px) {
   main .first-section .first-section-div .first-section-cards .first-cards .paragraph {
     margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .first-section .first-section-div .first-section-cards .first-cards .first-cards-div-two-img {
+    height: 425px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .first-section .first-section-div .first-section-cards .first-cards .first-cards-div-two-img {
+    height: 512px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .first-section .first-section-div .first-section-cards .first-cards .first-cards-div-two-img {
+    height: 605px;
   }
 }
 main .first-section .first-section-div .first-section-cards .second-cards {
@@ -870,6 +898,9 @@ main .first-section .first-section-div .first-section-cards .second-cards h3 {
 }
 main .first-section .first-section-div .first-section-cards .second-cards p {
   color: rgb(87, 90, 102);
+}
+main .first-section .first-section-div .first-section-cards .second-cards .second-cards-div-one-img {
+  border-radius: 10px;
 }
 main .second-section {
   display: flex;
@@ -1040,6 +1071,38 @@ main .second-section .second-section-div .spotlight .content-slider .content-sli
     transform: translateX(-50%) translateY(20%);
   }
 }
+main .third-section .info-section {
+  position: relative;
+  top: 200px;
+}
+main .third-section .info-section .why-choose-div {
+  display: flex;
+  gap: 64px;
+}
+main .third-section .info-section .why-choose-div ul li {
+  padding-top: 20px;
+}
+main .third-section .info-section .why-choose-div ul li span {
+  display: flex; /* Flexbox for alignment */
+  align-items: flex-start; /* Align image and text at the top */
+  gap: 8px;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -2%;
+}
+main .third-section .info-section .why-choose-div ul li span img {
+  flex-shrink: 0;
+}
+main .third-section .info-section .why-choose-div ul a {
+  position: relative;
+  top: 20px;
+}
+main .third-section .info-section .why-choose-div ul a button {
+  outline: none;
+  padding: 8px 20px;
+  background-color: rgb(64, 70, 148);
+  color: rgb(255, 255, 255);
+}
 
 .footer {
   margin: 0px !important;
@@ -1141,7 +1204,9 @@ main .second-section .second-section-div .spotlight .content-slider .content-sli
     flex-direction: row;
   }
 }
-.footer .footers .footer-header .footer-logo {
+.footer .footers .footer-header .footer-logo-image {
+  width: 100%;
+  max-width: 100px;
   display: flex;
   align-items: center;
 }
