@@ -710,7 +710,11 @@ main {
       justify-content: center !important;
     }
     @include tabletAndAbove {
+      top: 30px;
       padding: 50px !important;
+    }
+    @include laptop {
+      top: 60px;
     }
     @include largerLaptop {
       top: 200px;
@@ -840,12 +844,43 @@ main {
   & .third-section {
     .info-section {
       position: relative;
-      top: 200px;
+      @include tabletAndAbove {
+        top: 150px;
+      }
+      @include laptop {
+        top: 150px;
+      }
+      @include largerLaptop {
+        top: 300px;
+      }
       .why-choose-div {
         display: flex;
         // top: 200px;
         gap: 64px;
+        @include tabletAndAbove {
+          max-width: 970px;
+        }
+        @include laptop {
+          max-width: 1150px;
+        }
+        @include largerLaptop {
+          max-width: 1350px;
+        }
+        .why-choose-div-first-img {
+          img {
+            @include laptop {
+              width: 543px;
+            }
+            @include largerLaptop {
+              width: 643px;
+            }
+          }
+        }
         ul {
+          margin-bottom: 0 !important;
+          @include laptop {
+            padding-top: 70px;
+          }
           li {
             padding-top: 20px;
             span {
@@ -856,6 +891,16 @@ main {
               font-size: 20px;
               line-height: 30px;
               letter-spacing: -2%;
+              @include tabletAndAbove {
+                font-size: 16px;
+              }
+              @include laptop {
+                font-size: 18px;
+              }
+              @include largerLaptop {
+                font-size: 22px;
+                line-height: 40px;
+              }
               img {
                 flex-shrink: 0;
               }
@@ -875,9 +920,63 @@ main {
           }
         }
       }
+      .effortless-check-in-div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        // display: flex;
+        // position: relative;
+        // top: 96px;
+        // gap: 40px;
+
+        // @include laptop {
+        //   max-width: 1150px;
+        // }
+        .effortless-check-in {
+          background-color: rgba(27, 29, 62, 1);
+          border-radius: 10px;
+          // .effortless-check-in-content {
+          display: flex;
+          justify-content: center;
+          .effortless-check-in-content {
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            // flex-direction: row !important;
+            // justify-content: center !important;
+            // max-width: 1150px;
+            h3 {
+              color: rgba(255, 255, 255, 1);
+            }
+            p {
+              font-size: 18px;
+              line-height: 30px;
+              width: 415px;
+              color: rgba(196, 198, 222, 1);
+            }
+            ul {
+              li {
+                padding-bottom: 20px;
+                color: rgba(196, 198, 222, 1);
+              }
+            }
+            a {
+              button {
+                padding: 10px 30px;
+              }
+            }
+          }
+          // & .code-scannig-img {
+          //   @include laptop {
+          //     width: 419px;
+          //   }
+          // }
+        }
+      }
     }
   }
 }
+// }
 
 .footer {
   margin: 0px !important;
@@ -896,6 +995,9 @@ main {
   }
   @include tabletAndAbove {
     min-height: 1200px;
+  }
+  @include laptop {
+    min-height: 1400px;
   }
   @include largerLaptop {
     min-height: 1500px;
@@ -918,7 +1020,7 @@ main {
     //   top: 600px;
     // }
     @include laptop {
-      top: 800px;
+      top: 1000px;
     }
     @include largerLaptop {
       top: 1000px;

@@ -933,7 +933,13 @@ main .second-section {
 }
 @media only screen and (min-width: 1024px) {
   main .second-section {
+    top: 30px;
     padding: 50px !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .second-section {
+    top: 60px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -1073,11 +1079,58 @@ main .second-section .second-section-div .spotlight .content-slider .content-sli
 }
 main .third-section .info-section {
   position: relative;
-  top: 200px;
+}
+@media only screen and (min-width: 1024px) {
+  main .third-section .info-section {
+    top: 150px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .third-section .info-section {
+    top: 150px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .third-section .info-section {
+    top: 300px;
+  }
 }
 main .third-section .info-section .why-choose-div {
   display: flex;
   gap: 64px;
+}
+@media only screen and (min-width: 1024px) {
+  main .third-section .info-section .why-choose-div {
+    max-width: 970px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .third-section .info-section .why-choose-div {
+    max-width: 1150px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .third-section .info-section .why-choose-div {
+    max-width: 1350px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
+    width: 543px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
+    width: 643px;
+  }
+}
+main .third-section .info-section .why-choose-div ul {
+  margin-bottom: 0 !important;
+}
+@media only screen and (min-width: 1200px) {
+  main .third-section .info-section .why-choose-div ul {
+    padding-top: 70px;
+  }
 }
 main .third-section .info-section .why-choose-div ul li {
   padding-top: 20px;
@@ -1089,6 +1142,22 @@ main .third-section .info-section .why-choose-div ul li span {
   font-size: 20px;
   line-height: 30px;
   letter-spacing: -2%;
+}
+@media only screen and (min-width: 1024px) {
+  main .third-section .info-section .why-choose-div ul li span {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .third-section .info-section .why-choose-div ul li span {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .third-section .info-section .why-choose-div ul li span {
+    font-size: 22px;
+    line-height: 40px;
+  }
 }
 main .third-section .info-section .why-choose-div ul li span img {
   flex-shrink: 0;
@@ -1102,6 +1171,38 @@ main .third-section .info-section .why-choose-div ul a button {
   padding: 8px 20px;
   background-color: rgb(64, 70, 148);
   color: rgb(255, 255, 255);
+}
+main .third-section .info-section .effortless-check-in-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main .third-section .info-section .effortless-check-in-div .effortless-check-in {
+  background-color: rgb(27, 29, 62);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content h3 {
+  color: rgb(255, 255, 255);
+}
+main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content p {
+  font-size: 18px;
+  line-height: 30px;
+  width: 415px;
+  color: rgb(196, 198, 222);
+}
+main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content ul li {
+  padding-bottom: 20px;
+  color: rgb(196, 198, 222);
+}
+main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content a button {
+  padding: 10px 30px;
 }
 
 .footer {
@@ -1124,6 +1225,11 @@ main .third-section .info-section .why-choose-div ul a button {
 @media only screen and (min-width: 1024px) {
   .footer {
     min-height: 1200px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer {
+    min-height: 1400px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -1149,7 +1255,7 @@ main .third-section .info-section .why-choose-div ul a button {
 }
 @media only screen and (min-width: 1200px) {
   .footer .footers {
-    top: 800px;
+    top: 1000px;
   }
 }
 @media only screen and (min-width: 1440px) {
