@@ -1364,6 +1364,10 @@ main .third-section .info-section .effortless-check-in-div .effortless-check-in 
 }
 main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div a button {
   padding: 10px 30px;
+  border-radius: 4px;
+  background-color: #ecedf4;
+  color: #232751;
+  outline: none;
 }
 @media only screen and (min-width: 1024px) {
   main .third-section .info-section .effortless-check-in-div .effortless-check-in .code-scannig-img {
