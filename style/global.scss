@@ -848,6 +848,9 @@ main {
       @include smallMobile {
         top: 70px;
       }
+      @include smallTablet {
+        top: 180px;
+      }
       @include tablet_768 {
         top: 180px;
       }
@@ -889,6 +892,9 @@ main {
             @include smallMobile {
               width: 300px;
             }
+            @include smallTablet {
+              width: 500px;
+            }
             @include tablet_768 {
               width: 600px;
             }
@@ -909,6 +915,9 @@ main {
           @include smallMobile {
             width: 300px;
           }
+          @include smallTablet {
+            width: 500px;
+          }
           @include tablet_768 {
             width: 600px;
           }
@@ -921,20 +930,24 @@ main {
           }
           li {
             padding-top: 20px;
+
             @include tabletAndAbove {
               padding-top: 10px;
             }
             @include laptop {
               padding-top: 20px;
             }
+
             span {
               display: flex; /* Flexbox for alignment */
               align-items: flex-start; /* Align image and text at the top */
               gap: 8px;
               // width: 500px;
-              font-size: 20px;
+
               line-height: 30px;
-              letter-spacing: -2%;
+              @include smallMobile {
+                font-size: 16px;
+              }
               @include tabletAndAbove {
                 font-size: 16px;
               }
@@ -981,6 +994,7 @@ main {
           border-radius: 10px;
           display: flex;
           justify-content: center;
+
           @include tablet_768 {
             width: 100%;
           }
@@ -999,6 +1013,9 @@ main {
               gap: 25px;
               width: 300px;
             }
+            @include smallTablet {
+              width: 500px;
+            }
             @include tablet_768 {
               width: auto;
             }
@@ -1011,9 +1028,11 @@ main {
                 order: 2;
                 text-align: center;
               }
+              @include tablet_768 {
+                text-align: left;
+              }
               @include tabletAndAbove {
                 order: 1;
-                text-align: left;
               }
               h3 {
                 color: rgba(255, 255, 255, 1);
@@ -1023,7 +1042,16 @@ main {
                 line-height: 30px;
                 width: 415px;
                 color: rgba(196, 198, 222, 1);
+                @include smallMobile {
+                  font-size: 16px;
+                  width: 100%;
+                  // margin-bottom: 0 !important;
+                }
+                @include tablet_768 {
+                  width: 415px;
+                }
               }
+
               ul {
                 li {
                   padding-bottom: 20px;
@@ -1051,7 +1079,6 @@ main {
     }
   }
 }
-// }
 
 .footer {
   margin: 0px !important;
@@ -1064,6 +1091,9 @@ main {
   height: auto;
   @include smallMobile {
     min-height: 600px;
+  }
+  @include smallTablet {
+    min-height: 800px;
   }
   @include tablet_768 {
     min-height: 1200px;
@@ -1087,6 +1117,9 @@ main {
     position: relative;
     @include smallMobile {
       top: 200px;
+    }
+    @include smallTablet {
+      top: 600px;
     }
     @include tablet_768 {
       top: 800px;

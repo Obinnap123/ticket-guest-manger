@@ -1086,6 +1086,11 @@ main .third-section .info-section {
     top: 70px;
   }
 }
+@media only screen and (min-width: 540px) {
+  main .third-section .info-section {
+    top: 180px;
+  }
+}
 @media only screen and (min-width: 768px) {
   main .third-section .info-section {
     top: 180px;
@@ -1145,6 +1150,11 @@ main .third-section .info-section .why-choose-div {
     width: 300px;
   }
 }
+@media only screen and (min-width: 540px) {
+  main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
+    width: 500px;
+  }
+}
 @media only screen and (min-width: 768px) {
   main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
     width: 600px;
@@ -1172,6 +1182,11 @@ main .third-section .info-section .why-choose-div ul {
 @media only screen and (min-width: 320px) {
   main .third-section .info-section .why-choose-div ul {
     width: 300px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .third-section .info-section .why-choose-div ul {
+    width: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1207,9 +1222,12 @@ main .third-section .info-section .why-choose-div ul li span {
   display: flex; /* Flexbox for alignment */
   align-items: flex-start; /* Align image and text at the top */
   gap: 8px;
-  font-size: 20px;
   line-height: 30px;
-  letter-spacing: -2%;
+}
+@media only screen and (min-width: 320px) {
+  main .third-section .info-section .why-choose-div ul li span {
+    font-size: 16px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   main .third-section .info-section .why-choose-div ul li span {
@@ -1285,6 +1303,11 @@ main .third-section .info-section .effortless-check-in-div .effortless-check-in 
     width: 300px;
   }
 }
+@media only screen and (min-width: 540px) {
+  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
+    width: 500px;
+  }
+}
 @media only screen and (min-width: 768px) {
   main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
     width: auto;
@@ -1302,10 +1325,14 @@ main .third-section .info-section .effortless-check-in-div .effortless-check-in 
     text-align: center;
   }
 }
+@media only screen and (min-width: 768px) {
+  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div {
+    text-align: left;
+  }
+}
 @media only screen and (min-width: 1024px) {
   main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div {
     order: 1;
-    text-align: left;
   }
 }
 main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div h3 {
@@ -1316,6 +1343,17 @@ main .third-section .info-section .effortless-check-in-div .effortless-check-in 
   line-height: 30px;
   width: 415px;
   color: rgb(196, 198, 222);
+}
+@media only screen and (min-width: 320px) {
+  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div p {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div p {
+    width: 415px;
+  }
 }
 main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div ul li {
   padding-bottom: 20px;
@@ -1343,6 +1381,11 @@ main .third-section .info-section .effortless-check-in-div .effortless-check-in 
 @media only screen and (min-width: 320px) {
   .footer {
     min-height: 600px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  .footer {
+    min-height: 800px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1374,6 +1417,11 @@ main .third-section .info-section .effortless-check-in-div .effortless-check-in 
 @media only screen and (min-width: 320px) {
   .footer .footers {
     top: 200px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  .footer .footers {
+    top: 600px;
   }
 }
 @media only screen and (min-width: 768px) {
