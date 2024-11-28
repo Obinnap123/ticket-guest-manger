@@ -704,6 +704,7 @@ main {
       top: 100px;
     }
     @include tablet_768 {
+      top: 70px;
       padding: 16px 0px !important;
     }
     @include tablet_900 {
@@ -844,6 +845,12 @@ main {
   & .third-section {
     .info-section {
       position: relative;
+      @include smallMobile {
+        top: 70px;
+      }
+      @include tablet_768 {
+        top: 180px;
+      }
       @include tabletAndAbove {
         top: 150px;
       }
@@ -857,7 +864,18 @@ main {
         display: flex;
         // top: 200px;
         gap: 64px;
+        @include smallMobile {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 20px;
+        }
+        @include tablet_768 {
+          text-align: left;
+          gap: 64px;
+        }
         @include tabletAndAbove {
+          flex-direction: row;
           max-width: 970px;
         }
         @include laptop {
@@ -868,6 +886,15 @@ main {
         }
         .why-choose-div-first-img {
           img {
+            @include smallMobile {
+              width: 300px;
+            }
+            @include tablet_768 {
+              width: 600px;
+            }
+            @include tabletAndAbove {
+              width: 453px;
+            }
             @include laptop {
               width: 543px;
             }
@@ -878,11 +905,28 @@ main {
         }
         ul {
           margin-bottom: 0 !important;
+          padding-bottom: 30px;
+          @include smallMobile {
+            width: 300px;
+          }
+          @include tablet_768 {
+            width: 600px;
+          }
+          @include tabletAndAbove {
+            width: auto;
+          }
           @include laptop {
-            padding-top: 70px;
+            padding-top: 30px;
+            padding-bottom: 0;
           }
           li {
             padding-top: 20px;
+            @include tabletAndAbove {
+              padding-top: 10px;
+            }
+            @include laptop {
+              padding-top: 20px;
+            }
             span {
               display: flex; /* Flexbox for alignment */
               align-items: flex-start; /* Align image and text at the top */
@@ -924,53 +968,84 @@ main {
         display: flex;
         justify-content: center;
         width: 100%;
-        // display: flex;
-        // position: relative;
-        // top: 96px;
-        // gap: 40px;
-
-        // @include laptop {
-        //   max-width: 1150px;
-        // }
+        position: relative;
+        top: 96px;
+        @include smallMobile {
+          top: 50px;
+        }
+        @include tablet_768 {
+          top: 96px;
+        }
         .effortless-check-in {
           background-color: rgba(27, 29, 62, 1);
           border-radius: 10px;
-          // .effortless-check-in-content {
           display: flex;
           justify-content: center;
+          @include tablet_768 {
+            width: 100%;
+          }
+          // @include tabletAndAbove {
+          //   width: auto;
+          // }
+          @include laptop {
+            width: auto;
+          }
           .effortless-check-in-content {
             display: flex;
             gap: 40px;
             padding: 40px;
-            // flex-direction: row !important;
-            // justify-content: center !important;
-            // max-width: 1150px;
-            h3 {
-              color: rgba(255, 255, 255, 1);
+            @include smallMobile {
+              flex-direction: column;
+              gap: 25px;
+              width: 300px;
             }
-            p {
-              font-size: 18px;
-              line-height: 30px;
-              width: 415px;
-              color: rgba(196, 198, 222, 1);
+            @include tablet_768 {
+              width: auto;
             }
-            ul {
-              li {
-                padding-bottom: 20px;
+            @include tabletAndAbove {
+              flex-direction: row;
+              gap: 40px;
+            }
+            .effortless-check-in-content-div {
+              @include smallMobile {
+                order: 2;
+                text-align: center;
+              }
+              @include tabletAndAbove {
+                order: 1;
+                text-align: left;
+              }
+              h3 {
+                color: rgba(255, 255, 255, 1);
+              }
+              p {
+                font-size: 18px;
+                line-height: 30px;
+                width: 415px;
                 color: rgba(196, 198, 222, 1);
               }
-            }
-            a {
-              button {
-                padding: 10px 30px;
+              ul {
+                li {
+                  padding-bottom: 20px;
+                  color: rgba(196, 198, 222, 1);
+                  &:first-child {
+                    padding-top: 20px;
+                  }
+                }
+              }
+              a {
+                button {
+                  padding: 10px 30px;
+                }
               }
             }
           }
-          // & .code-scannig-img {
-          //   @include laptop {
-          //     width: 419px;
-          //   }
-          // }
+          & .code-scannig-img {
+            @include tabletAndAbove {
+              // width: 419px;
+              order: 1;
+            }
+          }
         }
       }
     }
@@ -991,7 +1066,7 @@ main {
     min-height: 600px;
   }
   @include tablet_768 {
-    min-height: 900px;
+    min-height: 1200px;
   }
   @include tabletAndAbove {
     min-height: 1200px;
@@ -1014,11 +1089,11 @@ main {
       top: 200px;
     }
     @include tablet_768 {
-      top: 600px;
+      top: 800px;
     }
-    // @include tabletAndAbove {
-    //   top: 600px;
-    // }
+    @include tabletAndAbove {
+      top: 800px;
+    }
     @include laptop {
       top: 1000px;
     }
