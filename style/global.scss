@@ -444,168 +444,16 @@ main {
     }
   }
   // & .second-section {
-  //   display: flex;
-  //   justify-content: center !important;
-  //   padding: 50px;
-  //   background-color: rgba(255, 255, 255, 1);
-  //   // margin-bottom: 50px;
-  //   position: relative;
-  //   width: 100%;
-  //   @include smallMobile {
-  //     justify-content: flex-start !important;
-  //     padding: 16px 0 30px !important;
-  //   }
-  //   @include smallTablet {
-  //     top: 100px;
-  //   }
-  //   @include tablet_768 {
-  //     top: 70px;
-  //     padding: 16px 0px !important;
-  //   }
-  //   @include tablet_900 {
-  //     justify-content: center !important;
-  //   }
-  //   @include tabletAndAbove {
-  //     top: 30px;
-  //     padding: 50px !important;
-  //   }
-  //   @include laptop {
-  //     top: 60px;
-  //   }
-  //   @include largerLaptop {
-  //     top: 200px;
-  //   }
-  //   .second-section-div {
-  //     @include smallMobile {
-  //       max-width: 100%;
-  //     }
-  //     @include tablet_900 {
-  //       max-width: 850px;
-  //     }
-  //     @include tabletAndAbove {
-  //       max-width: 970px;
-  //     }
 
-  //     @include laptop {
-  //       max-width: 1150px;
-  //     }
-  //     @include largerLaptop {
-  //       max-width: 1350px;
-  //       // padding: 0 19px;
-  //     }
-
-  //     & .spotlight {
-  //       display: flex !important;
-  //       gap: 24px;
-  //       @include smallMobile {
-  //         flex-direction: column;
-  //         gap: 20px;
-  //       }
-  //       @include tablet_768 {
-  //         flex-direction: row;
-  //         gap: 24px;
-  //       }
-  //       // gap: 20px;
-  //       // flex-direction: column; /* Stack items vertically */
-  //       // align-items: center;
-  //       h3 {
-  //         padding-top: 5px;
-  //         margin-block-end: 0 !important;
-  //         margin-block-start: 0 !important;
-  //         margin-bottom: 0 !important;
-  //         @include smallMobile {
-  //           font-size: 20px;
-  //           width: 300px;
-  //           text-align: center;
-  //           margin: 0 auto;
-  //         }
-  //         @include tablet_768 {
-  //           padding-left: 16px;
-  //           width: 400px;
-  //           text-align: left;
-  //         }
-
-  //         @include tablet_768 {
-  //           width: 280px;
-  //         }
-  //         @include tablet_900 {
-  //           padding-left: 0;
-  //           width: 250px;
-  //         }
-  //         @include laptop {
-  //           width: 230px;
-  //         }
-  //       }
-  //       .content-slider {
-  //         // display: flex;
-  //         // flex-wrap: nowrap; /* Ensure items are in a single row unless you want wrapping */
-  //         // gap: 20px; /* Add spacing between items */
-  //         // justify-content: center; /* Center the slider items */
-  //         // align-items: center;
-  //         overflow: hidden; /* Hides the horizontal scrollbar */
-  //         white-space: nowrap; /* Prevents items from wrapping */
-  //         width: 100%;
-  //         // height: 60vh; /* Adjusts the height */
-  //         position: relative;
-  //         @include smallMobile {
-  //           overflow: visible;
-  //         }
-  //         @include tablet_768 {
-  //           overflow: hidden;
-  //         }
-  //         .content-slider-track {
-  //           display: flex;
-  //           gap: 70px;
-  //           animation: scroll 15s linear infinite;
-  //           transform: translateY(20%);
-  //         }
-
-  //         .content-slider-item {
-  //           // display: flex;
-  //           display: flex; /* Align children side by side */
-  //           align-items: center; /* Vertically center images and text */
-  //           gap: 8px; /* Add spacing between elements */
-  //           // flex: 0 0 auto;
-  //           // width: 200px;
-  //           // margin-right: 10px;
-  //           // background-color: #eee;
-  //           // padding: 20px;
-  //           text-align: center;
-
-  //           span {
-  //             display: flex;
-  //             align-items: center;
-  //             gap: 8px;
-  //             font-size: 20px;
-  //             @include smallMobile {
-  //               font-size: 16px;
-  //             }
-  //             @include tablet_768 {
-  //               font-size: 20px;
-  //             }
-  //           }
-  //           @keyframes scroll {
-  //             0% {
-  //               transform: translateX(0) translateY(20%);
-  //             }
-  //             100% {
-  //               transform: translateX(-50%) translateY(20%);
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
   & .second-section {
     .second-section-div {
-      @include smallMobile{
+      @include smallMobile {
         margin: 140px 0 0 !important;
       }
-      @include smallTablet{
+      @include smallTablet {
         margin: 200px 0 0 !important;
       }
-      @include tablet_768{
+      @include tablet_768 {
         margin: 290px 0 0 !important;
       }
       @include tablet_900 {
@@ -781,26 +629,144 @@ main {
     }
   }
   & .third-section {
-    .info-section {
-      position: relative;
+    display: flex;
+    justify-content: center !important;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 1);
+    // margin-bottom: 50px;
+
+    width: 100%;
+    @include smallMobile {
+      justify-content: flex-start !important;
+      padding: 16px 0 30px !important;
+    }
+
+    @include tablet_768 {
+      padding: 16px 0px !important;
+    }
+    @include tablet_900 {
+      justify-content: center !important;
+    }
+    @include tabletAndAbove {
+      padding: 50px !important;
+    }
+
+    .third-section-div {
       @include smallMobile {
-        top: 70px;
+        max-width: 100%;
       }
-      @include smallTablet {
-        top: 180px;
-      }
-      @include tablet_768 {
-        top: 180px;
+      @include tablet_900 {
+        max-width: 850px;
       }
       @include tabletAndAbove {
-        top: 150px;
+        max-width: 970px;
       }
+
       @include laptop {
-        top: 150px;
+        max-width: 1150px;
       }
       @include largerLaptop {
-        top: 300px;
+        max-width: 1350px;
+        // padding: 0 19px;
       }
+
+      & .spotlight {
+        display: flex !important;
+        gap: 24px;
+        @include smallMobile {
+          flex-direction: column;
+          gap: 20px;
+        }
+        @include tablet_768 {
+          flex-direction: row;
+          gap: 24px;
+        }
+        // gap: 20px;
+        // flex-direction: column; /* Stack items vertically */
+        // align-items: center;
+        h3 {
+          padding-top: 5px;
+          margin-block-end: 0 !important;
+          margin-block-start: 0 !important;
+          margin-bottom: 0 !important;
+          @include smallMobile {
+            font-size: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+          }
+          @include tablet_768 {
+            padding-left: 16px;
+            width: 400px;
+            text-align: left;
+          }
+
+          @include tablet_768 {
+            width: 280px;
+          }
+          @include tablet_900 {
+            padding-left: 0;
+            width: 250px;
+          }
+          @include laptop {
+            width: 230px;
+          }
+        }
+        .content-slider {
+          overflow: hidden; /* Hides the horizontal scrollbar */
+          white-space: nowrap; /* Prevents items from wrapping */
+          width: 100%;
+
+          position: relative;
+          @include smallMobile {
+            overflow: visible;
+          }
+          @include tablet_768 {
+            overflow: hidden;
+          }
+          .content-slider-track {
+            display: flex;
+            gap: 70px;
+            animation: scroll 15s linear infinite;
+            transform: translateY(20%);
+          }
+
+          .content-slider-item {
+            // display: flex;
+            display: flex; /* Align children side by side */
+            align-items: center; /* Vertically center images and text */
+            gap: 8px; /* Add spacing between elements */
+
+            text-align: center;
+
+            span {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              font-size: 20px;
+              @include smallMobile {
+                font-size: 16px;
+              }
+              @include tablet_768 {
+                font-size: 20px;
+              }
+            }
+            @keyframes scroll {
+              0% {
+                transform: translateX(0) translateY(20%);
+              }
+              100% {
+                transform: translateX(-50%) translateY(20%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  & .fourth-section {
+    .info-section {
+      margin: 100px 0 0;
       .why-choose-div {
         display: flex;
         // top: 200px;
@@ -919,14 +885,7 @@ main {
         display: flex;
         justify-content: center;
         width: 100%;
-        position: relative;
-        top: 96px;
-        @include smallMobile {
-          top: 50px;
-        }
-        @include tablet_768 {
-          top: 96px;
-        }
+        margin: 70px 0 0;
         .effortless-check-in {
           background-color: rgba(27, 29, 62, 1);
           border-radius: 10px;

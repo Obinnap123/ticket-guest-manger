@@ -904,45 +904,173 @@ main .second-section .second-section-div .second-section-cards .second-cards p {
 main .second-section .second-section-div .second-section-cards .second-cards .second-cards-div-one-img {
   border-radius: 10px;
 }
-main .third-section .info-section {
-  position: relative;
+main .third-section {
+  display: flex;
+  justify-content: center !important;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
 }
 @media only screen and (min-width: 320px) {
-  main .third-section .info-section {
-    top: 70px;
-  }
-}
-@media only screen and (min-width: 540px) {
-  main .third-section .info-section {
-    top: 180px;
+  main .third-section {
+    justify-content: flex-start !important;
+    padding: 16px 0 30px !important;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .third-section .info-section {
-    top: 180px;
+  main .third-section {
+    padding: 16px 0px !important;
+  }
+}
+@media only screen and (min-width: 900px) {
+  main .third-section {
+    justify-content: center !important;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .third-section .info-section {
-    top: 150px;
+  main .third-section {
+    padding: 50px !important;
+  }
+}
+@media only screen and (min-width: 320px) {
+  main .third-section .third-section-div {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  main .third-section .third-section-div {
+    max-width: 850px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .third-section .third-section-div {
+    max-width: 970px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .third-section .info-section {
-    top: 150px;
+  main .third-section .third-section-div {
+    max-width: 1150px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .third-section .info-section {
-    top: 300px;
+  main .third-section .third-section-div {
+    max-width: 1350px;
   }
 }
-main .third-section .info-section .why-choose-div {
+main .third-section .third-section-div .spotlight {
+  display: flex !important;
+  gap: 24px;
+}
+@media only screen and (min-width: 320px) {
+  main .third-section .third-section-div .spotlight {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .third-section .third-section-div .spotlight {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+main .third-section .third-section-div .spotlight h3 {
+  padding-top: 5px;
+  margin-block-end: 0 !important;
+  margin-block-start: 0 !important;
+  margin-bottom: 0 !important;
+}
+@media only screen and (min-width: 320px) {
+  main .third-section .third-section-div .spotlight h3 {
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .third-section .third-section-div .spotlight h3 {
+    padding-left: 16px;
+    width: 400px;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .third-section .third-section-div .spotlight h3 {
+    width: 280px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  main .third-section .third-section-div .spotlight h3 {
+    padding-left: 0;
+    width: 250px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .third-section .third-section-div .spotlight h3 {
+    width: 230px;
+  }
+}
+main .third-section .third-section-div .spotlight .content-slider {
+  overflow: hidden; /* Hides the horizontal scrollbar */
+  white-space: nowrap; /* Prevents items from wrapping */
+  width: 100%;
+  position: relative;
+}
+@media only screen and (min-width: 320px) {
+  main .third-section .third-section-div .spotlight .content-slider {
+    overflow: visible;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .third-section .third-section-div .spotlight .content-slider {
+    overflow: hidden;
+  }
+}
+main .third-section .third-section-div .spotlight .content-slider .content-slider-track {
+  display: flex;
+  gap: 70px;
+  animation: scroll 15s linear infinite;
+  transform: translateY(20%);
+}
+main .third-section .third-section-div .spotlight .content-slider .content-slider-item {
+  display: flex; /* Align children side by side */
+  align-items: center; /* Vertically center images and text */
+  gap: 8px; /* Add spacing between elements */
+  text-align: center;
+}
+main .third-section .third-section-div .spotlight .content-slider .content-slider-item span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}
+@media only screen and (min-width: 320px) {
+  main .third-section .third-section-div .spotlight .content-slider .content-slider-item span {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .third-section .third-section-div .spotlight .content-slider .content-slider-item span {
+    font-size: 20px;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0) translateY(20%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(20%);
+  }
+}
+main .fourth-section .info-section {
+  margin: 100px 0 0;
+}
+main .fourth-section .info-section .why-choose-div {
   display: flex;
   gap: 64px;
 }
 @media only screen and (min-width: 320px) {
-  main .third-section .info-section .why-choose-div {
+  main .fourth-section .info-section .why-choose-div {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -950,245 +1078,234 @@ main .third-section .info-section .why-choose-div {
   }
 }
 @media only screen and (min-width: 768px) {
-  main .third-section .info-section .why-choose-div {
+  main .fourth-section .info-section .why-choose-div {
     text-align: left;
     gap: 64px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .third-section .info-section .why-choose-div {
+  main .fourth-section .info-section .why-choose-div {
     flex-direction: row;
     max-width: 970px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .third-section .info-section .why-choose-div {
+  main .fourth-section .info-section .why-choose-div {
     max-width: 1150px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .third-section .info-section .why-choose-div {
+  main .fourth-section .info-section .why-choose-div {
     max-width: 1350px;
   }
 }
 @media only screen and (min-width: 320px) {
-  main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
+  main .fourth-section .info-section .why-choose-div .why-choose-div-first-img img {
     width: 300px;
   }
 }
 @media only screen and (min-width: 540px) {
-  main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
+  main .fourth-section .info-section .why-choose-div .why-choose-div-first-img img {
     width: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
+  main .fourth-section .info-section .why-choose-div .why-choose-div-first-img img {
     width: 600px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
+  main .fourth-section .info-section .why-choose-div .why-choose-div-first-img img {
     width: 453px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
+  main .fourth-section .info-section .why-choose-div .why-choose-div-first-img img {
     width: 543px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .third-section .info-section .why-choose-div .why-choose-div-first-img img {
+  main .fourth-section .info-section .why-choose-div .why-choose-div-first-img img {
     width: 643px;
   }
 }
-main .third-section .info-section .why-choose-div ul {
+main .fourth-section .info-section .why-choose-div ul {
   margin-bottom: 0 !important;
   padding-bottom: 30px;
 }
 @media only screen and (min-width: 320px) {
-  main .third-section .info-section .why-choose-div ul {
+  main .fourth-section .info-section .why-choose-div ul {
     width: 300px;
   }
 }
 @media only screen and (min-width: 540px) {
-  main .third-section .info-section .why-choose-div ul {
+  main .fourth-section .info-section .why-choose-div ul {
     width: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .third-section .info-section .why-choose-div ul {
+  main .fourth-section .info-section .why-choose-div ul {
     width: 600px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .third-section .info-section .why-choose-div ul {
+  main .fourth-section .info-section .why-choose-div ul {
     width: auto;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .third-section .info-section .why-choose-div ul {
+  main .fourth-section .info-section .why-choose-div ul {
     padding-top: 30px;
     padding-bottom: 0;
   }
 }
-main .third-section .info-section .why-choose-div ul li {
+main .fourth-section .info-section .why-choose-div ul li {
   padding-top: 20px;
 }
 @media only screen and (min-width: 1024px) {
-  main .third-section .info-section .why-choose-div ul li {
+  main .fourth-section .info-section .why-choose-div ul li {
     padding-top: 10px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .third-section .info-section .why-choose-div ul li {
+  main .fourth-section .info-section .why-choose-div ul li {
     padding-top: 20px;
   }
 }
-main .third-section .info-section .why-choose-div ul li span {
+main .fourth-section .info-section .why-choose-div ul li span {
   display: flex; /* Flexbox for alignment */
   align-items: flex-start; /* Align image and text at the top */
   gap: 8px;
   line-height: 30px;
 }
 @media only screen and (min-width: 320px) {
-  main .third-section .info-section .why-choose-div ul li span {
+  main .fourth-section .info-section .why-choose-div ul li span {
     font-size: 16px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .third-section .info-section .why-choose-div ul li span {
+  main .fourth-section .info-section .why-choose-div ul li span {
     font-size: 16px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .third-section .info-section .why-choose-div ul li span {
+  main .fourth-section .info-section .why-choose-div ul li span {
     font-size: 18px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .third-section .info-section .why-choose-div ul li span {
+  main .fourth-section .info-section .why-choose-div ul li span {
     font-size: 22px;
     line-height: 40px;
   }
 }
-main .third-section .info-section .why-choose-div ul li span img {
+main .fourth-section .info-section .why-choose-div ul li span img {
   flex-shrink: 0;
 }
-main .third-section .info-section .why-choose-div ul a {
+main .fourth-section .info-section .why-choose-div ul a {
   position: relative;
   top: 20px;
 }
-main .third-section .info-section .why-choose-div ul a button {
+main .fourth-section .info-section .why-choose-div ul a button {
   outline: none;
   padding: 8px 20px;
   background-color: rgb(64, 70, 148);
   color: rgb(255, 255, 255);
 }
-main .third-section .info-section .effortless-check-in-div {
+main .fourth-section .info-section .effortless-check-in-div {
   display: flex;
   justify-content: center;
   width: 100%;
-  position: relative;
-  top: 96px;
+  margin: 70px 0 0;
 }
-@media only screen and (min-width: 320px) {
-  main .third-section .info-section .effortless-check-in-div {
-    top: 50px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .third-section .info-section .effortless-check-in-div {
-    top: 96px;
-  }
-}
-main .third-section .info-section .effortless-check-in-div .effortless-check-in {
+main .fourth-section .info-section .effortless-check-in-div .effortless-check-in {
   background-color: rgb(27, 29, 62);
   border-radius: 10px;
   display: flex;
   justify-content: center;
 }
 @media only screen and (min-width: 768px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in {
     width: 100%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in {
     width: auto;
   }
 }
-main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
+main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
   display: flex;
   gap: 40px;
   padding: 40px;
 }
 @media only screen and (min-width: 320px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
     flex-direction: column;
     gap: 25px;
     width: 300px;
   }
 }
 @media only screen and (min-width: 540px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
     width: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
     width: auto;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content {
     flex-direction: row;
     gap: 40px;
   }
 }
 @media only screen and (min-width: 320px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div {
     order: 2;
     text-align: center;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div {
     text-align: left;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div {
     order: 1;
   }
 }
-main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div h3 {
+main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div h3 {
   color: rgb(255, 255, 255);
 }
-main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div p {
+main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div p {
   font-size: 18px;
   line-height: 30px;
   width: 415px;
   color: rgb(196, 198, 222);
 }
 @media only screen and (min-width: 320px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div p {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div p {
     font-size: 16px;
     width: 100%;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div p {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div p {
     width: 415px;
   }
 }
-main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div ul li {
+main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div ul li {
   padding-bottom: 20px;
   color: rgb(196, 198, 222);
 }
-main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div ul li:first-child {
+main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div ul li:first-child {
   padding-top: 20px;
 }
-main .third-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div a button {
+main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div a button {
   padding: 10px 30px;
   border-radius: 4px;
   background-color: #ecedf4;
@@ -1196,7 +1313,7 @@ main .third-section .info-section .effortless-check-in-div .effortless-check-in 
   outline: none;
 }
 @media only screen and (min-width: 1024px) {
-  main .third-section .info-section .effortless-check-in-div .effortless-check-in .code-scannig-img {
+  main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .code-scannig-img {
     order: 1;
   }
 }
