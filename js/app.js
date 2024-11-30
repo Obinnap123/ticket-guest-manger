@@ -15,24 +15,24 @@
 //   attributeFilter: ["style"],
 // });
 
-document.querySelectorAll("button").forEach((button) => {
-  button.disabled = false; // Removes the disabled state
-  button.style.pointerEvents = "auto"; // Ensures pointer interactions
-  button.style.opacity = ""; // Resets any visual "disabled" styles
-});
+// document.querySelectorAll("button").forEach((button) => {
+//   button.disabled = false; // Removes the disabled state
+//   button.style.pointerEvents = "auto"; // Ensures pointer interactions
+//   button.style.opacity = ""; // Resets any visual "disabled" styles
+// });
 
-setInterval(() => {
-  document.querySelectorAll("button").forEach((button) => {
-    button.disabled = false; // Undisable
-    button.style.pointerEvents = "auto";
-  });
-}, 500);
+// setInterval(() => {
+//   document.querySelectorAll("button").forEach((button) => {
+//     button.disabled = false; // Undisable
+//     button.style.pointerEvents = "auto";
+//   });
+// }, 500);
 
-document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("click", () => {
-    console.log("Button clicked:", button.textContent);
-  });
-});
+// document.querySelectorAll("button").forEach((button) => {
+//   button.addEventListener("click", () => {
+//     console.log("Button clicked:", button.textContent);
+//   });
+// });
 
 const hamburger = document.querySelector(".hamburger");
 const menuIcon = document.querySelector(".img-hamburger");

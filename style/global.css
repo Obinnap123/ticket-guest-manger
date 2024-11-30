@@ -198,7 +198,6 @@ body {
   font-family: "Neue Regrade", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: rgb(233, 235, 248);
   width: 100% !important;
   overflow-x: hidden !important;
   min-height: 100vh !important;
@@ -211,38 +210,24 @@ h3 {
   font-weight: 600;
 }
 
+.hero-section {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
 header.header {
   display: block !important;
-  height: 550px !important;
-  position: relative !important;
+  height: auto !important;
 }
 @media only screen and (min-width: 320px) {
   header.header {
     padding: 0 !important;
   }
 }
-header.header .header-container {
+header.header .headers {
   width: 100% !important;
 }
-header.header .header-container .headers {
-  width: 100% !important;
-  height: 550px !important;
-  background: linear-gradient(to right, rgba(227, 149, 76, 0.8), rgba(58, 64, 135, 0.8)), url("https://s3-alpha-sig.figma.com/img/fbd9/6413/4145d90a9562b3eff6ef5c97a10cad3e?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J-e~Px~~oBVy5e41cykZ8aBoP3uqFg1l6MTIdeZ-0WXDLb-uO2O3t0xKKIiz483OSSlw0jExFLXy0G4gikxFRxYdMPDstsQZAbM6jxM~C86QZIfJEOJ6GuHJICeihFqhZr9iRtfSjp-krOtzKeKZ-2ULFXIpHi28SN8wYzoaD4jCrZYxCksy1lhjxW7~VoS-g3R69t1r9yGUTlQuJx0aCOZvI2uK2JfM4PuI8f6seWRCw1zLT1Ec7ty2VOHN9eI0istnUahrDpYojiDibJ0SQkvI3swyOeeJ4Lr9HIOMDx0FLwdTWjDZWYXC5nAbn70ouq9mpx~AAiAbAqc7k4IKEg__") !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-color: rgb(255, 255, 255) !important;
-}
-@media only screen and (min-width: 320px) {
-  header.header .header-container .headers {
-    height: 500px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  header.header .header-container .headers {
-    height: 700px !important;
-  }
-}
-header.header .header-container .headers .nav-bar {
+header.header .headers .nav-bar {
   width: 100%;
   max-width: 1150px;
   margin: 0px auto;
@@ -258,38 +243,38 @@ header.header .header-container .headers .nav-bar {
   z-index: 10;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .nav-bar {
+  header.header .headers .nav-bar {
     border-radius: 0;
     top: 0;
   }
 }
 @media only screen and (min-width: 900px) {
-  header.header .header-container .headers .nav-bar {
+  header.header .headers .nav-bar {
     border-radius: 12px;
     top: 20px;
     max-width: 850px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  header.header .header-container .headers .nav-bar {
+  header.header .headers .nav-bar {
     max-width: 970px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  header.header .header-container .headers .nav-bar {
+  header.header .headers .nav-bar {
     max-width: 1150px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  header.header .header-container .headers .nav-bar {
+  header.header .headers .nav-bar {
     max-width: 1350px;
   }
 }
-header.header .header-container .headers .nav-bar .nav-bar-logo {
+header.header .headers .nav-bar .nav-bar-logo {
   width: 100%;
   max-width: 100px;
 }
-header.header .header-container .headers .nav-bar .nav-bar-ul {
+header.header .headers .nav-bar .nav-bar-ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -297,16 +282,16 @@ header.header .header-container .headers .nav-bar .nav-bar-ul {
   padding: 0;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .nav-bar .nav-bar-ul {
+  header.header .headers .nav-bar .nav-bar-ul {
     display: none;
   }
 }
 @media only screen and (min-width: 900px) {
-  header.header .header-container .headers .nav-bar .nav-bar-ul {
+  header.header .headers .nav-bar .nav-bar-ul {
     display: flex;
   }
 }
-header.header .header-container .headers .nav-bar .nav-bar-ul ul {
+header.header .headers .nav-bar .nav-bar-ul ul {
   display: flex;
   justify-content: center;
   position: relative;
@@ -314,30 +299,30 @@ header.header .header-container .headers .nav-bar .nav-bar-ul ul {
   gap: 20px;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .nav-bar .nav-bar-ul ul {
+  header.header .headers .nav-bar .nav-bar-ul ul {
     flex-direction: column;
   }
 }
 @media only screen and (min-width: 900px) {
-  header.header .header-container .headers .nav-bar .nav-bar-ul ul {
+  header.header .headers .nav-bar .nav-bar-ul ul {
     flex-direction: row;
   }
 }
-header.header .header-container .headers .nav-bar .nav-bar-ul li {
+header.header .headers .nav-bar .nav-bar-ul li {
   padding: 8px;
   border-radius: 4px;
   color: rgb(87, 90, 102);
   text-align: center;
   cursor: pointer;
 }
-header.header .header-container .headers .nav-bar .nav-bar-ul li:hover {
+header.header .headers .nav-bar .nav-bar-ul li:hover {
   background-color: rgb(238, 239, 240);
 }
-header.header .header-container .headers .nav-bar .menu {
+header.header .headers .nav-bar .menu {
   position: relative;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .nav-bar .menu.active {
+  header.header .headers .nav-bar .menu.active {
     position: absolute;
     top: 75px;
     display: flex;
@@ -355,62 +340,98 @@ header.header .header-container .headers .nav-bar .menu {
     z-index: 100;
   }
 }
-header.header .header-container .headers .nav-bar .hamburger {
+header.header .headers .nav-bar .hamburger {
   border: 0;
   background-color: white;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .nav-bar .hamburger {
+  header.header .headers .nav-bar .hamburger {
     display: block !important;
     cursor: pointer;
   }
 }
 @media only screen and (min-width: 900px) {
-  header.header .header-container .headers .nav-bar .hamburger {
+  header.header .headers .nav-bar .hamburger {
     display: none !important;
   }
 }
-header.header .header-container .headers .nav-bar .hamburger .img-hamburger {
+header.header .headers .nav-bar .hamburger .img-hamburger {
   width: 30px;
   display: block !important;
 }
-header.header .header-container .headers .nav-bar .hamburger .x-icon {
+header.header .headers .nav-bar .hamburger .x-icon {
   padding-bottom: 4px;
   display: none !important;
 }
-header.header .header-container .headers .nav-bar .hamburger.active .img-hamburger {
+header.header .headers .nav-bar .hamburger.active .img-hamburger {
   display: none !important;
 }
-header.header .header-container .headers .nav-bar .hamburger.active .x-icon {
+header.header .headers .nav-bar .hamburger.active .x-icon {
   display: block !important;
 }
-header.header .header-container .headers .hero-section {
+
+main {
+  display: flex;
+}
+main.mt-5 {
+  margin-top: 0 !important;
+}
+main .first-section .hero-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: auto !important;
-  position: relative;
-  top: 150px;
-  background-image: none !important;
+  height: 700px !important;
+  padding: 0px 0 100px;
   max-height: none !important;
-  background-repeat: no-repeat !important;
+  background: url("../images/hero-section.png") !important;
   background-size: cover !important;
+  background-position: center !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .hero-section {
-    top: 120px;
+  main .first-section .hero-section {
+    height: 500px !important;
+    padding: 50px 0 0;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .first-section .hero-section {
+    height: 500px !important;
+    padding: 60px 0 40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .first-section .hero-section {
+    height: 650px !important;
+    padding: 0px 0 0px;
+  }
+}
+@media only screen and (min-width: 867px) {
+  main .first-section .hero-section {
+    height: 600px !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .first-section .hero-section {
+    height: 650px !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .first-section .hero-section {
+    height: 600px !important;
+    padding: 0 0 30px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  header.header .header-container .headers .hero-section {
-    top: 150px;
+  main .first-section .hero-section {
+    height: 750px !important;
+    padding: 0 0 50px;
   }
 }
-header.header .header-container .headers .hero-section .hero-section-text .hero-title h1 {
+main .first-section .hero-section .hero-section-text .hero-title h1 {
   width: 60%;
   margin: 0 auto;
   font-size: 45px;
@@ -419,37 +440,37 @@ header.header .header-container .headers .hero-section .hero-section-text .hero-
   color: rgb(255, 255, 255);
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .hero-section .hero-section-text .hero-title h1 {
+  main .first-section .hero-section .hero-section-text .hero-title h1 {
     font-size: 25px;
     width: 90%;
   }
 }
 @media only screen and (min-width: 768px) {
-  header.header .header-container .headers .hero-section .hero-section-text .hero-title h1 {
+  main .first-section .hero-section .hero-section-text .hero-title h1 {
     font-size: 50px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  header.header .header-container .headers .hero-section .hero-section-text .hero-title h1 {
+  main .first-section .hero-section .hero-section-text .hero-title h1 {
     font-size: 45px;
     line-height: 60px;
     width: 60%;
   }
 }
 @media only screen and (min-width: 1440px) {
-  header.header .header-container .headers .hero-section .hero-section-text .hero-title h1 {
+  main .first-section .hero-section .hero-section-text .hero-title h1 {
     font-size: 62px;
     width: 70%;
     line-height: 70.4px;
   }
 }
-header.header .header-container .headers .hero-section .hero-section-text .hero-subtitle p {
+main .first-section .hero-section .hero-section-text .hero-subtitle p {
   font-size: 22px;
   padding-top: 10px;
   color: rgb(255, 255, 255);
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .hero-section .hero-section-text .hero-subtitle p {
+  main .first-section .hero-section .hero-section-text .hero-subtitle p {
     width: 80%;
     font-size: 16px;
     margin: 0 auto;
@@ -457,227 +478,177 @@ header.header .header-container .headers .hero-section .hero-section-text .hero-
   }
 }
 @media only screen and (min-width: 540px) {
-  header.header .header-container .headers .hero-section .hero-section-text .hero-subtitle p {
+  main .first-section .hero-section .hero-section-text .hero-subtitle p {
     width: 60%;
   }
 }
 @media only screen and (min-width: 768px) {
-  header.header .header-container .headers .hero-section .hero-section-text .hero-subtitle p {
+  main .first-section .hero-section .hero-section-text .hero-subtitle p {
     width: 80%;
     font-size: 22px;
     line-height: 27px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  header.header .header-container .headers .hero-section .hero-section-text .hero-subtitle p {
+  main .first-section .hero-section .hero-section-text .hero-subtitle p {
     font-size: 30px;
     line-height: 33.6px;
   }
 }
-header.header .header-container .headers .hero-section .feature-highlight {
+main .first-section .hero-section .feature-highlight {
   display: flex;
   gap: 32px;
   padding-top: 20px;
   line-height: 27px;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .hero-section .feature-highlight {
+  main .first-section .hero-section .feature-highlight {
     flex-direction: column;
     gap: 10px;
   }
 }
 @media only screen and (min-width: 768px) {
-  header.header .header-container .headers .hero-section .feature-highlight {
+  main .first-section .hero-section .feature-highlight {
     flex-direction: row;
     gap: 32px;
   }
 }
-header.header .header-container .headers .hero-section .feature-highlight .paid-event {
+main .first-section .hero-section .feature-highlight .paid-event {
   margin-right: 30px;
 }
-header.header .header-container .headers .hero-section .feature-highlight img {
+main .first-section .hero-section .feature-highlight img {
   margin: 0 5px;
   vertical-align: baseline !important;
 }
-header.header .header-container .headers .hero-section .feature-highlight span {
+main .first-section .hero-section .feature-highlight span {
   position: relative;
   bottom: 6px;
   font-size: 18px;
   color: rgb(255, 255, 255);
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .hero-section .feature-highlight span {
+  main .first-section .hero-section .feature-highlight span {
     font-size: 16px;
   }
 }
 @media only screen and (min-width: 768px) {
-  header.header .header-container .headers .hero-section .feature-highlight span {
+  main .first-section .hero-section .feature-highlight span {
     font-size: 18px;
   }
 }
-header.header .header-container .headers .hero-section .hero-action {
+main .first-section .hero-section .hero-action {
   padding-top: 20px;
   display: flex;
   padding-bottom: 50px;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .hero-section .hero-action {
+  main .first-section .hero-section .hero-action {
     gap: 12px;
     padding-bottom: 50px;
   }
 }
 @media only screen and (min-width: 425px) {
-  header.header .header-container .headers .hero-section .hero-action {
+  main .first-section .hero-section .hero-action {
     padding-bottom: 30px;
   }
 }
 @media only screen and (min-width: 768px) {
-  header.header .header-container .headers .hero-section .hero-action {
+  main .first-section .hero-section .hero-action {
     gap: 32px;
   }
 }
-header.header .header-container .headers .hero-section .hero-action button {
+main .first-section .hero-section .hero-action button {
   padding: 16px 28px;
   font-size: 17px;
   font-weight: 600;
   border-radius: 4px;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .hero-section .hero-action button {
+  main .first-section .hero-section .hero-action button {
     padding: 10px 16px;
     font-size: 11px;
   }
 }
 @media only screen and (min-width: 768px) {
-  header.header .header-container .headers .hero-section .hero-action button {
+  main .first-section .hero-section .hero-action button {
     padding: 16px 28px;
     font-size: 17px;
     line-height: 27px;
   }
 }
-header.header .header-container .headers .device {
-  position: static;
-}
-header.header .header-container .headers .device::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-header.header .header-container .headers .device img {
+main .first-section .device {
   position: relative !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-55%, 0) !important;
-  bottom: 20px;
-  padding-top: 150px;
+  bottom: 250px;
 }
 @media only screen and (min-width: 320px) {
-  header.header .header-container .headers .device img {
+  main .first-section .device {
+    bottom: 80px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .first-section .device {
+    bottom: 105px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .first-section .device {
+    bottom: 130px;
+  }
+}
+@media only screen and (min-width: 867px) {
+  main .first-section .device {
+    bottom: 150px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .first-section .device {
+    bottom: 180px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .first-section .device {
+    bottom: 230px;
+  }
+}
+main .first-section .device img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translate(-52.5%, 0) !important;
+}
+@media only screen and (min-width: 320px) {
+  main .first-section .device img {
     width: 300px;
-    padding: 120px 16px 0;
   }
 }
 @media only screen and (min-width: 425px) {
-  header.header .header-container .headers .device img {
+  main .first-section .device img {
     bottom: 0;
   }
 }
 @media only screen and (min-width: 540px) {
-  header.header .header-container .headers .device img {
-    bottom: 20px;
+  main .first-section .device img {
     width: 450px;
-    padding: 150px 0 0;
   }
 }
 @media only screen and (min-width: 768px) {
-  header.header .header-container .headers .device img {
+  main .first-section .device img {
     width: 600px;
   }
 }
 @media only screen and (min-width: 900px) {
-  header.header .header-container .headers .device img {
+  main .first-section .device img {
     width: 700px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  header.header .header-container .headers .device img {
+  main .first-section .device img {
     width: 850px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  header.header .header-container .headers .device img {
+  main .first-section .device img {
     width: 1000px;
-  }
-}
-
-main {
-  display: flex;
-  position: relative !important;
-  min-height: 100vh !important;
-  top: 400px;
-}
-@media only screen and (min-width: 320px) {
-  main {
-    top: 40px !important;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main {
-    top: 300px !important;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  main {
-    top: 400px !important;
-  }
-}
-main.mt-5 {
-  margin-top: 0 !important;
-}
-main .first-section {
-  position: relative;
-  top: 70px;
-}
-@media only screen and (min-width: 320px) {
-  main .first-section {
-    top: 80px;
-    padding: 0 16px !important;
-  }
-}
-@media only screen and (min-width: 540px) {
-  main .first-section {
-    top: 150px;
-    padding: 0;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .first-section {
-    top: 120px;
-  }
-}
-@media only screen and (min-width: 867px) {
-  main .first-section {
-    top: 40px;
-  }
-}
-@media only screen and (min-width: 900px) {
-  main .first-section {
-    top: 100px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  main .first-section {
-    top: 60px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  main .first-section {
-    top: 100px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  main .first-section {
-    top: 230px !important;
   }
 }
 main .first-section .first-section-div .first-section-title {

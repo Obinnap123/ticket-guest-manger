@@ -42,7 +42,7 @@
   color: rgba(35, 39, 81, 1) !important;
   cursor: pointer;
   &:hover {
-    background-color:rgba(196, 198, 222, 1) !important;
+    background-color: rgba(196, 198, 222, 1) !important;
   }
 }
 // .btn-secondary {
@@ -74,6 +74,11 @@
     background-color: rgba(236, 237, 244, 1);
   }
 }
+// .sign-up {
+//   &:hover {
+//     background-color: black !important;
+//   }
+// }
 .ml-1 {
   margin-left: 4px;
 }
@@ -90,7 +95,7 @@
 .ml-5 {
   margin-left: 20px;
 }
-.mt-0{
+.mt-0 {
   margin-top: 0 !important;
 }
 .mt-1 {
