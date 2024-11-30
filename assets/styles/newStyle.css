@@ -104,22 +104,22 @@ nav ul li a:hover {
   display: block !important;
 }
 .hero-section {
-    background-image: linear-gradient(
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 0)
-        ),
-        url(/images/tam_img.jpg) !important;
-    width: 100% !important;
-    max-height: 1100px !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    margin-top: 50px !important;
-    margin-bottom: 30px !important;
-} 
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url(/images/tam_img.jpg) !important;
+  width: 100% !important;
+  max-height: 1100px !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  margin-top: 50px !important;
+  margin-bottom: 30px !important;
+}
 .hero {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
 }
 .hero-text {
   width: 50% !important;
@@ -153,21 +153,21 @@ nav ul li a:hover {
   padding: 8px 10px !important;
   font-size: revert !important;
 }
-.btn1:hover {
+/* .btn1:hover {
   background-color: green !important;
   transition: 0.5s ease-in-out !important;
-}
+} */
 .btn2 {
-    border: 2px solid green !important;
-    background-color: green !important;
-    border-radius: 10px !important;
-    padding: 8px 10px !important;
-    font-size: revert !important;
+  border: 2px solid green !important;
+  background-color: green !important;
+  border-radius: 10px !important;
+  padding: 8px 10px !important;
+  font-size: revert !important;
 }
-.btn2:hover {
+/* .btn2:hover {
     background-color: transparent !important;
     transition: 0.5s ease-in-out !important;
-}
+} */
 .partners {
   display: flex !important;
   justify-content: space-between !important;
