@@ -372,6 +372,7 @@ header.header .headers .nav-bar .hamburger.active .x-icon {
 
 main {
   display: flex;
+  background-color: rgb(233, 235, 248);
 }
 main.mt-5 {
   margin-top: 0 !important;
@@ -651,10 +652,40 @@ main .first-section .device img {
     width: 1000px;
   }
 }
-main .first-section .first-section-div .first-section-title {
+@media only screen and (min-width: 320px) {
+  main .second-section .second-section-div {
+    margin: 140px 0 0 !important;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .second-section .second-section-div {
+    margin: 200px 0 0 !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .second-section .second-section-div {
+    margin: 290px 0 0 !important;
+  }
+}
+@media only screen and (min-width: 900px) {
+  main .second-section .second-section-div {
+    margin: 330px 0 0 !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .second-section .second-section-div {
+    margin: 400px 0 0 !important;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .second-section .second-section-div {
+    margin: 450px 0 0 !important;
+  }
+}
+main .second-section .second-section-div .second-section-title {
   text-align: center;
 }
-main .first-section .first-section-div .first-section-title h2 {
+main .second-section .second-section-div .second-section-title h2 {
   font-size: 40px !important;
   width: 400px;
   margin: 0px auto 40px;
@@ -662,392 +693,216 @@ main .first-section .first-section-div .first-section-title h2 {
   margin-top: 0 !important;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-title h2 {
+  main .second-section .second-section-div .second-section-title h2 {
     font-size: 20px !important;
     width: 200px;
     margin: 0px auto 30px;
   }
 }
 @media only screen and (min-width: 540px) {
-  main .first-section .first-section-div .first-section-title h2 {
+  main .second-section .second-section-div .second-section-title h2 {
     margin: 80px auto 40px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .first-section .first-section-div .first-section-title h2 {
+  main .second-section .second-section-div .second-section-title h2 {
     font-size: 40px !important;
     width: 400px;
     margin: 0px auto 40px;
   }
 }
-main .first-section .first-section-div .first-section-cards {
+main .second-section .second-section-div .second-section-cards {
   margin-bottom: 100px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards img {
+  main .second-section .second-section-div .second-section-cards img {
     width: 300px;
   }
 }
 @media only screen and (min-width: 540px) {
-  main .first-section .first-section-div .first-section-cards img {
+  main .second-section .second-section-div .second-section-cards img {
     width: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .first-section .first-section-div .first-section-cards img {
+  main .second-section .second-section-div .second-section-cards img {
     width: 600px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards img {
+  main .second-section .second-section-div .second-section-cards img {
     width: 453px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .first-section .first-section-div .first-section-cards img {
+  main .second-section .second-section-div .second-section-cards img {
     width: 543px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .first-section .first-section-div .first-section-cards img {
+  main .second-section .second-section-div .second-section-cards img {
     width: 643px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards {
+  main .second-section .second-section-div .second-section-cards {
     max-width: 970px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .first-section .first-section-div .first-section-cards {
+  main .second-section .second-section-div .second-section-cards {
     max-width: 1150px !important;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .first-section .first-section-div .first-section-cards {
+  main .second-section .second-section-div .second-section-cards {
     max-width: 1350px !important;
   }
 }
-main .first-section .first-section-div .first-section-cards .first-cards {
+main .second-section .second-section-div .second-section-cards .first-cards {
   display: flex !important;
   justify-content: center !important;
   gap: 64px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .first-cards {
+  main .second-section .second-section-div .second-section-cards .first-cards {
     flex-direction: column;
     gap: 32px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .first-cards {
+  main .second-section .second-section-div .second-section-cards .first-cards {
     flex-direction: row;
     gap: 64px;
   }
 }
-main .first-section .first-section-div .first-section-cards .first-cards img {
+main .second-section .second-section-div .second-section-cards .first-cards img {
   border-radius: 10px;
 }
-main .first-section .first-section-div .first-section-cards .first-cards h3,
-main .first-section .first-section-div .first-section-cards .first-cards p {
+main .second-section .second-section-div .second-section-cards .first-cards h3,
+main .second-section .second-section-div .second-section-cards .first-cards p {
   width: 500px;
   padding-top: 20px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  main .second-section .second-section-div .second-section-cards .first-cards h3,
+  main .second-section .second-section-div .second-section-cards .first-cards p {
     width: 300px;
     text-align: center;
   }
 }
 @media only screen and (min-width: 540px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  main .second-section .second-section-div .second-section-cards .first-cards h3,
+  main .second-section .second-section-div .second-section-cards .first-cards p {
     width: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  main .second-section .second-section-div .second-section-cards .first-cards h3,
+  main .second-section .second-section-div .second-section-cards .first-cards p {
     width: 500px;
     text-align: left;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  main .second-section .second-section-div .second-section-cards .first-cards h3,
+  main .second-section .second-section-div .second-section-cards .first-cards p {
     width: 400px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .first-section .first-section-div .first-section-cards .first-cards h3,
-  main .first-section .first-section-div .first-section-cards .first-cards p {
+  main .second-section .second-section-div .second-section-cards .first-cards h3,
+  main .second-section .second-section-div .second-section-cards .first-cards p {
     width: 500px;
   }
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .first-cards .paragraph {
+  main .second-section .second-section-div .second-section-cards .first-cards .paragraph {
     margin-bottom: 40px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .first-cards .paragraph {
+  main .second-section .second-section-div .second-section-cards .first-cards .paragraph {
     margin-bottom: 0;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .first-cards .first-cards-div-two-img {
+  main .second-section .second-section-div .second-section-cards .first-cards .first-cards-div-two-img {
     height: 425px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .first-section .first-section-div .first-section-cards .first-cards .first-cards-div-two-img {
+  main .second-section .second-section-div .second-section-cards .first-cards .first-cards-div-two-img {
     height: 512px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .first-section .first-section-div .first-section-cards .first-cards .first-cards-div-two-img {
+  main .second-section .second-section-div .second-section-cards .first-cards .first-cards-div-two-img {
     height: 605px;
   }
 }
-main .first-section .first-section-div .first-section-cards .second-cards {
+main .second-section .second-section-div .second-section-cards .second-cards {
   display: flex !important;
   justify-content: center !important;
   gap: 64px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .second-cards {
+  main .second-section .second-section-div .second-section-cards .second-cards {
     flex-direction: column;
     gap: 32px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .second-cards {
+  main .second-section .second-section-div .second-section-cards .second-cards {
     flex-direction: row;
     gap: 64px;
   }
 }
-main .first-section .first-section-div .first-section-cards .second-cards h3,
-main .first-section .first-section-div .first-section-cards .second-cards p {
+main .second-section .second-section-div .second-section-cards .second-cards h3,
+main .second-section .second-section-div .second-section-cards .second-cards p {
   width: 500px;
   padding-top: 20px;
 }
 @media only screen and (min-width: 320px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  main .second-section .second-section-div .second-section-cards .second-cards h3,
+  main .second-section .second-section-div .second-section-cards .second-cards p {
     width: 300px;
     text-align: center;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 540px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  main .second-section .second-section-div .second-section-cards .second-cards h3,
+  main .second-section .second-section-div .second-section-cards .second-cards p {
     width: 500px;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 768px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  main .second-section .second-section-div .second-section-cards .second-cards h3,
+  main .second-section .second-section-div .second-section-cards .second-cards p {
     width: 500px;
     text-align: left;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 1024px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  main .second-section .second-section-div .second-section-cards .second-cards h3,
+  main .second-section .second-section-div .second-section-cards .second-cards p {
     width: 400px;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 1200px) {
-  main .first-section .first-section-div .first-section-cards .second-cards h3,
-  main .first-section .first-section-div .first-section-cards .second-cards p {
+  main .second-section .second-section-div .second-section-cards .second-cards h3,
+  main .second-section .second-section-div .second-section-cards .second-cards p {
     width: 500px;
   }
 }
-main .first-section .first-section-div .first-section-cards .second-cards h3 {
+main .second-section .second-section-div .second-section-cards .second-cards h3 {
   color: rgb(27, 29, 62);
 }
-main .first-section .first-section-div .first-section-cards .second-cards p {
+main .second-section .second-section-div .second-section-cards .second-cards p {
   color: rgb(87, 90, 102);
 }
-main .first-section .first-section-div .first-section-cards .second-cards .second-cards-div-one-img {
+main .second-section .second-section-div .second-section-cards .second-cards .second-cards-div-one-img {
   border-radius: 10px;
-}
-main .second-section {
-  display: flex;
-  justify-content: center !important;
-  padding: 50px;
-  background-color: rgb(255, 255, 255);
-  position: relative;
-  width: 100%;
-}
-@media only screen and (min-width: 320px) {
-  main .second-section {
-    justify-content: flex-start !important;
-    padding: 16px 0 30px !important;
-  }
-}
-@media only screen and (min-width: 540px) {
-  main .second-section {
-    top: 100px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .second-section {
-    top: 70px;
-    padding: 16px 0px !important;
-  }
-}
-@media only screen and (min-width: 900px) {
-  main .second-section {
-    justify-content: center !important;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  main .second-section {
-    top: 30px;
-    padding: 50px !important;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  main .second-section {
-    top: 60px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  main .second-section {
-    top: 200px;
-  }
-}
-@media only screen and (min-width: 320px) {
-  main .second-section .second-section-div {
-    max-width: 100%;
-  }
-}
-@media only screen and (min-width: 900px) {
-  main .second-section .second-section-div {
-    max-width: 850px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  main .second-section .second-section-div {
-    max-width: 970px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  main .second-section .second-section-div {
-    max-width: 1150px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  main .second-section .second-section-div {
-    max-width: 1350px;
-  }
-}
-main .second-section .second-section-div .spotlight {
-  display: flex !important;
-  gap: 24px;
-}
-@media only screen and (min-width: 320px) {
-  main .second-section .second-section-div .spotlight {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .second-section .second-section-div .spotlight {
-    flex-direction: row;
-    gap: 24px;
-  }
-}
-main .second-section .second-section-div .spotlight h3 {
-  padding-top: 5px;
-  margin-block-end: 0 !important;
-  margin-block-start: 0 !important;
-  margin-bottom: 0 !important;
-}
-@media only screen and (min-width: 320px) {
-  main .second-section .second-section-div .spotlight h3 {
-    font-size: 20px;
-    width: 300px;
-    text-align: center;
-    margin: 0 auto;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .second-section .second-section-div .spotlight h3 {
-    padding-left: 16px;
-    width: 400px;
-    text-align: left;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .second-section .second-section-div .spotlight h3 {
-    width: 280px;
-  }
-}
-@media only screen and (min-width: 900px) {
-  main .second-section .second-section-div .spotlight h3 {
-    padding-left: 0;
-    width: 250px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  main .second-section .second-section-div .spotlight h3 {
-    width: 230px;
-  }
-}
-main .second-section .second-section-div .spotlight .content-slider {
-  overflow: hidden; /* Hides the horizontal scrollbar */
-  white-space: nowrap; /* Prevents items from wrapping */
-  width: 100%;
-  position: relative;
-}
-@media only screen and (min-width: 320px) {
-  main .second-section .second-section-div .spotlight .content-slider {
-    overflow: visible;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .second-section .second-section-div .spotlight .content-slider {
-    overflow: hidden;
-  }
-}
-main .second-section .second-section-div .spotlight .content-slider .content-slider-track {
-  display: flex;
-  gap: 70px;
-  animation: scroll 15s linear infinite;
-  transform: translateY(20%);
-}
-main .second-section .second-section-div .spotlight .content-slider .content-slider-item {
-  display: flex; /* Align children side by side */
-  align-items: center; /* Vertically center images and text */
-  gap: 8px; /* Add spacing between elements */
-  text-align: center;
-}
-main .second-section .second-section-div .spotlight .content-slider .content-slider-item span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 20px;
-}
-@media only screen and (min-width: 320px) {
-  main .second-section .second-section-div .spotlight .content-slider .content-slider-item span {
-    font-size: 16px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .second-section .second-section-div .spotlight .content-slider .content-slider-item span {
-    font-size: 20px;
-  }
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0) translateY(20%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(20%);
-  }
 }
 main .third-section .info-section {
   position: relative;
@@ -1347,40 +1202,28 @@ main .third-section .info-section .effortless-check-in-div .effortless-check-in 
 }
 
 .footer {
-  margin: 0px !important;
   width: 100% !important;
   max-width: 100%;
-  position: relative !important;
-  height: auto;
+  margin: 0px 0 83% !important;
 }
 @media only screen and (min-width: 320px) {
   .footer {
-    min-height: 600px;
+    margin: 0px 0 200px !important;
   }
 }
 @media only screen and (min-width: 540px) {
   .footer {
-    min-height: 800px;
+    margin: 0px 0 605px !important;
   }
 }
 @media only screen and (min-width: 768px) {
   .footer {
-    min-height: 1200px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .footer {
-    min-height: 1200px;
+    margin: 0px 0 805px !important;
   }
 }
 @media only screen and (min-width: 1200px) {
   .footer {
-    min-height: 1400px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .footer {
-    min-height: 1500px;
+    margin: 0px 0 1005px !important;
   }
 }
 .footer .footers {
