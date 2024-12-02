@@ -1012,6 +1012,7 @@ main {
       width: 100% !important;
       position: relative !important; /* Ensure proper layout */
       /* Visual feedback for draggable content */
+      scroll-behavior: smooth;
 
       .carousel {
         max-width: 1350px;
@@ -1019,6 +1020,7 @@ main {
         display: flex !important;
         gap: 40px !important;
         transition: transform 0.3s ease-in-out !important;
+
         // Make sure the carousel doesn't shrink and forces horizontal scrolling
         @include smallMobile {
           max-width: 295px;
