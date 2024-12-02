@@ -765,6 +765,13 @@ main {
     }
   }
   & .fourth-section {
+    margin: 0 0 100px;
+    @include smallMobile {
+      margin: 0 0 40px;
+    }
+    @include tablet_768 {
+      margin: 0 0 100px;
+    }
     .info-section {
       margin: 100px 0 0;
       .why-choose-div {
@@ -979,8 +986,189 @@ main {
       }
     }
   }
-}
+  & .fifth-section {
+    background-color: #ffffff;
+    width: 100%;
 
+    h2 {
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 40px;
+      margin-top: 100px;
+      @include smallMobile {
+        font-size: 25px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+      }
+      @include smallTablet {
+        font-size: 30px;
+      }
+      @include tablet_768 {
+        font-size: 40px;
+      }
+    }
+    .carousel-container {
+      overflow: hidden !important;
+      width: 100% !important;
+      position: relative !important; /* Ensure proper layout */
+      /* Visual feedback for draggable content */
+
+      .carousel {
+        max-width: 1350px;
+        margin: 0 auto;
+        display: flex !important;
+        gap: 40px !important;
+        transition: transform 0.3s ease-in-out !important;
+        // Make sure the carousel doesn't shrink and forces horizontal scrolling
+        @include smallMobile {
+          max-width: 295px;
+        }
+        @include smallTablet {
+          max-width: 500px;
+        }
+        @include tablet_768 {
+          max-width: 600px;
+        }
+        @include tabletAndAbove {
+          max-width: 970px;
+        }
+        @include laptop {
+          max-width: 1150px;
+        }
+        @include largerLaptop {
+          max-width: 1350px;
+        }
+        .card {
+          background-color: #ffffff;
+          border-radius: 8px;
+          border: 1px solid black;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          padding: 40px;
+          width: 520px;
+          height: 354px;
+          flex-shrink: 0;
+          display: flex;
+          // flex-direction: column;
+          &:hover {
+            background-color: #232751;
+          }
+          &:hover .feedback-category {
+            color: #fff;
+          }
+          &:hover .testimonial {
+            color: rgb(202, 199, 199);
+          }
+          &:hover .client-info {
+            .client-details {
+              .client-name {
+                color: #fff;
+              }
+            }
+          }
+          @include smallMobile {
+            width: 427px;
+            padding: 20px;
+            height: fit-content;
+          }
+          @include tablet_768 {
+            padding: 40px;
+            width: 470px;
+            height: auto;
+          }
+          @include tabletAndAbove {
+            width: 470px;
+            height: auto;
+          }
+          @include laptop {
+            width: 470px;
+            height: 340px;
+          }
+          @include largerLaptop {
+            width: 520px;
+            height: 354px;
+          }
+          .feedback-category {
+            font-weight: 700 !important;
+            margin-bottom: 10px !important;
+            font-size: 27px;
+            line-height: 33.6px;
+            color: #25262b;
+            // &:hover{
+            //   color: #fff;
+            // }
+            @include smallMobile {
+              font-size: 20px;
+              line-height: 28px;
+            }
+            @include tablet_768 {
+              font-size: 25px;
+            }
+            @include laptop {
+              font-size: 23px;
+            }
+            @include largerLaptop {
+              font-size: 27px;
+            }
+          }
+
+          .testimonial {
+            margin-bottom: 10px !important;
+            font-size: 20px;
+            @include smallMobile {
+              font-size: 14px;
+            }
+            @include tablet_768 {
+              font-size: 17.5px;
+            }
+            // @include laptop {
+            //   font-size: 17.5px;
+            // }
+            @include largerLaptop {
+              line-height: 33.6px;
+              font-size: 18px;
+            }
+          }
+
+          .rating {
+            display: flex !important;
+            margin-bottom: 15px !important;
+            font-size: 20px;
+            gap: 5px;
+          }
+
+          .client-info {
+            display: flex !important;
+            align-items: center !important;
+            margin-top: auto !important;
+
+            img {
+              border-radius: 50% !important;
+              width: 50px !important;
+              height: 50px !important;
+              margin-right: 10px !important;
+            }
+
+            .client-details {
+              display: flex !important;
+              flex-direction: column !important;
+
+              .client-name {
+                font-weight: 500 !important;
+                font-size: 18px;
+                color: #25262b;
+              }
+
+              .client-role {
+                font-size: 0.9em !important;
+                color: #6c757d !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .footer {
   // margin-top: 1000px !important;
   width: 100% !important;

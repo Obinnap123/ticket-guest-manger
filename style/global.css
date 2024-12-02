@@ -1062,6 +1062,19 @@ main .third-section .third-section-div .spotlight .content-slider .content-slide
     transform: translateX(-50%) translateY(20%);
   }
 }
+main .fourth-section {
+  margin: 0 0 100px;
+}
+@media only screen and (min-width: 320px) {
+  main .fourth-section {
+    margin: 0 0 40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .fourth-section {
+    margin: 0 0 100px;
+  }
+}
 main .fourth-section .info-section {
   margin: 100px 0 0;
 }
@@ -1316,6 +1329,210 @@ main .fourth-section .info-section .effortless-check-in-div .effortless-check-in
   main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .code-scannig-img {
     order: 1;
   }
+}
+main .fifth-section {
+  background-color: #ffffff;
+  width: 100%;
+}
+main .fifth-section h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 40px;
+  margin-top: 100px;
+}
+@media only screen and (min-width: 320px) {
+  main .fifth-section h2 {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .fifth-section h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .fifth-section h2 {
+    font-size: 40px;
+  }
+}
+main .fifth-section .carousel-container {
+  overflow: hidden !important;
+  width: 100% !important;
+  position: relative !important; /* Ensure proper layout */
+  /* Visual feedback for draggable content */
+}
+main .fifth-section .carousel-container .carousel {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex !important;
+  gap: 40px !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+@media only screen and (min-width: 320px) {
+  main .fifth-section .carousel-container .carousel {
+    max-width: 295px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .fifth-section .carousel-container .carousel {
+    max-width: 500px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .fifth-section .carousel-container .carousel {
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .fifth-section .carousel-container .carousel {
+    max-width: 970px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .fifth-section .carousel-container .carousel {
+    max-width: 1150px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .fifth-section .carousel-container .carousel {
+    max-width: 1350px;
+  }
+}
+main .fifth-section .carousel-container .carousel .card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 520px;
+  height: 354px;
+  flex-shrink: 0;
+  display: flex;
+}
+main .fifth-section .carousel-container .carousel .card:hover {
+  background-color: #232751;
+}
+main .fifth-section .carousel-container .carousel .card:hover .feedback-category {
+  color: #fff;
+}
+main .fifth-section .carousel-container .carousel .card:hover .testimonial {
+  color: rgb(202, 199, 199);
+}
+main .fifth-section .carousel-container .carousel .card:hover .client-info .client-details .client-name {
+  color: #fff;
+}
+@media only screen and (min-width: 320px) {
+  main .fifth-section .carousel-container .carousel .card {
+    width: 427px;
+    padding: 20px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .fifth-section .carousel-container .carousel .card {
+    padding: 40px;
+    width: 470px;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .fifth-section .carousel-container .carousel .card {
+    width: 470px;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .fifth-section .carousel-container .carousel .card {
+    width: 470px;
+    height: 340px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .fifth-section .carousel-container .carousel .card {
+    width: 520px;
+    height: 354px;
+  }
+}
+main .fifth-section .carousel-container .carousel .card .feedback-category {
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+  font-size: 27px;
+  line-height: 33.6px;
+  color: #25262b;
+}
+@media only screen and (min-width: 320px) {
+  main .fifth-section .carousel-container .carousel .card .feedback-category {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .fifth-section .carousel-container .carousel .card .feedback-category {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .fifth-section .carousel-container .carousel .card .feedback-category {
+    font-size: 23px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .fifth-section .carousel-container .carousel .card .feedback-category {
+    font-size: 27px;
+  }
+}
+main .fifth-section .carousel-container .carousel .card .testimonial {
+  margin-bottom: 10px !important;
+  font-size: 20px;
+}
+@media only screen and (min-width: 320px) {
+  main .fifth-section .carousel-container .carousel .card .testimonial {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .fifth-section .carousel-container .carousel .card .testimonial {
+    font-size: 17.5px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .fifth-section .carousel-container .carousel .card .testimonial {
+    line-height: 33.6px;
+    font-size: 18px;
+  }
+}
+main .fifth-section .carousel-container .carousel .card .rating {
+  display: flex !important;
+  margin-bottom: 15px !important;
+  font-size: 20px;
+  gap: 5px;
+}
+main .fifth-section .carousel-container .carousel .card .client-info {
+  display: flex !important;
+  align-items: center !important;
+  margin-top: auto !important;
+}
+main .fifth-section .carousel-container .carousel .card .client-info img {
+  border-radius: 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  margin-right: 10px !important;
+}
+main .fifth-section .carousel-container .carousel .card .client-info .client-details {
+  display: flex !important;
+  flex-direction: column !important;
+}
+main .fifth-section .carousel-container .carousel .card .client-info .client-details .client-name {
+  font-weight: 500 !important;
+  font-size: 18px;
+  color: #25262b;
+}
+main .fifth-section .carousel-container .carousel .card .client-info .client-details .client-role {
+  font-size: 0.9em !important;
+  color: #6c757d !important;
 }
 
 .footer {
