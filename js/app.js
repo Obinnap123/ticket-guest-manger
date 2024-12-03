@@ -43,6 +43,21 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
+
+// document.querySelector('.dropdown-btn').addEventListener('click', function () {
+//   const dropdown = document.querySelector('.dropdown-content');
+//   dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+// });
+
+// // Close dropdown if clicking outside
+// document.addEventListener('click', function (e) {
+//   const dropdown = document.querySelector('.dropdown-content');
+//   if (!e.target.closest('.login-dropdown')) {
+//     dropdown.style.display = 'none';
+//   }
+// });
+
+
 // Mock data for dynamic rendering
 const feedbackData = [
   {
@@ -223,24 +238,3 @@ function addNewFeedback(data) {
   renderCards(); // Re-render cards
 }
 
-// Example usage: Adding a new feedback card
-// addNewFeedback[
-//   ({
-//     category: "New category",
-//     testimonial: "This is a new testimonial for the platform.",
-//     rating: 4,
-//     picture: "https://via.placeholder.com/50",
-//     name: "New User",
-//     role: "Developer",
-//     company: "TechStart",
-//   },
-//   {
-//     category: "New food",
-//     testimonial: "This is a new testimonial for the platform.",
-//     rating: 4,
-//     picture: "https://via.placeholder.com/50",
-//     name: "New User",
-//     role: "Developer",
-//     company: "TechStart",
-//   })
-// ];

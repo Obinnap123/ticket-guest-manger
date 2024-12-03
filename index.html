@@ -100,7 +100,13 @@
               <li><a href="">Contact us</a></li>
             </ul>
             <div class="auth">
-              <a href="" class="login btn"> Log in </a>
+              <div class="login-dropdown">
+                <button class="login btn dropdown-btn">Log in</button>
+                <div class="dropdown-content">
+                  <a href="/organization-login">Login as an Organization</a>
+                  <a href="/attendee-login">Login as an Attendee</a>
+                </div>
+              </div>
               <a href="">
                 <button class="sign-up btn bg-primary btn-primary">
                   Sign up
@@ -169,7 +175,25 @@
           <div class="second-section-cards">
             <div class="first-cards">
               <div class="first-cards-div-one">
-                <img src="./images/Free-event.png" alt="presentation" />
+                <div class="card-img-container-one">
+                  <img
+                    src="./images/Free-event.png"
+                    alt="presentation"
+                    class="first-cards-div-one-img"
+                  />
+                  <div class="zero-cost-image-container">
+                    <img
+                      src="./images/zero-cost-circular-img.png"
+                      alt=""
+                      class="zero-cost-img"
+                    />
+                    <img
+                      src="./images/presenting-image.png"
+                      alt=""
+                      class="presenting-img"
+                    />
+                  </div>
+                </div>
                 <h3>Zero cost for free events, 2.5% on all paid events</h3>
                 <p>
                   Take advantage of our incredible zero-cost access to a wide
@@ -180,11 +204,13 @@
                 </p>
               </div>
               <div class="first-cards-div-two">
-                <img
-                  src="images/track-ur-ticket-sales.png"
-                  alt="data-calender"
-                  class="first-cards-div-two-img"
-                />
+                <div class="card-img-container-two">
+                  <img
+                    src="images/track-ur-ticket-sales.png"
+                    alt="data-calender"
+                    class="first-cards-div-two-img"
+                  />
+                </div>
                 <h3>Track your tickets sales & attendees all on one place</h3>
                 <p class="paragraph">
                   Stay informed and engaged with your event's success using our
@@ -196,11 +222,13 @@
             </div>
             <div class="second-cards">
               <div class="second-cards-div-one">
-                <img
-                  src="images/easy-ticket-booking.png"
-                  alt="rock-concerts"
-                  class="second-cards-div-one-img"
-                />
+                <div class="card-img-container-three">
+                  <img
+                    src="images/easy-ticket-booking.png"
+                    alt="rock-concerts"
+                    class="second-cards-div-one-img"
+                  />
+                </div>
                 <h3>Easy ticket booking & check-in as an attendee</h3>
                 <p>
                   Booking your ticket for your next exciting event takes just a
@@ -211,7 +239,11 @@
                 </p>
               </div>
               <div class="second-cards-div-two">
-                <img src="images/girl-image.png" alt="girl-image" />
+                <img
+                  src="images/girl-image.png"
+                  alt="girl-image"
+                  class="second-cards-div-two-img"
+                />
                 <h3>
                   Receive your funds instantly with our secure, fast payment
                   gateway.
