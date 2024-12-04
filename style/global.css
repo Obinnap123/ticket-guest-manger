@@ -17,6 +17,11 @@ html {
   font-family: "Neue Regrade", sans-serif;
 }
 
+.auth {
+  display: flex;
+  gap: 16px;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -335,24 +340,29 @@ header.header .headers .nav-bar .menu {
     z-index: 100;
   }
 }
-header.header .headers .nav-bar .auth {
-  display: flex;
-  gap: 16px;
-}
-header.header .headers .nav-bar .auth .login-dropdown {
+header.header .headers .nav-bar .login-dropdown,
+header.header .headers .nav-bar .sign-up-dropdown {
   position: relative;
   display: inline-block;
 }
-header.header .headers .nav-bar .auth .login-dropdown .dropdown-content {
+@media only screen and (min-width: 900px) {
+  header.header .headers .nav-bar .login-dropdown:hover .dropdown-content,
+  header.header .headers .nav-bar .sign-up-dropdown:hover .dropdown-content {
+    display: block !important; /* Show the dropdown when hovering over the parent */
+  }
+}
+header.header .headers .nav-bar .login-dropdown .dropdown-content,
+header.header .headers .nav-bar .sign-up-dropdown .dropdown-content {
   display: none !important;
   position: absolute !important;
   background-color: white !important;
-  min-width: 200px !important;
+  min-width: 160px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
   z-index: 1 !important;
   border-radius: 5px !important;
 }
-header.header .headers .nav-bar .auth .login-dropdown .dropdown-content a {
+header.header .headers .nav-bar .login-dropdown .dropdown-content a,
+header.header .headers .nav-bar .sign-up-dropdown .dropdown-content a {
   color: black;
   padding: 10px 20px;
   text-decoration: none;
@@ -360,15 +370,19 @@ header.header .headers .nav-bar .auth .login-dropdown .dropdown-content a {
   font-size: 14px;
   transition: background-color 0.3s ease;
 }
-header.header .headers .nav-bar .auth .login-dropdown .dropdown-content a:hover {
+header.header .headers .nav-bar .login-dropdown .dropdown-content a:hover,
+header.header .headers .nav-bar .sign-up-dropdown .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
-header.header .headers .nav-bar .auth .login-dropdown:hover .dropdown-content {
-  display: block; /* Show the dropdown when hovering over the parent */
+header.header .headers .nav-bar .login-dropdown.open .dropdown-content,
+header.header .headers .nav-bar .sign-up-dropdown.open .dropdown-content {
+  display: block !important; /* Show when the dropdown is open (used for mobile) */
 }
 header.header .headers .nav-bar .hamburger {
   border: 0;
   background-color: white;
+  border: none;
+  outline: none;
 }
 @media only screen and (min-width: 320px) {
   header.header .headers .nav-bar .hamburger {
@@ -1850,10 +1864,14 @@ main .fifth-section .carousel-container .carousel .card:hover .client-info .clie
 }
 @media only screen and (min-width: 320px) {
   main .fifth-section .carousel-container .carousel .card {
-    width: 400px;
+    width: 300px;
     padding: 20px;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .fifth-section .carousel-container .carousel .card {
+    width: 400px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1959,11 +1977,36 @@ main .fifth-section .carousel-container .carousel .card .client-info .client-det
   font-size: 0.9em !important;
   color: #6c757d !important;
 }
+main .fifth-section .carousel-container .dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+main .fifth-section .carousel-container .dots-container .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+main .fifth-section .carousel-container .dots-container .dot.active {
+  background-color: #333;
+}
 
 .footer {
   width: 100% !important;
   max-width: 100%;
   margin: 0px 0 83% !important;
+  transition: transform 2s ease-in, opacity 2s ease-in !important;
+  transform: translate3d(100%, 0, 0) !important; /* Initial state (off-screen) */
+  opacity: 0 !important;
+}
+.footer.scrolled {
+  transform: translate3d(0, 0, 0) !important; /* Final state (in view) */
+  opacity: 1 !important;
 }
 @media only screen and (min-width: 320px) {
   .footer {

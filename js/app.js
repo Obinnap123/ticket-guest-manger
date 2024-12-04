@@ -43,20 +43,55 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdowns = document.querySelectorAll(
+    ".login-dropdown, .sign-up-dropdown"
+  );
 
-// document.querySelector('.dropdown-btn').addEventListener('click', function () {
-//   const dropdown = document.querySelector('.dropdown-content');
-//   dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-// });
+  const handleClick = (dropdown) => (event) => {
+    event.stopPropagation(); // Prevent click from propagating to document
+    // Close other dropdowns before toggling the clicked one
+    dropdowns.forEach((d) => {
+      if (d !== dropdown) {
+        d.classList.remove("open");
+      }
+    });
+    dropdown.classList.toggle("open"); // Toggle the specific dropdown
+  };
 
-// // Close dropdown if clicking outside
-// document.addEventListener('click', function (e) {
-//   const dropdown = document.querySelector('.dropdown-content');
-//   if (!e.target.closest('.login-dropdown')) {
-//     dropdown.style.display = 'none';
-//   }
-// });
+  const handleOutsideClick = () => {
+    dropdowns.forEach((dropdown) => dropdown.classList.remove("open")); // Close all dropdowns
+  };
 
+  const setupDropdownBehavior = () => {
+    // Clear existing event listeners to avoid duplicates
+    dropdowns.forEach((dropdown) => {
+      dropdown.replaceWith(dropdown.cloneNode(true));
+    });
+
+    const updatedDropdowns = document.querySelectorAll(
+      ".login-dropdown, .sign-up-dropdown"
+    );
+
+    if (window.innerWidth <= 899) {
+      // Mobile view
+      updatedDropdowns.forEach((dropdown) => {
+        const clickHandler = handleClick(dropdown);
+        dropdown.addEventListener("click", clickHandler);
+      });
+      document.addEventListener("click", handleOutsideClick);
+    } else {
+      // Desktop view
+      document.removeEventListener("click", handleOutsideClick);
+    }
+  };
+
+  // Initial setup
+  setupDropdownBehavior();
+
+  // Re-apply event listeners on window resize
+  window.addEventListener("resize", setupDropdownBehavior);
+});
 
 // Mock data for dynamic rendering
 const feedbackData = [
@@ -102,7 +137,8 @@ const feedbackData = [
   },
   {
     category: "Outstanding opportunities",
-    testimonial: "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+    testimonial:
+      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
     rating: 5,
     picture: "../images/woman's-img.jpg",
     name: "David Clark",
@@ -111,7 +147,8 @@ const feedbackData = [
   },
   {
     category: "Perfect matches made easy",
-    testimonial: "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+    testimonial:
+      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
     rating: 5,
     picture: "../images/woman's-img.jpg",
     name: "David Clark",
@@ -120,7 +157,8 @@ const feedbackData = [
   },
   {
     category: "Find your dream job",
-    testimonial: "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+    testimonial:
+      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
     rating: 5,
     picture: "../images/woman's-img.jpg",
     name: "David Clark",
@@ -129,7 +167,8 @@ const feedbackData = [
   },
   {
     category: "Transform your career",
-    testimonial: "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+    testimonial:
+      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
     rating: 5,
     picture: "../images/woman's-img.jpg",
     name: "David Clark",
@@ -238,3 +277,65 @@ function addNewFeedback(data) {
   renderCards(); // Re-render cards
 }
 
+// Function to render dots
+function renderDots() {
+  const dotsContainer = document.querySelector(".dots-container");
+  const cards = feedbackData;
+  dotsContainer.innerHTML = ""; // Clear previous dots
+
+  cards.forEach((_, index) => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active"); // First dot is active by default
+    dot.dataset.index = index; // Store index for navigation
+    dotsContainer.appendChild(dot);
+  });
+}
+
+// Function to update active dot
+function updateActiveDot() {
+  const carousel = document.querySelector(".carousel");
+  const dots = document.querySelectorAll(".dot");
+  const cardWidth = 300 + 40; // Width of card + gap
+  const scrollPosition = carousel.scrollLeft;
+  const activeIndex = Math.round(scrollPosition / cardWidth);
+
+  dots.forEach((dot, index) => {
+    if (index === activeIndex) {
+      dot.classList.add("active");
+    } else {
+      dot.classList.remove("active");
+    }
+  });
+}
+
+// Function to scroll to card when a dot is clicked
+function scrollToCard(index) {
+  const carousel = document.querySelector(".carousel");
+  const cardWidth = 520 + 40; // Width of card + gap
+  carousel.scrollTo({
+    left: index * cardWidth,
+    behavior: "smooth",
+  });
+}
+
+// Add click event listeners to dots
+function addDotListeners() {
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const index = parseInt(dot.dataset.index, 10);
+      scrollToCard(index);
+    });
+  });
+}
+
+// Initialize the carousel and dots
+document.addEventListener("DOMContentLoaded", () => {
+  renderCards(); // Render the cards dynamically
+  renderDots(); // Render dots dynamically
+  enableHorizontalScroll(); // Enable horizontal scroll
+  addDotListeners(); // Attach click events to dots
+  const carousel = document.querySelector(".carousel");
+  carousel.addEventListener("scroll", updateActiveDot); // Update active dot on scroll
+});
