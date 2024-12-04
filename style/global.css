@@ -1800,7 +1800,6 @@ main .fifth-section .carousel-container {
   width: 100% !important;
   position: relative !important; /* Ensure proper layout */
   /* Visual feedback for draggable content */
-  scroll-behavior: smooth;
 }
 main .fifth-section .carousel-container .carousel {
   max-width: 1350px;

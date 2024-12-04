@@ -315,7 +315,7 @@ function scrollToCard(index) {
   const cardWidth = 520 + 40; // Width of card + gap
   carousel.scrollTo({
     left: index * cardWidth,
-    behavior: "smooth",
+    // behavior: "smooth",
   });
 }
 

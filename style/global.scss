@@ -1375,7 +1375,7 @@ main {
       width: 100% !important;
       position: relative !important; /* Ensure proper layout */
       /* Visual feedback for draggable content */
-      scroll-behavior: smooth;
+      // scroll-behavior: smooth;
 
       .carousel {
         max-width: 1350px;
