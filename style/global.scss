@@ -1416,6 +1416,10 @@ main {
             width: 300px;
             height: 385px;
           }
+          @include smallTablet {
+            width: 500px;
+            height: 300px;
+          }
           @include tablet_768 {
             width: 600px;
             height: 300px;
