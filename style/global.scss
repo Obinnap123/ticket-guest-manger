@@ -1376,6 +1376,8 @@ main {
       height: 100% !important;
       overflow: hidden !important;
       .swiper-wrapper {
+        display: flex !important; /* Ensure row layout by default */
+        flex-direction: row !important;
         margin: 0 auto !important;
         @include tabletAndAbove {
           max-width: 970px !important;
