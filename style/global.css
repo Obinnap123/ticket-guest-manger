@@ -1795,205 +1795,157 @@ main .fifth-section h2 {
     font-size: 40px;
   }
 }
-main .fifth-section .carousel-container {
-  overflow: hidden !important;
+main .fifth-section .swiper {
   width: 100% !important;
-  position: relative !important; /* Ensure proper layout */
-  /* Visual feedback for draggable content */
-  scroll-behavior: smooth;
+  height: 100% !important;
+  overflow: hidden !important;
 }
-main .fifth-section .carousel-container .carousel {
-  max-width: 1350px;
-  margin: 0 auto;
-  display: flex !important;
-  gap: 40px !important;
-  transition: transform 0.3s ease-in-out !important;
-}
-@media only screen and (min-width: 320px) {
-  main .fifth-section .carousel-container .carousel {
-    max-width: 295px;
-  }
-}
-@media only screen and (min-width: 540px) {
-  main .fifth-section .carousel-container .carousel {
-    max-width: 500px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .fifth-section .carousel-container .carousel {
-    max-width: 600px;
-  }
+main .fifth-section .swiper .swiper-wrapper {
+  margin: 0 auto !important;
 }
 @media only screen and (min-width: 1024px) {
-  main .fifth-section .carousel-container .carousel {
-    max-width: 970px;
+  main .fifth-section .swiper .swiper-wrapper {
+    max-width: 970px !important;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .fifth-section .carousel-container .carousel {
-    max-width: 1150px;
+  main .fifth-section .swiper .swiper-wrapper {
+    max-width: 1150px !important;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .fifth-section .carousel-container .carousel {
-    max-width: 1350px;
+  main .fifth-section .swiper .swiper-wrapper {
+    max-width: 1350px !important;
   }
 }
-main .fifth-section .carousel-container .carousel .card {
+main .fifth-section .swiper .swiper-wrapper .swiper-slide {
+  display: flex !important;
+  align-items: center;
+}
+@media only screen and (min-width: 320px) {
+  main .fifth-section .swiper .swiper-wrapper .swiper-slide {
+    justify-content: center !important;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .fifth-section .swiper .swiper-wrapper .swiper-slide {
+    justify-content: flex-start !important;
+  }
+}
+main .fifth-section .swiper .swiper-wrapper .card {
   background-color: #ffffff;
   border-radius: 8px;
   border: 1px solid black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 40px;
+  padding: 30px;
   width: 520px;
-  height: 354px;
-  flex-shrink: 0;
+  height: 300px;
   display: flex;
-}
-main .fifth-section .carousel-container .carousel .card:hover {
-  background-color: #232751;
-}
-main .fifth-section .carousel-container .carousel .card:hover .feedback-category {
-  color: #fff;
-}
-main .fifth-section .carousel-container .carousel .card:hover .testimonial {
-  color: rgb(202, 199, 199);
-}
-main .fifth-section .carousel-container .carousel .card:hover .client-info .client-details .client-name {
-  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 @media only screen and (min-width: 320px) {
-  main .fifth-section .carousel-container .carousel .card {
+  main .fifth-section .swiper .swiper-wrapper .card {
     width: 300px;
-    padding: 20px;
-    height: auto;
-  }
-}
-@media only screen and (min-width: 540px) {
-  main .fifth-section .carousel-container .carousel .card {
-    width: 400px;
+    height: 385px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .fifth-section .carousel-container .carousel .card {
-    padding: 40px;
-    width: 470px;
-    height: auto;
+  main .fifth-section .swiper .swiper-wrapper .card {
+    width: 600px;
+    height: 300px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .fifth-section .carousel-container .carousel .card {
-    width: 470px;
-    height: auto;
+  main .fifth-section .swiper .swiper-wrapper .card {
+    height: 350px;
+    width: 520px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .fifth-section .carousel-container .carousel .card {
-    width: 470px;
-    height: 340px;
+  main .fifth-section .swiper .swiper-wrapper .card {
+    height: 320px;
   }
 }
-@media only screen and (min-width: 1440px) {
-  main .fifth-section .carousel-container .carousel .card {
-    width: 520px;
-    height: 354px;
-  }
+main .fifth-section .swiper .swiper-wrapper .card:hover {
+  background-color: #232751;
+  transform: scale(1.05);
 }
-main .fifth-section .carousel-container .carousel .card .feedback-category {
-  font-weight: 700 !important;
-  margin-bottom: 10px !important;
-  font-size: 27px;
-  line-height: 33.6px;
-  color: #25262b;
+main .fifth-section .swiper .swiper-wrapper .card:hover .feedback-category,
+main .fifth-section .swiper .swiper-wrapper .card:hover .testimonial,
+main .fifth-section .swiper .swiper-wrapper .card:hover .client-name {
+  color: #fff;
 }
-@media only screen and (min-width: 320px) {
-  main .fifth-section .carousel-container .carousel .card .feedback-category {
-    font-size: 24px;
-    line-height: 28px;
-  }
+main .fifth-section .swiper .swiper-wrapper .card .feedback-category {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
 }
-@media only screen and (min-width: 768px) {
-  main .fifth-section .carousel-container .carousel .card .feedback-category {
+@media only screen and (min-width: 1024px) {
+  main .fifth-section .swiper .swiper-wrapper .card .feedback-category {
     font-size: 25px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .fifth-section .carousel-container .carousel .card .feedback-category {
+  main .fifth-section .swiper .swiper-wrapper .card .feedback-category {
     font-size: 23px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .fifth-section .carousel-container .carousel .card .feedback-category {
-    font-size: 27px;
+  main .fifth-section .swiper .swiper-wrapper .card .feedback-category {
+    font-size: 28px;
   }
 }
-main .fifth-section .carousel-container .carousel .card .testimonial {
-  margin-bottom: 10px !important;
-  font-size: 20px;
+main .fifth-section .swiper .swiper-wrapper .card .testimonial {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
 }
-@media only screen and (min-width: 320px) {
-  main .fifth-section .carousel-container .carousel .card .testimonial {
-    font-size: 14px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  main .fifth-section .carousel-container .carousel .card .testimonial {
-    font-size: 17.5px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  main .fifth-section .carousel-container .carousel .card .testimonial {
-    line-height: 33.6px;
+@media only screen and (min-width: 1024px) {
+  main .fifth-section .swiper .swiper-wrapper .card .testimonial {
     font-size: 18px;
   }
 }
-main .fifth-section .carousel-container .carousel .card .rating {
+@media only screen and (min-width: 1200px) {
+  main .fifth-section .swiper .swiper-wrapper .card .testimonial {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .fifth-section .swiper .swiper-wrapper .card .testimonial {
+    font-size: 17px;
+  }
+}
+main .fifth-section .swiper .swiper-wrapper .card .rating {
   display: flex !important;
   margin-bottom: 15px !important;
   font-size: 20px;
   gap: 5px;
 }
-main .fifth-section .carousel-container .carousel .card .client-info {
-  display: flex !important;
-  align-items: center !important;
-  margin-top: auto !important;
-}
-main .fifth-section .carousel-container .carousel .card .client-info img {
-  border-radius: 50% !important;
-  width: 50px !important;
-  height: 50px !important;
-  margin-right: 10px !important;
-}
-main .fifth-section .carousel-container .carousel .card .client-info .client-details {
-  display: flex !important;
-  flex-direction: column !important;
-}
-main .fifth-section .carousel-container .carousel .card .client-info .client-details .client-name {
-  font-weight: 500 !important;
-  font-size: 18px;
-  color: #25262b;
-}
-main .fifth-section .carousel-container .carousel .card .client-info .client-details .client-role {
-  font-size: 0.9em !important;
-  color: #6c757d !important;
-}
-main .fifth-section .carousel-container .dots-container {
+main .fifth-section .swiper .swiper-wrapper .card .client-info {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 10px;
 }
-main .fifth-section .carousel-container .dots-container .dot {
-  width: 12px;
-  height: 12px;
-  background-color: #ddd;
+main .fifth-section .swiper .swiper-wrapper .card .client-info img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border: 2px solid #ddd;
 }
-main .fifth-section .carousel-container .dots-container .dot.active {
-  background-color: #333;
+main .fifth-section .swiper .swiper-wrapper .card .client-info .client-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+main .fifth-section .swiper .swiper-wrapper .card .client-info .client-details .client-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+main .fifth-section .swiper .swiper-wrapper .card .client-info .client-details .client-role {
+  font-size: 14px;
+  color: #777;
 }
 
 .footer {

@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", setupDropdownBehavior);
 });
 
-// Mock data for dynamic rendering
+// Sample Data for the Cards
 const feedbackData = [
   {
     category: "Exceptional job matching service",
@@ -101,9 +101,9 @@ const feedbackData = [
       "Working with the freelancers on the platform was a game-changer for our project. Their dedication to meeting our needs while offering innovative ideas truly set them apart.",
     rating: 5,
     picture: "../images/man's-img.jpeg",
-    name: "Tommy Jones",
-    role: "Chief Operating Officer",
-    company: "Bing HR",
+    name: "John Doe",
+    role: "Manager",
+    company: "Tech Co.",
   },
   {
     category: "Great services",
@@ -111,231 +111,136 @@ const feedbackData = [
       "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
     rating: 5,
     picture: "../images/woman's-img.jpg",
-    name: "Chinyere Ndubisi",
-    role: "Product Principal",
-    company: "Capsule",
+    name: "Jane Smith",
+    role: "Engineer",
+    company: "Build Inc.",
   },
   {
     category: "Success stories with service",
     testimonial:
       "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
     rating: 5,
-    picture: "../images/woman's-img.jpg",
-    name: "Ethan Nguyen",
-    role: "Chief Financial Officer",
-    company: " Visionary Technologies",
+    picture: "https://via.placeholder.com/100",
+    name: "Alex Johnson",
+    role: "Designer",
+    company: "Creative Hub",
   },
   {
-    category: "Unlock your career potential",
+    category: "Great Quality",
     testimonial:
-      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
     rating: 5,
-    picture: "../images/woman's-img.jpg",
-    name: "Lisa Green",
-    role: "CTO",
-    company: "GrowthHackers",
+    picture: "https://via.placeholder.com/100",
+    name: "Alex Johnson",
+    role: "Designer",
+    company: "Creative Hub",
   },
   {
-    category: "Outstanding opportunities",
+    category: "Great Quality",
     testimonial:
-      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
     rating: 5,
-    picture: "../images/woman's-img.jpg",
-    name: "David Clark",
-    role: "Project Manager",
-    company: "Creative Minds",
+    picture: "https://via.placeholder.com/100",
+    name: "Alex Johnson",
+    role: "Designer",
+    company: "Creative Hub",
   },
   {
-    category: "Perfect matches made easy",
+    category: "Great Quality",
     testimonial:
-      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
     rating: 5,
-    picture: "../images/woman's-img.jpg",
-    name: "David Clark",
-    role: "Project Manager",
-    company: "Creative Minds",
+    picture: "https://via.placeholder.com/100",
+    name: "Alex Johnson",
+    role: "Designer",
+    company: "Creative Hub",
   },
   {
-    category: "Find your dream job",
+    category: "Great Quality",
     testimonial:
-      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
     rating: 5,
-    picture: "../images/woman's-img.jpg",
-    name: "David Clark",
-    role: "Project Manager",
-    company: "Creative Minds",
+    picture: "https://via.placeholder.com/100",
+    name: "Alex Johnson",
+    role: "Designer",
+    company: "Creative Hub",
   },
   {
-    category: "Transform your career",
+    category: "Great Quality",
     testimonial:
-      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
     rating: 5,
-    picture: "../images/woman's-img.jpg",
-    name: "David Clark",
-    role: "Project Manager",
-    company: "Creative Minds",
+    picture: "https://via.placeholder.com/100",
+    name: "Alex Johnson",
+    role: "Designer",
+    company: "Creative Hub",
   },
 ];
 
-// Function to render stars
+// Function to Render Swiper Slides
+function renderSwiperSlides() {
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+  feedbackData.forEach((data) => {
+    const slide = document.createElement("div");
+    slide.className = "swiper-slide";
+
+    slide.innerHTML = `
+      <div class="card">
+        <div class="feedback-category">${data.category}</div>
+        <div class="testimonial">${data.testimonial}</div>
+        <div class="rating">${renderRatingStars(data.rating)}</div>
+        <div class="client-info">
+          <img src="${data.picture}" alt="${data.name}" />
+          <div class="client-details">
+            <div class="client-name">${data.name}</div>
+            <div class="client-role">${data.role}, ${data.company}</div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    swiperWrapper.appendChild(slide);
+  });
+}
+
+// Function to Render Stars for Rating
+// function renderRatingStars(rating) {
+//   return Array(rating)
+//     .fill("⭐")
+//     .join("");
+// }
+
 function renderStars(count) {
   return Array(count).fill("<span>&#9733;</span>").join("");
 }
 
-// Function to render picture-based stars
-function renderPictureRating(count) {
+function renderRatingStars(count) {
   const starImageURL = "../images/star.svg"; // Replace with your star image URL
   return Array(count)
     .fill(`<img src="${starImageURL}" alt="Star" class="rating-star">`)
     .join("");
 }
-// Function to render all cards dynamically
-function renderCards() {
-  const carousel = document.querySelector(".carousel");
-
-  // Clear existing cards before rendering (optional, for re-renders)
-  carousel.innerHTML = "";
-
-  feedbackData.forEach((data) => {
-    const card = document.createElement("div");
-    card.className = "card";
-
-    card.innerHTML = `
-      <div class="feedback-category">${data.category}</div>
-      <div class="testimonial">${data.testimonial}</div>
-      <div class="rating">${renderPictureRating(data.rating)}</div>
-      <div class="client-info">
-        <img src="${data.picture}" alt="${data.name}" />
-        <div class="client-details">
-          <div class="client-name">${data.name}</div>
-          <div class="client-role">${data.role}, ${data.company}</div>
-        </div>
-      </div>
-    `;
-
-    carousel.appendChild(card);
+// console.log(renderPictureRating());
+// // Initialize Swiper with Settings
+function initializeSwiper() {
+  new Swiper(".mySwiper", {
+    slidesPerView: 2.5,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: { slidesPerView: 1 },
+      1024: { slidesPerView: 2 },
+      1200: { slidesPerView: 2.5 },
+    },
   });
 }
 
-// Enable horizontal scrolling with touch or mouse (same as before)
-function enableHorizontalScroll() {
-  const carouselContainer = document.querySelector(".carousel-container");
-  const carousel = document.querySelector(".carousel");
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  carouselContainer.addEventListener("mousedown", (e) => {
-    isDown = true;
-    startX = e.pageX - carousel.offsetLeft;
-    scrollLeft = carouselContainer.scrollLeft;
-  });
-
-  carouselContainer.addEventListener("mouseleave", () => {
-    isDown = false;
-  });
-
-  carouselContainer.addEventListener("mouseup", () => {
-    isDown = false;
-  });
-
-  carouselContainer.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 2;
-    carouselContainer.scrollLeft = scrollLeft - walk;
-  });
-
-  carouselContainer.addEventListener("touchstart", (e) => {
-    isDown = true;
-    startX = e.touches[0].pageX - carousel.offsetLeft;
-    scrollLeft = carouselContainer.scrollLeft;
-  });
-
-  carouselContainer.addEventListener("touchend", () => {
-    isDown = false;
-  });
-
-  carouselContainer.addEventListener("touchmove", (e) => {
-    if (!isDown) return;
-    const x = e.touches[0].pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 2;
-    carouselContainer.scrollLeft = scrollLeft - walk;
-  });
-}
-
-// Initialize the carousel
+// Initialize Everything
 document.addEventListener("DOMContentLoaded", () => {
-  renderCards(); // Render cards dynamically
-  enableHorizontalScroll(); // Enable scroll interaction
-});
-
-// Example: Add a new card dynamically
-function addNewFeedback(data) {
-  feedbackData.push(data); // Add new feedback to the array
-  renderCards(); // Re-render cards
-}
-
-// Function to render dots
-function renderDots() {
-  const dotsContainer = document.querySelector(".dots-container");
-  const cards = feedbackData;
-  dotsContainer.innerHTML = ""; // Clear previous dots
-
-  cards.forEach((_, index) => {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    if (index === 0) dot.classList.add("active"); // First dot is active by default
-    dot.dataset.index = index; // Store index for navigation
-    dotsContainer.appendChild(dot);
-  });
-}
-
-// Function to update active dot
-function updateActiveDot() {
-  const carousel = document.querySelector(".carousel");
-  const dots = document.querySelectorAll(".dot");
-  const cardWidth = 300 + 40; // Width of card + gap
-  const scrollPosition = carousel.scrollLeft;
-  const activeIndex = Math.round(scrollPosition / cardWidth);
-
-  dots.forEach((dot, index) => {
-    if (index === activeIndex) {
-      dot.classList.add("active");
-    } else {
-      dot.classList.remove("active");
-    }
-  });
-}
-
-// Function to scroll to card when a dot is clicked
-function scrollToCard(index) {
-  const carousel = document.querySelector(".carousel");
-  const cardWidth = 520 + 40; // Width of card + gap
-  carousel.scrollTo({
-    left: index * cardWidth,
-    // behavior: "smooth",
-  });
-}
-
-// Add click event listeners to dots
-function addDotListeners() {
-  const dots = document.querySelectorAll(".dot");
-  dots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      const index = parseInt(dot.dataset.index, 10);
-      scrollToCard(index);
-    });
-  });
-}
-
-// Initialize the carousel and dots
-document.addEventListener("DOMContentLoaded", () => {
-  renderCards(); // Render the cards dynamically
-  renderDots(); // Render dots dynamically
-  enableHorizontalScroll(); // Enable horizontal scroll
-  addDotListeners(); // Attach click events to dots
-  const carousel = document.querySelector(".carousel");
-  carousel.addEventListener("scroll", updateActiveDot); // Update active dot on scroll
+  renderSwiperSlides();
+  initializeSwiper();
 });
