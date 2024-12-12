@@ -585,13 +585,13 @@ main {
             @include smallMobile {
               width: 300px;
               text-align: center;
+              margin: 0 auto;
             }
             @include smallTablet {
               width: 500px;
-              margin: 0 auto;
             }
             @include tablet_768 {
-              width: 500px;
+              width: 600px;
               text-align: left;
               margin: 0;
             }
@@ -617,7 +617,7 @@ main {
             }
           }
           & .card-img-container-one {
-            position: relative;
+            // position: relative;
             background: linear-gradient(
               to left,
               rgba(253, 227, 202, 1),
@@ -627,27 +627,27 @@ main {
             width: 643px;
             border-radius: 10px;
             @include smallMobile {
-              width: 300px;
-              height: 400px;
+              width: auto;
+              height: 300px;
             }
             @include smallTablet {
               width: 500px;
               height: 500px;
             }
             @include tablet_768 {
-              height: 605px;
+              height: 591px;
               width: 643px;
             }
             @include tabletAndAbove {
               width: 450px;
-              height: 550px;
+              height: 450px;
             }
             @include laptop {
               width: 542px;
-              height: 605px;
+              height: 560px;
             }
             @include largerLaptop {
-              width: 643px;
+              width: 610px;
             }
             .first-cards-div-one-img {
               position: relative;
@@ -656,33 +656,38 @@ main {
               top: 95px;
               left: 72px;
               @include smallMobile {
-                width: 259px;
-                height: 338px;
-                top: 62px;
-                left: 40px;
+                width: 314px;
+                height: 270px;
+                top: 30px;
+                left: 15px;
+                // padding: 0 16px;
               }
               @include smallTablet {
-                width: 428px;
-                left: 72px;
-                height: 438px;
+                width: 470px;
+                left: 30px;
+                top: 50px;
+                height: 450px;
               }
               @include tablet_768 {
-                top: 95px;
+                top: 80px;
                 left: 72px;
                 height: 510px;
                 width: 571px;
               }
               @include tabletAndAbove {
-                width: 379px;
-                height: 455px;
+                width: 420px;
+                height: 400px;
+                left: 30px;
+                top: 50px;
               }
               @include laptop {
-                width: 470px;
-                top: 95px;
+                width: 492px;
+                top: 50px;
+                left: 50px;
                 height: 510px;
               }
               @include largerLaptop {
-                width: 571px;
+                width: 560px;
               }
             }
             .zero-cost-image-container {
@@ -691,15 +696,24 @@ main {
               left: 70px;
               @include smallMobile {
                 top: 80px;
+                left: 60px;
               }
               @include smallTablet {
-                left: 130px;
+                left: 90px;
+                top: 60px;
               }
               @include tablet_768 {
                 left: 150px;
               }
+              @include tabletAndAbove {
+                left: 120px;
+              }
               @include laptop {
-                top: 73px;
+                top: 33px;
+                left: 135px;
+              }
+              @include largerLaptop{
+                left: 125px;
               }
               .zero-cost-img {
                 position: absolute;
@@ -772,65 +786,62 @@ main {
             );
             height: 605px;
             width: 643px;
-            position: relative;
+            // position: relative;
             border-radius: 10px;
             @include smallMobile {
-              width: 300px;
-              height: 400px;
+              width: auto;
+              height: 300px;
             }
             @include smallTablet {
               width: 500px;
               height: 500px;
             }
             @include tablet_768 {
-              height: 605px;
+              height: 591px;
               width: 643px;
             }
             @include tabletAndAbove {
               width: 450px;
-              height: 550px;
+              height: 450px;
             }
             @include laptop {
               width: 542px;
-              height: 605px;
+              height: 560px;
             }
             @include largerLaptop {
-              width: 643px;
+              width: 610px;
             }
             .first-cards-div-two-img {
-              position: absolute;
               width: 571px;
               height: 533px;
-              top: 95px;
-              left: 72px;
+
               @include smallMobile {
-                width: 260px;
-                height: 338px;
-                top: 62px;
-                left: 40px;
+                width: 314px;
+                height: 270px;
+                margin: 30px 0 0 15px;
               }
               @include smallTablet {
-                width: 428px;
-                left: 72px;
-                height: 438px;
+                width: 470px;
+                height: 450px;
+                margin: 50px 0 0 30px;
               }
               @include tablet_768 {
-                top: 95px;
-                left: 72px;
-                height: 510px;
+                margin: 80px 0 0 72px;
+                height: 511px;
                 width: 571px;
               }
               @include tabletAndAbove {
-                height: 455px;
-                width: 379px;
+                height: 400px;
+                width: 420px;
+                margin: 50px 0 0 30px;
               }
               @include laptop {
-                width: 470px;
-                top: 95px;
+                width: 492px;
+                margin: 50px 0 0 50px;
                 height: 510px;
               }
               @include largerLaptop {
-                width: 571px;
+                width: 560px;
               }
             }
           }
@@ -856,12 +867,12 @@ main {
             @include smallMobile {
               width: 300px;
               text-align: center;
+              margin: 0 auto;
               @include smallTablet {
                 width: 500px;
-                margin: 0 auto;
               }
               @include tablet_768 {
-                width: 500px;
+                width: 600px;
                 text-align: left;
                 margin: 0;
               }
@@ -893,98 +904,236 @@ main {
             );
             height: 605px;
             width: 643px;
-            position: relative;
+            // position: relative;
             border-radius: 10px;
             @include smallMobile {
-              width: 300px;
-              height: 400px;
+              width: auto;
+              height: 300px;
             }
             @include smallTablet {
               width: 500px;
               height: 500px;
             }
             @include tablet_768 {
-              height: 605px;
+              height: 591px;
               width: 643px;
             }
             @include tabletAndAbove {
               width: 450px;
-              height: 550px;
+              height: 450px;
             }
             @include laptop {
               width: 542px;
-              height: 605px;
+              height: 560px;
             }
             @include largerLaptop {
-              width: 643px;
+              width: 610px;
             }
             .second-cards-div-one-img {
               // border-radius: 4px;
+
               border-top-left-radius: 8px;
               border-bottom-right-radius: 10px;
-              position: absolute;
-              top: 72px;
-              top: 95px;
-              left: 72px;
               width: 571px;
               height: 533px;
+
               @include smallMobile {
-                width: 260px;
-                height: 338px;
-                top: 62px;
-                left: 40px;
+                width: 314px;
+                height: 270px;
+                margin: 30px 0 0 15px;
               }
               @include smallTablet {
-                width: 428px;
-                left: 72px;
-                height: 438px;
+                width: 470px;
+                height: 450px;
+                margin: 50px 0 0 30px;
               }
               @include tablet_768 {
-                top: 95px;
-                left: 72px;
+                margin: 80px 0 0 72px;
+                height: 511px;
+                width: 571px;
+              }
+              @include tabletAndAbove {
+                height: 400px;
+                width: 420px;
+                margin: 50px 0 0 30px;
+              }
+              @include laptop {
+                width: 492px;
+                margin: 50px 0 0 50px;
+                height: 510px;
+              }
+              @include largerLaptop {
+                width: 560px;
+              }
+              // position: absolute;
+              // top: 72px;
+              // top: 95px;
+              // left: 72px;
+              // width: 571px;
+              // height: 533px;
+              // @include smallMobile {
+              //   width: 314px;
+              //   height: 270px;
+              //   top: 30px;
+              //   left: 163px;
+              //   padding: 0 16px;
+              // }
+              // @include smallTablet {
+              //   width: 428px;
+              //   left: 72px;
+              //   height: 438px;
+              //   padding: 0;
+              // }
+              // @include tablet_768 {
+              //   top: 95px;
+              //   left: 72px;
+              //   height: 510px;
+              //   width: 571px;
+              // }
+              // @include tabletAndAbove {
+              //   width: 379px;
+              //   height: 455px;
+              // }
+              // @include laptop {
+              //   width: 470px;
+              //   top: 95px;
+              //   height: 510px;
+              // }
+              // @include largerLaptop {
+              //   width: 571px;
+              // }
+            }
+          }
+          .card-img-container-four {
+            background: linear-gradient(
+              to right,
+              rgba(253, 227, 202, 1),
+              rgba(196, 198, 222, 1)
+            );
+            height: 605px;
+            width: 643px;
+            // position: relative;
+            border-radius: 10px;
+            @include smallMobile {
+              width: auto;
+              height: 300px;
+            }
+            @include smallTablet {
+              width: 500px;
+              height: 500px;
+            }
+            @include tablet_768 {
+              height: 591px;
+              width: 643px;
+            }
+            @include tabletAndAbove {
+              width: 450px;
+              height: 450px;
+            }
+            @include laptop {
+              width: 542px;
+              height: 560px;
+            }
+            @include largerLaptop {
+              width: 610px;
+            }
+            .second-cards-div-two-img {
+              border-top-left-radius: 8px;
+              border-bottom-right-radius: 10px;
+              width: 571px;
+              height: 533px;
+
+              @include smallMobile {
+                width: 314px;
+                height: 270px;
+                margin: 30px 0 0 15px;
+              }
+              @include smallTablet {
+                width: 470px;
+                height: 450px;
+                margin: 50px 0 0 30px;
+              }
+              @include tablet_768 {
+                margin: 80px 0 0 72px;
                 height: 510px;
                 width: 571px;
               }
               @include tabletAndAbove {
-                width: 379px;
-                height: 455px;
+                height: 400px;
+                width: 420px;
+                margin: 50px 0 0 30px;
               }
               @include laptop {
-                width: 470px;
-                top: 95px;
+                width: 492px;
+                margin: 50px 0 0 50px;
                 height: 510px;
               }
               @include largerLaptop {
-                width: 571px;
+                width: 560px;
               }
-            }
-          }
-          .second-cards-div-two-img {
-            width: 643px;
-            height: 610px;
-            border-radius: 10px;
-            @include smallMobile {
-              width: 300px;
-              height: 400px;
-            }
-            @include smallTablet {
-              width: 500px;
-              height: 500px;
-            }
-            @include tablet_768 {
-              height: 605px;
-              width: 643px;
-            }
-            @include tabletAndAbove {
-              width: 450px;
-              height: 550px;
-            }
-            @include laptop {
-              width: 542px;
-              height: 610px;
-            }
-            @include largerLaptop {
-              width: 643px;
+              // position: absolute;
+              // top: 72px;
+              // top: 95px;
+              // left: 72px;
+              // width: 571px;
+              // height: 533px;
+              // @include smallMobile {
+              //   width: 314px;
+              //   height: 270px;
+              //   top: 30px;
+              //   left: 163px;
+              //   padding: 0 16px;
+              // }
+              // @include smallTablet {
+              //   width: 428px;
+              //   left: 72px;
+              //   height: 438px;
+              //   padding: 0;
+              // }
+              // @include tablet_768 {
+              //   top: 95px;
+              //   left: 72px;
+              //   height: 510px;
+              //   width: 571px;
+              // }
+              // @include tabletAndAbove {
+              //   width: 379px;
+              //   height: 455px;
+              // }
+              // @include laptop {
+              //   width: 470px;
+              //   top: 95px;
+              //   height: 510px;
+              // }
+              // @include largerLaptop {
+              //   width: 571px;
+              // }
+              // width: 643px;
+              // height: 610px;
+              // border-radius: 10px;
+              // @include smallMobile {
+              //   width: 300px;
+              //   height: 400px;
+              // }
+              // @include smallTablet {
+              //   width: 500px;
+              //   height: 500px;
+              // }
+              // @include tablet_768 {
+              //   height: 605px;
+              //   width: 643px;
+              // }
+              // @include tabletAndAbove {
+              //   width: 450px;
+              //   height: 550px;
+              // }
+              // @include laptop {
+              //   width: 542px;
+              //   height: 610px;
+              // }
+              // @include largerLaptop {
+              //   width: 643px;
+              // }
             }
           }
         }
@@ -1065,7 +1214,7 @@ main {
           }
 
           @include tablet_768 {
-            width: 280px;
+            width: 290px;
           }
           @include tablet_900 {
             padding-left: 0;

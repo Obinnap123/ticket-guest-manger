@@ -800,19 +800,19 @@ main .second-section .second-section-div .second-section-cards .first-cards p {
   main .second-section .second-section-div .second-section-cards .first-cards p {
     width: 300px;
     text-align: center;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 540px) {
   main .second-section .second-section-div .second-section-cards .first-cards h3,
   main .second-section .second-section-div .second-section-cards .first-cards p {
     width: 500px;
-    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 768px) {
   main .second-section .second-section-div .second-section-cards .first-cards h3,
   main .second-section .second-section-div .second-section-cards .first-cards p {
-    width: 500px;
+    width: 600px;
     text-align: left;
     margin: 0;
   }
@@ -849,7 +849,6 @@ main .second-section .second-section-div .second-section-cards .first-cards p {
   }
 }
 main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one {
-  position: relative;
   background: linear-gradient(to left, rgb(253, 227, 202), rgb(196, 198, 222));
   height: 605px;
   width: 643px;
@@ -857,8 +856,8 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one {
-    width: 300px;
-    height: 400px;
+    width: auto;
+    height: 300px;
   }
 }
 @media only screen and (min-width: 540px) {
@@ -869,25 +868,25 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 }
 @media only screen and (min-width: 768px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one {
-    height: 605px;
+    height: 591px;
     width: 643px;
   }
 }
 @media only screen and (min-width: 1024px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one {
     width: 450px;
-    height: 550px;
+    height: 450px;
   }
 }
 @media only screen and (min-width: 1200px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one {
     width: 542px;
-    height: 605px;
+    height: 560px;
   }
 }
 @media only screen and (min-width: 1440px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one {
-    width: 643px;
+    width: 610px;
   }
 }
 main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .first-cards-div-one-img {
@@ -899,22 +898,23 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .first-cards-div-one-img {
-    width: 259px;
-    height: 338px;
-    top: 62px;
-    left: 40px;
+    width: 314px;
+    height: 270px;
+    top: 30px;
+    left: 15px;
   }
 }
 @media only screen and (min-width: 540px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .first-cards-div-one-img {
-    width: 428px;
-    left: 72px;
-    height: 438px;
+    width: 470px;
+    left: 30px;
+    top: 50px;
+    height: 450px;
   }
 }
 @media only screen and (min-width: 768px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .first-cards-div-one-img {
-    top: 95px;
+    top: 80px;
     left: 72px;
     height: 510px;
     width: 571px;
@@ -922,20 +922,23 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 }
 @media only screen and (min-width: 1024px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .first-cards-div-one-img {
-    width: 379px;
-    height: 455px;
+    width: 420px;
+    height: 400px;
+    left: 30px;
+    top: 50px;
   }
 }
 @media only screen and (min-width: 1200px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .first-cards-div-one-img {
-    width: 470px;
-    top: 95px;
+    width: 492px;
+    top: 50px;
+    left: 50px;
     height: 510px;
   }
 }
 @media only screen and (min-width: 1440px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .first-cards-div-one-img {
-    width: 571px;
+    width: 560px;
   }
 }
 main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .zero-cost-image-container {
@@ -946,11 +949,13 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .zero-cost-image-container {
     top: 80px;
+    left: 60px;
   }
 }
 @media only screen and (min-width: 540px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .zero-cost-image-container {
-    left: 130px;
+    left: 90px;
+    top: 60px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -958,9 +963,20 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
     left: 150px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .zero-cost-image-container {
+    left: 120px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .zero-cost-image-container {
-    top: 73px;
+    top: 33px;
+    left: 135px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .zero-cost-image-container {
+    left: 125px;
   }
 }
 main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .zero-cost-image-container .zero-cost-img {
@@ -1051,13 +1067,12 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
   background: linear-gradient(to right, rgb(196, 198, 222), rgb(253, 227, 202));
   height: 605px;
   width: 643px;
-  position: relative;
   border-radius: 10px;
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two {
-    width: 300px;
-    height: 400px;
+    width: auto;
+    height: 300px;
   }
 }
 @media only screen and (min-width: 540px) {
@@ -1068,73 +1083,69 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 }
 @media only screen and (min-width: 768px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two {
-    height: 605px;
+    height: 591px;
     width: 643px;
   }
 }
 @media only screen and (min-width: 1024px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two {
     width: 450px;
-    height: 550px;
+    height: 450px;
   }
 }
 @media only screen and (min-width: 1200px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two {
     width: 542px;
-    height: 605px;
+    height: 560px;
   }
 }
 @media only screen and (min-width: 1440px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two {
-    width: 643px;
+    width: 610px;
   }
 }
 main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two .first-cards-div-two-img {
-  position: absolute;
   width: 571px;
   height: 533px;
-  top: 95px;
-  left: 72px;
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two .first-cards-div-two-img {
-    width: 260px;
-    height: 338px;
-    top: 62px;
-    left: 40px;
+    width: 314px;
+    height: 270px;
+    margin: 30px 0 0 15px;
   }
 }
 @media only screen and (min-width: 540px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two .first-cards-div-two-img {
-    width: 428px;
-    left: 72px;
-    height: 438px;
+    width: 470px;
+    height: 450px;
+    margin: 50px 0 0 30px;
   }
 }
 @media only screen and (min-width: 768px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two .first-cards-div-two-img {
-    top: 95px;
-    left: 72px;
-    height: 510px;
+    margin: 80px 0 0 72px;
+    height: 511px;
     width: 571px;
   }
 }
 @media only screen and (min-width: 1024px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two .first-cards-div-two-img {
-    height: 455px;
-    width: 379px;
+    height: 400px;
+    width: 420px;
+    margin: 50px 0 0 30px;
   }
 }
 @media only screen and (min-width: 1200px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two .first-cards-div-two-img {
-    width: 470px;
-    top: 95px;
+    width: 492px;
+    margin: 50px 0 0 50px;
     height: 510px;
   }
 }
 @media only screen and (min-width: 1440px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two .first-cards-div-two-img {
-    width: 571px;
+    width: 560px;
   }
 }
 main .second-section .second-section-div .second-section-cards .second-cards {
@@ -1165,19 +1176,19 @@ main .second-section .second-section-div .second-section-cards .second-cards p {
   main .second-section .second-section-div .second-section-cards .second-cards p {
     width: 300px;
     text-align: center;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 540px) {
   main .second-section .second-section-div .second-section-cards .second-cards h3,
   main .second-section .second-section-div .second-section-cards .second-cards p {
     width: 500px;
-    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 320px) and (min-width: 768px) {
   main .second-section .second-section-div .second-section-cards .second-cards h3,
   main .second-section .second-section-div .second-section-cards .second-cards p {
-    width: 500px;
+    width: 600px;
     text-align: left;
     margin: 0;
   }
@@ -1213,13 +1224,12 @@ main .second-section .second-section-div .second-section-cards .second-cards .ca
   background: linear-gradient(to right, rgb(196, 198, 222), rgb(253, 227, 202));
   height: 605px;
   width: 643px;
-  position: relative;
   border-radius: 10px;
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three {
-    width: 300px;
-    height: 400px;
+    width: auto;
+    height: 300px;
   }
 }
 @media only screen and (min-width: 540px) {
@@ -1230,116 +1240,158 @@ main .second-section .second-section-div .second-section-cards .second-cards .ca
 }
 @media only screen and (min-width: 768px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three {
-    height: 605px;
+    height: 591px;
     width: 643px;
   }
 }
 @media only screen and (min-width: 1024px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three {
     width: 450px;
-    height: 550px;
+    height: 450px;
   }
 }
 @media only screen and (min-width: 1200px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three {
     width: 542px;
-    height: 605px;
+    height: 560px;
   }
 }
 @media only screen and (min-width: 1440px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three {
-    width: 643px;
+    width: 610px;
   }
 }
 main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three .second-cards-div-one-img {
   border-top-left-radius: 8px;
   border-bottom-right-radius: 10px;
-  position: absolute;
-  top: 72px;
-  top: 95px;
-  left: 72px;
   width: 571px;
   height: 533px;
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three .second-cards-div-one-img {
-    width: 260px;
-    height: 338px;
-    top: 62px;
-    left: 40px;
+    width: 314px;
+    height: 270px;
+    margin: 30px 0 0 15px;
   }
 }
 @media only screen and (min-width: 540px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three .second-cards-div-one-img {
-    width: 428px;
-    left: 72px;
-    height: 438px;
+    width: 470px;
+    height: 450px;
+    margin: 50px 0 0 30px;
   }
 }
 @media only screen and (min-width: 768px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three .second-cards-div-one-img {
-    top: 95px;
-    left: 72px;
-    height: 510px;
+    margin: 80px 0 0 72px;
+    height: 511px;
     width: 571px;
   }
 }
 @media only screen and (min-width: 1024px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three .second-cards-div-one-img {
-    width: 379px;
-    height: 455px;
+    height: 400px;
+    width: 420px;
+    margin: 50px 0 0 30px;
   }
 }
 @media only screen and (min-width: 1200px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three .second-cards-div-one-img {
-    width: 470px;
-    top: 95px;
+    width: 492px;
+    margin: 50px 0 0 50px;
     height: 510px;
   }
 }
 @media only screen and (min-width: 1440px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three .second-cards-div-one-img {
-    width: 571px;
+    width: 560px;
   }
 }
-main .second-section .second-section-div .second-section-cards .second-cards .second-cards-div-two-img {
+main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four {
+  background: linear-gradient(to right, rgb(253, 227, 202), rgb(196, 198, 222));
+  height: 605px;
   width: 643px;
-  height: 610px;
   border-radius: 10px;
 }
 @media only screen and (min-width: 320px) {
-  main .second-section .second-section-div .second-section-cards .second-cards .second-cards-div-two-img {
-    width: 300px;
-    height: 400px;
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four {
+    width: auto;
+    height: 300px;
   }
 }
 @media only screen and (min-width: 540px) {
-  main .second-section .second-section-div .second-section-cards .second-cards .second-cards-div-two-img {
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four {
     width: 500px;
     height: 500px;
   }
 }
 @media only screen and (min-width: 768px) {
-  main .second-section .second-section-div .second-section-cards .second-cards .second-cards-div-two-img {
-    height: 605px;
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four {
+    height: 591px;
     width: 643px;
   }
 }
 @media only screen and (min-width: 1024px) {
-  main .second-section .second-section-div .second-section-cards .second-cards .second-cards-div-two-img {
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four {
     width: 450px;
-    height: 550px;
+    height: 450px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .second-section .second-section-div .second-section-cards .second-cards .second-cards-div-two-img {
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four {
     width: 542px;
-    height: 610px;
+    height: 560px;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .second-section .second-section-div .second-section-cards .second-cards .second-cards-div-two-img {
-    width: 643px;
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four {
+    width: 610px;
+  }
+}
+main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four .second-cards-div-two-img {
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 10px;
+  width: 571px;
+  height: 533px;
+}
+@media only screen and (min-width: 320px) {
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four .second-cards-div-two-img {
+    width: 314px;
+    height: 270px;
+    margin: 30px 0 0 15px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four .second-cards-div-two-img {
+    width: 470px;
+    height: 450px;
+    margin: 50px 0 0 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four .second-cards-div-two-img {
+    margin: 80px 0 0 72px;
+    height: 510px;
+    width: 571px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four .second-cards-div-two-img {
+    height: 400px;
+    width: 420px;
+    margin: 50px 0 0 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four .second-cards-div-two-img {
+    width: 492px;
+    margin: 50px 0 0 50px;
+    height: 510px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four .second-cards-div-two-img {
+    width: 560px;
   }
 }
 main .third-section {
@@ -1434,7 +1486,7 @@ main .third-section .third-section-div .spotlight h3 {
 }
 @media only screen and (min-width: 768px) {
   main .third-section .third-section-div .spotlight h3 {
-    width: 280px;
+    width: 290px;
   }
 }
 @media only screen and (min-width: 900px) {
