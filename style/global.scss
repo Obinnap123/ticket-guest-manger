@@ -273,7 +273,7 @@ main {
         padding: 50px 0 0;
       }
       @include smallTablet {
-        height: 500px !important;
+        height: 600px !important;
         padding: 60px 0 40px;
       }
       @include tablet_768 {
@@ -281,7 +281,7 @@ main {
         padding: 0px 0 0px;
       }
       @include tablet_867 {
-        height: 600px !important;
+        height: 700px !important;
       }
       @include tabletAndAbove {
         height: 680px !important;
@@ -313,14 +313,14 @@ main {
             }
             @include mediumMobile {
               line-height: 35px;
+            }
+            @include largeMobile {
               font-size: 25px;
             }
-            // @include largeMobile {
-             
-            // }
             @include tablet_768 {
-              font-size: 50px;
-              width: 90%;
+              font-size: 30px;
+              width: 700px;
+              line-height: 40px;
               padding: 0;
             }
             @include tabletAndAbove {

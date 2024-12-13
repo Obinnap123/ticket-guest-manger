@@ -440,7 +440,7 @@ main .first-section .hero-section {
 }
 @media only screen and (min-width: 540px) {
   main .first-section .hero-section {
-    height: 500px !important;
+    height: 600px !important;
     padding: 60px 0 40px;
   }
 }
@@ -452,7 +452,7 @@ main .first-section .hero-section {
 }
 @media only screen and (min-width: 867px) {
   main .first-section .hero-section {
-    height: 600px !important;
+    height: 700px !important;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -491,13 +491,18 @@ main .first-section .hero-section .hero-section-text .hero-title h1 {
 @media only screen and (min-width: 375px) {
   main .first-section .hero-section .hero-section-text .hero-title h1 {
     line-height: 35px;
+  }
+}
+@media only screen and (min-width: 425px) {
+  main .first-section .hero-section .hero-section-text .hero-title h1 {
     font-size: 25px;
   }
 }
 @media only screen and (min-width: 768px) {
   main .first-section .hero-section .hero-section-text .hero-title h1 {
-    font-size: 50px;
-    width: 90%;
+    font-size: 30px;
+    width: 700px;
+    line-height: 40px;
     padding: 0;
   }
 }
