@@ -491,10 +491,6 @@ main .first-section .hero-section .hero-section-text .hero-title h1 {
 @media only screen and (min-width: 375px) {
   main .first-section .hero-section .hero-section-text .hero-title h1 {
     line-height: 35px;
-  }
-}
-@media only screen and (min-width: 425px) {
-  main .first-section .hero-section .hero-section-text .hero-title h1 {
     font-size: 25px;
   }
 }
