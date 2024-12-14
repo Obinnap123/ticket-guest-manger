@@ -641,7 +641,7 @@ main {
             width: 643px;
             border-radius: 10px;
             @include smallMobile {
-              width: auto;
+              width: 300px;
               height: 300px;
             }
             @include smallTablet {
@@ -670,7 +670,7 @@ main {
               top: 95px;
               left: 72px;
               @include smallMobile {
-                width: 314px;
+                width: 285px;
                 height: 270px;
                 top: 30px;
                 left: 15px;
@@ -710,7 +710,7 @@ main {
               left: 70px;
               @include smallMobile {
                 top: 80px;
-                left: 60px;
+                left: 53px;
               }
               @include smallTablet {
                 left: 90px;
@@ -803,7 +803,7 @@ main {
             // position: relative;
             border-radius: 10px;
             @include smallMobile {
-              width: auto;
+              width: 300px;
               height: 300px;
             }
             @include smallTablet {
@@ -830,7 +830,7 @@ main {
               height: 533px;
 
               @include smallMobile {
-                width: 314px;
+                width: 285px;
                 height: 270px;
                 margin: 30px 0 0 15px;
               }
@@ -921,7 +921,7 @@ main {
             // position: relative;
             border-radius: 10px;
             @include smallMobile {
-              width: auto;
+              width: 300px;
               height: 300px;
             }
             @include smallTablet {
@@ -952,7 +952,7 @@ main {
               height: 533px;
 
               @include smallMobile {
-                width: 314px;
+                width: 285px;
                 height: 270px;
                 margin: 30px 0 0 15px;
               }
@@ -1029,7 +1029,7 @@ main {
             // position: relative;
             border-radius: 10px;
             @include smallMobile {
-              width: auto;
+              width: 300px;
               height: 300px;
             }
             @include smallTablet {
@@ -1058,7 +1058,7 @@ main {
               height: 533px;
 
               @include smallMobile {
-                width: 314px;
+                width: 285px;
                 height: 270px;
                 margin: 30px 0 0 15px;
               }
@@ -1397,6 +1397,9 @@ main {
               }
               img {
                 flex-shrink: 0;
+                @include smallMobile {
+                  width: 13px;
+                }
               }
             }
           }
@@ -1488,6 +1491,11 @@ main {
                   color: rgba(196, 198, 222, 1);
                   &:first-child {
                     padding-top: 20px;
+                  }
+                  span {
+                    img {
+                      width: 13px;
+                    }
                   }
                 }
               }
@@ -1708,6 +1716,10 @@ main {
       }
       @include tabletAndAbove {
         flex-direction: row;
+        gap: 30px;
+      }
+      @include laptop {
+        gap: 60px;
       }
       img {
         width: 589px;
@@ -1717,12 +1729,15 @@ main {
           margin: 0 0 0px;
           width: 300px;
         }
+        @include smallTablet {
+          width: 500px;
+        }
         @include tablet_768 {
           width: 600px;
         }
         @include tabletAndAbove {
           // width: 589px;
-          margin: 0 0 210px;
+          margin: 0 0 360px;
         }
       }
       ul {
@@ -1738,7 +1753,7 @@ main {
           width: 100%;
         }
         li {
-          padding-top: 20px;
+          // padding-top: 20px;
           counter-increment: my-counter; /* Use a unique counter name */
           position: relative;
           &:before {
@@ -1756,6 +1771,12 @@ main {
               left: -1em;
               font-size: 50px;
             }
+            @include tabletAndAbove {
+              font-size: 35px;
+            }
+            @include laptop {
+              font-size: 50px;
+            }
           }
           h3 {
             @include smallMobile {
@@ -1767,9 +1788,13 @@ main {
           }
           p {
             width: 300px;
+            @include smallTablet {
+              width: 500px;
+            }
             @include tablet_768 {
               width: 100%;
               font-size: 20px;
+              width: 600px;
             }
             @include tabletAndAbove {
               width: 300px;
@@ -1781,67 +1806,16 @@ main {
   }
 }
 .footer {
-  // margin-top: 1000px !important;
   width: 100% !important;
   max-width: 100%;
-  margin: 0px 0 83% !important;
-  transition: transform 2s ease-in, opacity 2s ease-in !important;
-  transform: translate3d(
-    100%,
-    0,
-    0
-  ) !important; /* Initial state (off-screen) */
-  opacity: 0 !important;
-  &.scrolled {
-    transform: translate3d(0, 0, 0) !important; /* Final state (in view) */
-    opacity: 1 !important;
-  }
-
-  @include smallMobile {
-    margin: 0px 0 200px !important;
-  }
-  @include smallTablet {
-    margin: 0px 0 605px !important;
-  }
-  // @include tablet_768 {
-  //   min-height: 1200px;
-  // }
-  @include tablet_768 {
-    margin: 0px 0 805px !important;
-  }
-  @include laptop {
-    margin: 0px 0 1005px !important;
-  }
-  // @include largerLaptop {
-  //   margin: 0px 0 1010px!important;
-  // }
+  margin: 30px 0 0 !important;
 
   .footers {
     width: 100% !important;
 
     padding: 48px 0;
     background-color: rgba(27, 29, 62, 1) !important;
-    position: relative;
 
-    @include smallMobile {
-      top: 200px;
-    }
-    @include smallTablet {
-      top: 600px;
-    }
-    @include tablet_768 {
-      top: 800px;
-    }
-    @include tabletAndAbove {
-      top: 800px;
-    }
-    @include laptop {
-      top: 1000px;
-    }
-    @include largerLaptop {
-      top: 1000px;
-    }
-    // margin-bottom: 40px;
     .footer-content {
       width: 100% !important;
       max-width: 1150px !important;

@@ -877,7 +877,7 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one {
-    width: auto;
+    width: 300px;
     height: 300px;
   }
 }
@@ -919,7 +919,7 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .first-cards-div-one-img {
-    width: 314px;
+    width: 285px;
     height: 270px;
     top: 30px;
     left: 15px;
@@ -970,7 +970,7 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-one .zero-cost-image-container {
     top: 80px;
-    left: 60px;
+    left: 53px;
   }
 }
 @media only screen and (min-width: 540px) {
@@ -1092,7 +1092,7 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two {
-    width: auto;
+    width: 300px;
     height: 300px;
   }
 }
@@ -1131,7 +1131,7 @@ main .second-section .second-section-div .second-section-cards .first-cards .car
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .first-cards .card-img-container-two .first-cards-div-two-img {
-    width: 314px;
+    width: 285px;
     height: 270px;
     margin: 30px 0 0 15px;
   }
@@ -1249,7 +1249,7 @@ main .second-section .second-section-div .second-section-cards .second-cards .ca
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three {
-    width: auto;
+    width: 300px;
     height: 300px;
   }
 }
@@ -1290,7 +1290,7 @@ main .second-section .second-section-div .second-section-cards .second-cards .ca
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-three .second-cards-div-one-img {
-    width: 314px;
+    width: 285px;
     height: 270px;
     margin: 30px 0 0 15px;
   }
@@ -1336,7 +1336,7 @@ main .second-section .second-section-div .second-section-cards .second-cards .ca
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four {
-    width: auto;
+    width: 300px;
     height: 300px;
   }
 }
@@ -1377,7 +1377,7 @@ main .second-section .second-section-div .second-section-cards .second-cards .ca
 }
 @media only screen and (min-width: 320px) {
   main .second-section .second-section-div .second-section-cards .second-cards .card-img-container-four .second-cards-div-two-img {
-    width: 314px;
+    width: 285px;
     height: 270px;
     margin: 30px 0 0 15px;
   }
@@ -1726,6 +1726,11 @@ main .fourth-section .info-section .why-choose-div ul li span {
 main .fourth-section .info-section .why-choose-div ul li span img {
   flex-shrink: 0;
 }
+@media only screen and (min-width: 320px) {
+  main .fourth-section .info-section .why-choose-div ul li span img {
+    width: 13px;
+  }
+}
 main .fourth-section .info-section .why-choose-div ul a {
   position: relative;
   top: 20px;
@@ -1828,6 +1833,9 @@ main .fourth-section .info-section .effortless-check-in-div .effortless-check-in
 }
 main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div ul li:first-child {
   padding-top: 20px;
+}
+main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div ul li span img {
+  width: 13px;
 }
 main .fourth-section .info-section .effortless-check-in-div .effortless-check-in .effortless-check-in-content .effortless-check-in-content-div a button {
   padding: 10px 30px;
@@ -2076,6 +2084,12 @@ main .seventh-section .the-workflow {
 @media only screen and (min-width: 1024px) {
   main .seventh-section .the-workflow {
     flex-direction: row;
+    gap: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .seventh-section .the-workflow {
+    gap: 60px;
   }
 }
 main .seventh-section .the-workflow img {
@@ -2089,6 +2103,11 @@ main .seventh-section .the-workflow img {
     width: 300px;
   }
 }
+@media only screen and (min-width: 540px) {
+  main .seventh-section .the-workflow img {
+    width: 500px;
+  }
+}
 @media only screen and (min-width: 768px) {
   main .seventh-section .the-workflow img {
     width: 600px;
@@ -2096,7 +2115,7 @@ main .seventh-section .the-workflow img {
 }
 @media only screen and (min-width: 1024px) {
   main .seventh-section .the-workflow img {
-    margin: 0 0 210px;
+    margin: 0 0 360px;
   }
 }
 @media only screen and (min-width: 320px) {
@@ -2117,7 +2136,6 @@ main .seventh-section .the-workflow img {
   }
 }
 main .seventh-section .the-workflow ul li {
-  padding-top: 20px;
   counter-increment: my-counter; /* Use a unique counter name */
   position: relative;
 }
@@ -2141,6 +2159,16 @@ main .seventh-section .the-workflow ul li:before {
     font-size: 50px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  main .seventh-section .the-workflow ul li:before {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .seventh-section .the-workflow ul li:before {
+    font-size: 50px;
+  }
+}
 @media only screen and (min-width: 320px) {
   main .seventh-section .the-workflow ul li h3 {
     font-size: 20px;
@@ -2154,10 +2182,16 @@ main .seventh-section .the-workflow ul li:before {
 main .seventh-section .the-workflow ul li p {
   width: 300px;
 }
+@media only screen and (min-width: 540px) {
+  main .seventh-section .the-workflow ul li p {
+    width: 500px;
+  }
+}
 @media only screen and (min-width: 768px) {
   main .seventh-section .the-workflow ul li p {
     width: 100%;
     font-size: 20px;
+    width: 600px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -2169,70 +2203,12 @@ main .seventh-section .the-workflow ul li p {
 .footer {
   width: 100% !important;
   max-width: 100%;
-  margin: 0px 0 83% !important;
-  transition: transform 2s ease-in, opacity 2s ease-in !important;
-  transform: translate3d(100%, 0, 0) !important; /* Initial state (off-screen) */
-  opacity: 0 !important;
-}
-.footer.scrolled {
-  transform: translate3d(0, 0, 0) !important; /* Final state (in view) */
-  opacity: 1 !important;
-}
-@media only screen and (min-width: 320px) {
-  .footer {
-    margin: 0px 0 200px !important;
-  }
-}
-@media only screen and (min-width: 540px) {
-  .footer {
-    margin: 0px 0 605px !important;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .footer {
-    margin: 0px 0 805px !important;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .footer {
-    margin: 0px 0 1005px !important;
-  }
+  margin: 30px 0 0 !important;
 }
 .footer .footers {
   width: 100% !important;
   padding: 48px 0;
   background-color: rgb(27, 29, 62) !important;
-  position: relative;
-}
-@media only screen and (min-width: 320px) {
-  .footer .footers {
-    top: 200px;
-  }
-}
-@media only screen and (min-width: 540px) {
-  .footer .footers {
-    top: 600px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .footer .footers {
-    top: 800px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .footer .footers {
-    top: 800px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .footer .footers {
-    top: 1000px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .footer .footers {
-    top: 1000px;
-  }
 }
 .footer .footers .footer-content {
   width: 100% !important;
