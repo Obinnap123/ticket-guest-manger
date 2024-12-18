@@ -269,7 +269,7 @@ main {
       margin-bottom: 0px !important;
 
       @include smallMobile {
-        height: 650px !important;
+        height: 600px !important;
         padding: 50px 0 0;
       }
       @include smallTablet {
@@ -277,21 +277,16 @@ main {
         padding: 60px 0 40px;
       }
       @include tablet_768 {
-        height: 650px !important;
+        height: 600px !important;
         padding: 0px 0 0px;
       }
-      @include tablet_867 {
-        height: 700px !important;
-      }
-      @include tabletAndAbove {
-        height: 680px !important;
-      }
+
       @include laptop {
-        height: 700px !important;
+        height: 650px !important;
         padding: 0 0 30px;
       }
       @include largerLaptop {
-        height: 800px !important;
+        height: 750px !important;
         padding: 0 0 50px;
       }
 
@@ -324,16 +319,16 @@ main {
               padding: 0;
             }
             @include tabletAndAbove {
-              font-size: 35px;
+              font-size: 38px;
               line-height: 60px;
               width: 900px;
             }
             @include laptop {
               width: 1100px;
-              font-size: 40px;
+              font-size: 45px;
             }
             @include largerLaptop {
-              font-size: 47px;
+              font-size: 50px;
               width: 1200px;
               line-height: 70.4px;
             }
@@ -1813,7 +1808,7 @@ main {
   .footers {
     width: 100% !important;
 
-    padding: 48px 0;
+    padding: 48px 0 80px;
     background-color: rgba(27, 29, 62, 1) !important;
 
     .footer-content {
@@ -1855,44 +1850,116 @@ main {
 
     .footer-header {
       display: flex;
-      justify-content: space-between;
+      justify-content: unset !important;
+      gap: 200px;
 
       @include smallMobile {
         flex-direction: column;
+        gap: 42px;
+        text-align: center;
+      }
+      @include smallTablet {
+        gap: 48px;
       }
       @include tablet_768 {
         flex-direction: row;
+        text-align: left;
+        gap: 100px;
       }
-
+      @include tabletAndAbove {
+        gap: 150px;
+      }
+      @include laptop {
+        gap: 200px;
+      }
       .footer-logo-image {
         width: 100%;
         max-width: 100px;
         display: flex;
         align-items: center;
-      }
-
-      .socials {
-        display: flex;
-        // gap: 16px;
-        align-items: center;
-        justify-content: center;
+        padding: 0 0 140px;
         @include smallMobile {
-          justify-content: center;
-          margin-top: 20px;
+          padding: 0;
         }
         @include tablet_768 {
-          position: relative;
-          left: 12px;
+          padding: 0 0 130px;
         }
-        & img {
-          display: inline-block;
-          border-radius: 50%;
-          background-color: transparent;
-          transition: background-color 0.3s ease, transform 0.3s ease;
-          padding: 5px;
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.744);
-            transform: scale(1.1);
+        @include laptop {
+          padding: 0 0 140px;
+        }
+      }
+      .footer-ul {
+        display: flex;
+        gap: 200px;
+        padding: 18px 0 0;
+        @include smallMobile {
+          display: block;
+          padding: 0;
+        }
+        @include tablet_768 {
+          display: flex;
+          gap: 80px;
+        }
+        @include tabletAndAbove {
+          gap: 100px;
+        }
+        @include laptop {
+          gap: 200px;
+          padding: 18px 0 0;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+          @include smallMobile {
+            gap: 16px;
+          }
+          @include smallTablet {
+            gap: 22px;
+          }
+          @include laptop {
+            gap: 32px;
+          }
+        }
+        li {
+          color: rgba(178, 179, 185, 1);
+        }
+      }
+      .footer-bottom-socials {
+        display: flex;
+        // gap: 16px;
+        padding: 0 0 110px;
+        flex-direction: column;
+        @include smallMobile {
+          justify-content: center;
+          width: 100%;
+          padding: 0;
+          text-wrap: nowrap;
+        }
+        @include tablet_768 {
+          width: auto;
+          padding: 0 0 100px;
+        }
+        @include laptop {
+          padding: 0 0 110px;
+        }
+        span {
+          position: relative;
+          cursor: pointer;
+          color: rgba(178, 179, 185, 1);
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: rgba(203, 204, 208, 1);
+            transition: height 0.3s linear;
+          }
+
+          &:hover::after {
+            height: 1px;
           }
         }
       }
@@ -1914,16 +1981,25 @@ main {
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+
       padding-top: 40px;
       color: rgba(203, 204, 208, 1);
       @include smallMobile {
         padding-top: 20px;
+        justify-content: center;
+        flex-direction: column;
+      }
+      @include smallTablet {
+        padding-top: 40px;
       }
       @include tablet_768 {
         flex-wrap: nowrap;
-        padding-top: 40px;
+        flex-direction: row;
+        justify-content: space-between;
       }
-
+      // @include laptop {
+      //   justify-content: space-between;
+      // }
       p {
         text-align: left;
         margin: 0;
@@ -1942,38 +2018,34 @@ main {
           max-width: 500px;
         }
       }
-
-      .footer-bottom-socials {
+      .socials {
         display: flex;
-        gap: 16px;
-
+        // gap: 16px;
+        align-items: center;
+        justify-content: center;
         @include smallMobile {
           justify-content: center;
-          width: 100%;
-
-          text-wrap: nowrap;
+          // margin-top: 20px;
         }
-        @include tablet_768 {
-          width: auto;
+        // @include tablet_768 {
+        //   position: relative;
+        //   left: 12px;
+        // }
+        & img,
+        i {
+          display: inline-block;
+          border-radius: 50%;
+          background-color: transparent;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+          padding: 5px;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.744);
+            transform: scale(1.1);
+          }
         }
-        span {
-          position: relative;
-          cursor: pointer;
-
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-            background-color: rgba(203, 204, 208, 1);
-            transition: height 0.3s linear;
-          }
-
-          &:hover::after {
-            height: 1px;
-          }
+        i {
+          font-size: 25px;
+          margin-left: 10px;
         }
       }
     }
