@@ -645,7 +645,7 @@ main {
             }
             @include tablet_768 {
               height: 591px;
-              width: 643px;
+              width: 600px;
             }
             @include tabletAndAbove {
               width: 450px;
@@ -681,7 +681,7 @@ main {
                 top: 80px;
                 left: 72px;
                 height: 510px;
-                width: 571px;
+                width: 528px;
               }
               @include tabletAndAbove {
                 width: 420px;
@@ -807,7 +807,7 @@ main {
             }
             @include tablet_768 {
               height: 591px;
-              width: 643px;
+              width: 600px;
             }
             @include tabletAndAbove {
               width: 450px;
@@ -837,7 +837,7 @@ main {
               @include tablet_768 {
                 margin: 80px 0 0 72px;
                 height: 511px;
-                width: 571px;
+                width: 528px;
               }
               @include tabletAndAbove {
                 height: 400px;
@@ -925,7 +925,7 @@ main {
             }
             @include tablet_768 {
               height: 591px;
-              width: 643px;
+              width: 600px;
             }
             @include tabletAndAbove {
               width: 450px;
@@ -959,7 +959,7 @@ main {
               @include tablet_768 {
                 margin: 80px 0 0 72px;
                 height: 511px;
-                width: 571px;
+                width: 528px;
               }
               @include tabletAndAbove {
                 height: 400px;
@@ -1033,7 +1033,7 @@ main {
             }
             @include tablet_768 {
               height: 591px;
-              width: 643px;
+              width: 600px;
             }
             @include tabletAndAbove {
               width: 450px;
@@ -1065,7 +1065,7 @@ main {
               @include tablet_768 {
                 margin: 80px 0 0 72px;
                 height: 510px;
-                width: 571px;
+                width: 528px;
               }
               @include tabletAndAbove {
                 height: 400px;
@@ -1149,142 +1149,7 @@ main {
       }
     }
   }
-  & .third-section {
-    display: flex;
-    justify-content: center !important;
-    padding: 50px;
-    background-color: rgba(255, 255, 255, 1);
-    // margin-bottom: 50px;
 
-    width: 100%;
-    @include smallMobile {
-      justify-content: flex-start !important;
-      padding: 16px 0 30px !important;
-    }
-
-    @include tablet_768 {
-      padding: 16px 0px !important;
-    }
-    @include tablet_900 {
-      justify-content: center !important;
-    }
-    @include tabletAndAbove {
-      padding: 50px !important;
-    }
-
-    .third-section-div {
-      @include smallMobile {
-        max-width: 100%;
-      }
-      @include tablet_900 {
-        max-width: 850px;
-      }
-      @include tabletAndAbove {
-        max-width: 970px;
-      }
-
-      @include laptop {
-        max-width: 1150px;
-      }
-      @include largerLaptop {
-        max-width: 1350px;
-        // padding: 0 19px;
-      }
-
-      & .spotlight {
-        display: flex !important;
-        gap: 24px;
-        @include smallMobile {
-          flex-direction: column;
-          gap: 20px;
-        }
-        @include tablet_768 {
-          flex-direction: row;
-          gap: 24px;
-        }
-        // gap: 20px;
-        // flex-direction: column; /* Stack items vertically */
-        // align-items: center;
-        h3 {
-          padding-top: 5px;
-          margin-block-end: 0 !important;
-          margin-block-start: 0 !important;
-          margin-bottom: 0 !important;
-          @include smallMobile {
-            font-size: 20px;
-            width: 300px;
-            text-align: center;
-            margin: 0 auto;
-          }
-          @include tablet_768 {
-            padding-left: 16px;
-            width: 400px;
-            text-align: left;
-          }
-
-          @include tablet_768 {
-            width: 290px;
-          }
-          @include tablet_900 {
-            padding-left: 0;
-            width: 250px;
-          }
-          @include laptop {
-            width: 230px;
-          }
-        }
-        .content-slider {
-          overflow: hidden; /* Hides the horizontal scrollbar */
-          white-space: nowrap; /* Prevents items from wrapping */
-          width: 100%;
-
-          position: relative;
-          @include smallMobile {
-            overflow: visible;
-          }
-          @include tablet_768 {
-            overflow: hidden;
-          }
-          .content-slider-track {
-            display: flex;
-            gap: 70px;
-            animation: scroll 15s linear infinite;
-            transform: translateY(20%);
-          }
-
-          .content-slider-item {
-            // display: flex;
-            display: flex; /* Align children side by side */
-            align-items: center; /* Vertically center images and text */
-            gap: 8px; /* Add spacing between elements */
-
-            text-align: center;
-
-            span {
-              display: flex;
-              align-items: center;
-              gap: 8px;
-              font-size: 20px;
-              @include smallMobile {
-                font-size: 16px;
-              }
-              @include tablet_768 {
-                font-size: 20px;
-              }
-            }
-            @keyframes scroll {
-              0% {
-                transform: translateX(0) translateY(20%);
-              }
-              100% {
-                transform: translateX(-50%) translateY(20%);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   & .fourth-section {
     margin: 0 0 100px;
     @include smallMobile {
@@ -1294,7 +1159,7 @@ main {
       margin: 0 0 100px;
     }
     .info-section {
-      margin: 100px 0 0;
+      // margin: 100px 0 0;
       .why-choose-div {
         display: flex;
         // top: 200px;
@@ -1580,22 +1445,22 @@ main {
           transition: background-color 0.3s ease, transform 0.3s ease;
           @include smallMobile {
             width: 300px;
-            height: 385px;
+            height: 470px;
           }
           @include smallTablet {
             width: 500px;
-            height: 300px;
+            height: 330px;
           }
           @include tablet_768 {
             width: 600px;
-            height: 300px;
+            // height: 330px;
           }
           @include tabletAndAbove {
             height: 350px;
             width: 520px;
           }
           @include laptop {
-            height: 320px;
+            height: 390px;
           }
           &:hover {
             background-color: #232751;
@@ -1716,9 +1581,10 @@ main {
       @include laptop {
         gap: 60px;
       }
-      img {
-        width: 589px;
-        margin: 0 0 150px;
+      .the-workflow-img {
+        margin: 0 0 400px;
+        padding: 0 170px 0 0;
+        position: relative;
         @include smallMobile {
           order: 1;
           margin: 0 0 0px;
@@ -1732,7 +1598,61 @@ main {
         }
         @include tabletAndAbove {
           // width: 589px;
+          margin: 0 0 440px;
+        }
+        @include laptop {
           margin: 0 0 360px;
+        }
+        .man-with-micophone {
+          width: 443px;
+          @include smallMobile {
+            width: 230px;
+          }
+          @include smallTablet {
+            width: 390px;
+          }
+          @include tablet_768 {
+            width: 470px;
+          }
+          @include tabletAndAbove {
+            width: 400px;
+          }
+          @include laptop {
+            width: 443px;
+          }
+        }
+        .paid-event {
+          width: 275px;
+          position: absolute;
+          left: 280px;
+          top: 70px;
+          border-radius: 10px;
+          @include smallMobile {
+            width: 155px;
+            left: 145px;
+            top: 25px;
+          }
+          @include smallTablet {
+            width: 250px;
+            left: 250px;
+            top: 50px;
+          }
+          @include tablet_768 {
+            width: 310px;
+            left: 290px;
+            top: 50px;
+          }
+          @include tabletAndAbove {
+            width: 260px;
+            left: 260px;
+            top: 50px;
+          }
+          @include laptop {
+            width: 275px;
+            position: absolute;
+            left: 280px;
+            top: 70px;
+          }
         }
       }
       ul {
@@ -1864,12 +1784,13 @@ main {
       @include tablet_768 {
         flex-direction: row;
         text-align: left;
-        gap: 100px;
+        gap: 60px;
       }
       @include tabletAndAbove {
         gap: 150px;
       }
-      @include laptop {
+
+      @include largerLaptop {
         gap: 200px;
       }
       .footer-logo-image {
@@ -1882,10 +1803,10 @@ main {
           padding: 0;
         }
         @include tablet_768 {
-          padding: 0 0 130px;
+          padding: 0 0 160px;
         }
         @include laptop {
-          padding: 0 0 140px;
+          padding: 0 0 170px;
         }
       }
       .footer-ul {
@@ -1911,6 +1832,11 @@ main {
           display: flex;
           flex-direction: column;
           gap: 32px;
+          &:first-of-type {
+            @include smallMobile {
+              margin: 0 0 50px;
+            }
+          }
           @include smallMobile {
             gap: 16px;
           }
@@ -1927,39 +1853,44 @@ main {
       }
       .footer-bottom-socials {
         display: flex;
-        // gap: 16px;
+        gap: 32px;
         padding: 0 0 110px;
         flex-direction: column;
         @include smallMobile {
           justify-content: center;
           width: 100%;
           padding: 0;
+          gap: 16px;
           text-wrap: nowrap;
         }
         @include tablet_768 {
           width: auto;
-          padding: 0 0 100px;
+          padding: 0 0 50px;
+          gap: 32px;
         }
         @include laptop {
-          padding: 0 0 110px;
+          padding: 0 0 50px;
         }
-        span {
-          position: relative;
-          cursor: pointer;
-          color: rgba(178, 179, 185, 1);
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-            background-color: rgba(203, 204, 208, 1);
-            transition: height 0.3s linear;
-          }
 
-          &:hover::after {
-            height: 1px;
+        a {
+          span {
+            position: relative;
+            cursor: pointer;
+            color: rgba(178, 179, 185, 1);
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 0;
+              background-color: rgba(203, 204, 208, 1);
+              transition: height 0.3s linear;
+            }
+
+            &:hover::after {
+              height: 1px;
+            }
           }
         }
       }

@@ -96,85 +96,93 @@ document.addEventListener("DOMContentLoaded", () => {
 // Sample Data for the Cards
 const feedbackData = [
   {
-    category: "Exceptional job matching service",
-    testimonial:
-      "Working with the freelancers on the platform was a game-changer for our project. Their dedication to meeting our needs while offering innovative ideas truly set them apart.",
+    category: "Marketing Support Provision",
+    testimonial: `I had already prepared my bank account to get debited when I was going to try out T&AM for the very first time, but it turned out that I wasn't going to be debited as the platform is absolutely free to use with easy navigation & event set-up as an icing on the cake!
+I can't thank you enough T&AM.
+
+`,
     rating: 5,
-    picture: "../images/man's-img.jpeg",
-    name: "John Doe",
+    picture: "../images/woman-pink.jpg",
+    name: "Fumite",
     role: "Manager",
     company: "Tech Co.",
   },
   {
-    category: "Great services",
-    testimonial:
-      "The freelancers we connected with on the platform exceeded all expectations. Their commitment to delivering exactly what we wanted, along with fresh perspectives, was impressive.",
+    category: "Free To Use",
+    testimonial: `I had already prepared my bank account to get debited when I was going to try out T&AM for the very first time, but it turned out that I wasn't going to be debited as the platform is absolutely free to use with easy navigation & event set-up as an icing on the cake!
+I can't thank you enough T&AM.
+`,
     rating: 5,
-    picture: "../images/woman's-img.jpg",
-    name: "Jane Smith",
+    picture: "../images/woman3.jpg",
+    name: "Toyin",
     role: "Engineer",
     company: "Build Inc.",
   },
   {
-    category: "Success stories with service",
-    testimonial:
-      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
+    category: "So Affordable",
+    testimonial: `T&AM must have had the masses by heart while developing their commission structure, as it's so economical and affordable, which has always given me the chance to take care of my event expenses easily with enough ticket sales funds.
+T&AM is such a blessing!
+`,
     rating: 5,
-    picture: "https://via.placeholder.com/100",
-    name: "Alex Johnson",
+    picture: "../images/man1.jpg",
+    name: "Simon Peter",
     role: "Designer",
     company: "Creative Hub",
   },
   {
-    category: "Great Quality",
+    category: "Easy Check In By My Event Attendees",
     testimonial:
-      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
+    `T&AM must have had the masses by heart while developing their commission structure, as it's so economical and affordable, which has always given me the chance to take care of my event expenses easily with enough ticket sales funds.
+    T&AM is such a blessing!
+    `,
     rating: 5,
-    picture: "https://via.placeholder.com/100",
-    name: "Alex Johnson",
+    picture: "../images/man2.jpg",
+    name: "Theodore",
     role: "Designer",
     company: "Creative Hub",
   },
-  {
-    category: "Great Quality",
-    testimonial:
-      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
-    rating: 5,
-    picture: "https://via.placeholder.com/100",
-    name: "Alex Johnson",
-    role: "Designer",
-    company: "Creative Hub",
-  },
-  {
-    category: "Great Quality",
-    testimonial:
-      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
-    rating: 5,
-    picture: "https://via.placeholder.com/100",
-    name: "Alex Johnson",
-    role: "Designer",
-    company: "Creative Hub",
-  },
-  {
-    category: "Great Quality",
-    testimonial:
-      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
-    rating: 5,
-    picture: "https://via.placeholder.com/100",
-    name: "Alex Johnson",
-    role: "Designer",
-    company: "Creative Hub",
-  },
-  {
-    category: "Great Quality",
-    testimonial:
-      "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
-    rating: 5,
-    picture: "https://via.placeholder.com/100",
-    name: "Alex Johnson",
-    role: "Designer",
-    company: "Creative Hub",
-  },
+  //   {
+  //     category: "Great Quality",
+  //     testimonial:
+  //       "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
+  //     rating: 5,
+  //     picture: "https://via.placeholder.com/100",
+  //     name: "Alex Johnson",
+  //     role: "Designer",
+  //     company: "Creative Hub",
+  //   },
+  //   {
+  //     category: "Great Quality",
+  //     testimonial: `I had already prepared my bank account to get debited when I was going to try out T&AM for the very first time, but it turned out that I wasn't going to be debited as the platform is absolutely free to use with easy navigation & event set-up as an icing on the cake
+  //       I can't thank you enough T&AM, I've seen a lot from other paid platforms out there.
+
+  // `,
+  //     rating: 5,
+  //     picture: "https://via.placeholder.com/100",
+  //     name: "Alex Johnson",
+  //     role: "Designer",
+  //     company: "Creative Hub",
+  //   },
+  //   {
+  //     category: "Great Quality",
+  //     testimonial:
+  //       "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
+  //     rating: 5,
+  //     picture: "https://via.placeholder.com/100",
+  //     name: "Alex Johnson",
+  //     role: "Designer",
+  //     company: "Creative Hub",
+  //   },
+  //   {
+  //     category: "Great Quality",
+  //     testimonial:
+  //       "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
+  //     rating: 5,
+  //     picture: "https://via.placeholder.com/100",
+  //     name: "Alex Johnson",
+  //     role: "Designer",
+  //     company: "Creative Hub",
+  //   },
 ];
 
 // Function to Render Swiper Slides
