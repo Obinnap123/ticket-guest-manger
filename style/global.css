@@ -1888,6 +1888,9 @@ main .sixth-section .sixth-section-div {
 main .sixth-section .sixth-section-div a button {
   padding: 8px 20px;
   background-color: rgb(236, 237, 244);
+  border: 1px solid rgb(58, 64, 135);
+  color: rgb(35, 39, 81);
+  border-radius: 4px;
 }
 @media only screen and (min-width: 320px) {
   main .sixth-section .sixth-section-div a button {

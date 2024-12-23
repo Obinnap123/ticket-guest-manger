@@ -1565,6 +1565,9 @@ main {
         button {
           padding: 8px 20px;
           background-color: rgba(236, 237, 244, 1);
+          border: 1px solid rgba(58, 64, 135, 1);
+          color: rgba(35, 39, 81, 1);
+          border-radius: 4px;
           @include smallMobile{
             padding: 4px 4px;
             font-size: 12px;

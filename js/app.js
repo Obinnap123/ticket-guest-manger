@@ -272,6 +272,7 @@ function createCard(data) {
   button.textContent = data.buttonText || "Click Me";
   button.style.marginBottom = "10px";
   button.style.backgroundColor = "rgba(249, 164, 83, 1)";
+  button.style.color= "rgba(35, 39, 81, 1)";
   button.style.cursor = "pointer";
 
   // Create the <a> tag
