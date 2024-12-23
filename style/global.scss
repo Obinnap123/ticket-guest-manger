@@ -1719,6 +1719,42 @@ main {
       }
     }
   }
+  .eighth-section {
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    div {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      @include smallMobile{
+        flex-direction: column;
+        gap: 0;
+      }
+      @include tablet_768{
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+      }
+      h3{
+        margin: auto 0;
+        @include smallMobile{
+          margin: 30px auto;
+        }
+        @include tablet_768{
+          margin: auto 0;
+        }
+      }
+      img{
+        @include smallMobile{
+          width: 300px;
+          margin: 0 auto;
+        }
+        @include tablet_768{
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 .footer {
   width: 100% !important;

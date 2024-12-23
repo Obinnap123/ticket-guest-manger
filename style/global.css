@@ -2104,6 +2104,52 @@ main .seventh-section .the-workflow ul li p {
     width: 300px;
   }
 }
+main .eighth-section {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+main .eighth-section div {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+@media only screen and (min-width: 320px) {
+  main .eighth-section div {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .eighth-section div {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+}
+main .eighth-section div h3 {
+  margin: auto 0;
+}
+@media only screen and (min-width: 320px) {
+  main .eighth-section div h3 {
+    margin: 30px auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .eighth-section div h3 {
+    margin: auto 0;
+  }
+}
+@media only screen and (min-width: 320px) {
+  main .eighth-section div img {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .eighth-section div img {
+    margin: 0;
+  }
+}
 
 .footer {
   width: 100% !important;
