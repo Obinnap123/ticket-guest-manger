@@ -1544,6 +1544,125 @@ main {
       }
     }
   }
+  & .sixth-section {
+    .sixth-section-div {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0 20px;
+
+      @include smallMobile{
+        margin: 40px 16px 20px;
+      }
+      @include tabletAndAbove{
+        margin: 40px 0 20px;
+      }
+      h3{
+        @include smallMobile{
+          font-size: 20px;
+        }
+      }
+      a {
+        button {
+          padding: 8px 20px;
+          background-color: rgba(236, 237, 244, 1);
+          @include smallMobile{
+            padding: 4px 4px;
+            font-size: 12px;
+          }
+          @include tablet_768{
+            padding: 8px 20px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1150px;
+      @include tabletAndAbove {
+        max-width: 970px;
+      }
+      @include laptop {
+        max-width: 1150px;
+      }
+      @include largerLaptop {
+        max-width: 1350px;
+      }
+      .card {
+        width: 30%; /* Ensures three cards per row */
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 1);
+        // align-items: center;
+        margin: 10px 0;
+        @include smallMobile{
+          width: 300px;
+          margin: 0 auto;
+        }
+        @include smallTablet{
+          width: 500px;
+        }
+        @include tablet_768 {
+          width: 600px;
+          margin: 0 auto 40px;
+        }
+        @include tabletAndAbove {
+          width: 30%;
+          margin: 0;
+        }
+        & img {
+          width: 100%;
+          height: 200px; /* Adjusted height for the image */
+          object-fit: cover;
+          @include smallTablet {
+            height: 300px;
+          }
+          @include tabletAndAbove {
+            height: 200px;
+          }
+        }
+        .card-content {
+          padding: 32px;
+          // text-align: center;
+          button {
+            padding: 4px 16px;
+            border-radius: 20px;
+            text-align: center;
+            border: none;
+          }
+          & h3 {
+            margin: 10px 0;
+          }
+          & p {
+            margin: 5px 0;
+          }
+          .horizontal-rule {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            margin: 10px 0;
+          }
+          .social-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            & img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
   & .seventh-section {
     margin: 80px 0 0;
     @include smallMobile {
@@ -1726,30 +1845,30 @@ main {
       display: flex;
       justify-content: center;
       gap: 32px;
-      @include smallMobile{
+      @include smallMobile {
         flex-direction: column;
         gap: 0;
       }
-      @include tablet_768{
+      @include tablet_768 {
         flex-direction: row;
         justify-content: center;
         gap: 32px;
       }
-      h3{
+      h3 {
         margin: auto 0;
-        @include smallMobile{
+        @include smallMobile {
           margin: 30px auto;
         }
-        @include tablet_768{
+        @include tablet_768 {
           margin: auto 0;
         }
       }
-      img{
-        @include smallMobile{
+      img {
+        @include smallMobile {
           width: 300px;
           margin: 0 auto;
         }
-        @include tablet_768{
+        @include tablet_768 {
           margin: 0;
         }
       }

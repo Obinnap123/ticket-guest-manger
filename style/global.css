@@ -1865,6 +1865,145 @@ main .fifth-section .swiper .swiper-wrapper .card .client-info .client-details .
   font-size: 14px;
   color: #777;
 }
+main .sixth-section .sixth-section-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 20px;
+}
+@media only screen and (min-width: 320px) {
+  main .sixth-section .sixth-section-div {
+    margin: 40px 16px 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .sixth-section .sixth-section-div {
+    margin: 40px 0 20px;
+  }
+}
+@media only screen and (min-width: 320px) {
+  main .sixth-section .sixth-section-div h3 {
+    font-size: 20px;
+  }
+}
+main .sixth-section .sixth-section-div a button {
+  padding: 8px 20px;
+  background-color: rgb(236, 237, 244);
+}
+@media only screen and (min-width: 320px) {
+  main .sixth-section .sixth-section-div a button {
+    padding: 4px 4px;
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .sixth-section .sixth-section-div a button {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
+main .sixth-section .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1150px;
+}
+@media only screen and (min-width: 1024px) {
+  main .sixth-section .card-container {
+    max-width: 970px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .sixth-section .card-container {
+    max-width: 1150px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main .sixth-section .card-container {
+    max-width: 1350px;
+  }
+}
+main .sixth-section .card-container .card {
+  width: 30%; /* Ensures three cards per row */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  margin: 10px 0;
+}
+@media only screen and (min-width: 320px) {
+  main .sixth-section .card-container .card {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main .sixth-section .card-container .card {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .sixth-section .card-container .card {
+    width: 600px;
+    margin: 0 auto 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .sixth-section .card-container .card {
+    width: 30%;
+    margin: 0;
+  }
+}
+main .sixth-section .card-container .card img {
+  width: 100%;
+  height: 200px; /* Adjusted height for the image */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (min-width: 540px) {
+  main .sixth-section .card-container .card img {
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .sixth-section .card-container .card img {
+    height: 200px;
+  }
+}
+main .sixth-section .card-container .card .card-content {
+  padding: 32px;
+}
+main .sixth-section .card-container .card .card-content button {
+  padding: 4px 16px;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+}
+main .sixth-section .card-container .card .card-content h3 {
+  margin: 10px 0;
+}
+main .sixth-section .card-container .card .card-content p {
+  margin: 5px 0;
+}
+main .sixth-section .card-container .card .card-content .horizontal-rule {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+}
+main .sixth-section .card-container .card .card-content .social-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+main .sixth-section .card-container .card .card-content .social-icons img {
+  width: 24px;
+  height: 24px;
+}
 main .seventh-section {
   margin: 80px 0 0;
 }
