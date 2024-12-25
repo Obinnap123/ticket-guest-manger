@@ -340,6 +340,52 @@ header.header .headers .nav-bar .menu {
     z-index: 100;
   }
 }
+header.header .headers .nav-bar .categories-dropdown {
+  position: relative;
+  display: inline-block;
+}
+@media only screen and (min-width: 900px) {
+  header.header .headers .nav-bar .categories-dropdown:hover .dropdown-content {
+    display: block !important; /* Show the dropdown when hovering over the parent */
+  }
+}
+header.header .headers .nav-bar .categories-dropdown button {
+  border: none;
+  background-color: snow;
+  color: rgb(87, 90, 102);
+  outline: none;
+}
+header.header .headers .nav-bar .categories-dropdown button:focus {
+  outline: none;
+}
+header.header .headers .nav-bar .categories-dropdown button i {
+  margin-left: 5px;
+}
+header.header .headers .nav-bar .categories-dropdown .dropdown-content {
+  display: none !important;
+  position: absolute !important;
+  background-color: white !important;
+  min-width: 160px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  z-index: 1 !important;
+  border-radius: 5px !important;
+  height: 40vh;
+  overflow: auto;
+}
+header.header .headers .nav-bar .categories-dropdown .dropdown-content a {
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+header.header .headers .nav-bar .categories-dropdown .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+header.header .headers .nav-bar .categories-dropdown.open .dropdown-content {
+  display: block !important; /* Show when the dropdown is open (used for mobile) */
+}
 header.header .headers .nav-bar .login-dropdown,
 header.header .headers .nav-bar .sign-up-dropdown {
   position: relative;
@@ -2283,7 +2329,7 @@ main .eighth-section div h3 {
 }
 @media only screen and (min-width: 320px) {
   main .eighth-section div img {
-    width: 300px;
+    width: 178px;
     margin: 0 auto;
   }
 }
@@ -2297,6 +2343,9 @@ main .eighth-section div h3 {
   width: 100% !important;
   max-width: 100%;
   margin: 30px 0 0 !important;
+  opacity: 1 !important;
+  transition: none !important;
+  transform: none !important;
 }
 .footer .footers {
   width: 100% !important;
@@ -2384,12 +2433,12 @@ main .eighth-section div h3 {
 }
 @media only screen and (min-width: 768px) {
   .footer .footers .footer-header .footer-logo-image {
-    padding: 0 0 160px;
+    padding: 0 0 330px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .footer .footers .footer-header .footer-logo-image {
-    padding: 0 0 170px;
+    padding: 0 0 340px;
   }
 }
 .footer .footers .footer-header .footer-ul {
@@ -2466,13 +2515,13 @@ main .eighth-section div h3 {
 @media only screen and (min-width: 768px) {
   .footer .footers .footer-header .footer-bottom-socials {
     width: auto;
-    padding: 0 0 50px;
+    padding: 0 0 200px;
     gap: 32px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .footer .footers .footer-header .footer-bottom-socials {
-    padding: 0 0 50px;
+    padding: 0 0 230px;
   }
 }
 .footer .footers .footer-header .footer-bottom-socials a span {

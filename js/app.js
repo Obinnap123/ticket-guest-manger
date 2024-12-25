@@ -272,7 +272,7 @@ function createCard(data) {
   button.textContent = data.buttonText || "Click Me";
   button.style.marginBottom = "10px";
   button.style.backgroundColor = "rgba(249, 164, 83, 1)";
-  button.style.color= "rgba(35, 39, 81, 1)";
+  button.style.color = "rgba(35, 39, 81, 1)";
   button.style.cursor = "pointer";
 
   // Create the <a> tag
@@ -288,6 +288,7 @@ function createCard(data) {
   cardContent.appendChild(link);
 
   // button.style.backgroundColor = "rgba(249, 164, 83, 1)";
+
   // Subtitle
   const subtitle = document.createElement("h3");
   subtitle.textContent = data.subtitle || "Default Subtitle";
@@ -302,14 +303,52 @@ function createCard(data) {
   cardContent.appendChild(createHorizontalRule());
 
   // Slots Left Row
-  const slotsRow = createRow("Slots Left", data.slotsLeft);
-  cardContent.appendChild(slotsRow);
+  // const slotsRow = createRow("Slots Left", data.slotsLeft);
+  // cardContent.appendChild(slotsRow);
+  // cardContent.appendChild(createHorizontalRule());
+
+  // People Row
+  const peopleRow = createRow("People", data.people || "N/A");
+  cardContent.appendChild(peopleRow);
+  cardContent.appendChild(createHorizontalRule());
+
+  // Sold Tickets Row
+  const soldTicketsRow = createRow("Sold Tickets", data.soldTickets || "N/A");
+  cardContent.appendChild(soldTicketsRow);
+  cardContent.appendChild(createHorizontalRule());
+
+  // Available Row
+  const availableRow = createRow("Available", data.available || "N/A");
+  cardContent.appendChild(availableRow);
   cardContent.appendChild(createHorizontalRule());
 
   // Date Row
   const dateRow = createRow("Date", `${data.date} (${data.time})`);
   cardContent.appendChild(dateRow);
   cardContent.appendChild(createHorizontalRule());
+
+  // Create "More Details" link
+  const moreDetailsLink = document.createElement("a");
+  moreDetailsLink.href = data.detailsLink || "#"; // Fallback to "#" if no link provided
+  moreDetailsLink.textContent = "More Details";
+  moreDetailsLink.target = "_blank"; // Open in a new tab
+  moreDetailsLink.style.display = "inline-block";
+  moreDetailsLink.style.marginTop = "10px";
+  moreDetailsLink.style.color = "black";
+  moreDetailsLink.style.textDecoration = "none";
+  moreDetailsLink.style.fontWeight = "bold";
+
+  // Add hover effect
+  moreDetailsLink.onmouseover = () =>
+    (moreDetailsLink.style.textDecoration = "underline");
+  moreDetailsLink.onmouseout = () =>
+    (moreDetailsLink.style.textDecoration = "none");
+
+  // Append the link to card content
+  cardContent.appendChild(moreDetailsLink);
+
+  // Append cardContent to card
+  card.appendChild(cardContent);
 
   // Social Media Icons
   const socialIcons = document.createElement("div");
@@ -370,7 +409,11 @@ const cardDataArray = [
     subtitle: "Abeokuta palm wine hangout",
     price: "1,500.00",
     slotsLeft: "120",
+    people: "200", // Add this
+    // soldTickets: "80",       // Add this
+    available: "40",
     date: "24 Nov. 2024",
+    detailsLink: "https://ticketguestmanager.com/details/party",
     time: "10:30am",
     socialMedia: [
       {
@@ -399,6 +442,9 @@ const cardDataArray = [
     subtitle: "Learning lounge: sip & study",
     price: "2,000.00",
     slotsLeft: "90",
+    people: "200", // Add this
+    // soldTickets: "80",       // Add this
+    available: "40",
     date: "25 Nov. 2024",
     time: "11:00am",
     socialMedia: [
@@ -427,6 +473,9 @@ const cardDataArray = [
     subtitle: "Birthday bash at palm oasis",
     price: "3,000.00",
     slotsLeft: "70",
+    people: "200", // Add this
+    // soldTickets: "80",       // Add this
+    available: "40",
     date: "26 Nov. 2024",
     time: "12:00pm",
     socialMedia: [
@@ -455,6 +504,9 @@ const cardDataArray = [
     subtitle: "Innovative minds conference",
     price: "3,000.00",
     slotsLeft: "70",
+    people: "200", // Add this
+    // soldTickets: "80",       // Add this
+    available: "40",
     date: "26 Nov. 2024",
     time: "12:00pm",
     socialMedia: [
@@ -483,6 +535,9 @@ const cardDataArray = [
     subtitle: "Euphoria under the stars",
     price: "3,000.00",
     slotsLeft: "70",
+    people: "200", // Add this
+    // soldTickets: "80",       // Add this
+    available: "40",
     date: "26 Nov. 2024",
     time: "12:00pm",
     socialMedia: [
@@ -510,7 +565,10 @@ const cardDataArray = [
     buttonLink: "https://ticketguestmanager.com/events-category/20/Charity",
     subtitle: "Sip for a cause: charity palm wine fest",
     price: "3,000.00",
-    slotsLeft: "70",
+    // slotsLeft: "70",
+    people: "200", // Add this
+    soldTickets: "80", // Add this
+    available: "40",
     date: "26 Nov. 2024",
     time: "12:00pm",
     socialMedia: [

@@ -172,6 +172,54 @@ header.header {
         }
       }
 
+      .categories-dropdown {
+        position: relative;
+        display: inline-block;
+        @include tablet_900 {
+          &:hover .dropdown-content {
+            display: block !important; /* Show the dropdown when hovering over the parent */
+          }
+        }
+        button {
+          border: none;
+          background-color: snow;
+          color: rgba(87, 90, 102, 1);
+          outline: none;
+          &:focus{
+            outline: none;
+          }
+          i{
+            margin-left:5px;
+          }
+        }
+        .dropdown-content {
+          display: none !important;
+          position: absolute !important;
+          background-color: white !important;
+          min-width: 160px !important;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+          z-index: 1 !important;
+          border-radius: 5px !important;
+          height: 40vh;
+          overflow: auto;
+          a {
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #f1f1f1;
+            }
+          }
+        }
+        &.open .dropdown-content {
+          display: block !important; /* Show when the dropdown is open (used for mobile) */
+        }
+      }
+
       .login-dropdown,
       .sign-up-dropdown {
         position: relative;
@@ -1550,14 +1598,14 @@ main {
       justify-content: space-between;
       margin: 40px 0 20px;
 
-      @include smallMobile{
+      @include smallMobile {
         margin: 40px 16px 20px;
       }
-      @include tabletAndAbove{
+      @include tabletAndAbove {
         margin: 40px 0 20px;
       }
-      h3{
-        @include smallMobile{
+      h3 {
+        @include smallMobile {
           font-size: 20px;
         }
       }
@@ -1568,11 +1616,11 @@ main {
           border: 1px solid rgba(58, 64, 135, 1);
           color: rgba(35, 39, 81, 1);
           border-radius: 4px;
-          @include smallMobile{
+          @include smallMobile {
             padding: 4px 4px;
             font-size: 12px;
           }
-          @include tablet_768{
+          @include tablet_768 {
             padding: 8px 20px;
             font-size: 16px;
           }
@@ -1607,11 +1655,11 @@ main {
         background-color: rgba(255, 255, 255, 1);
         // align-items: center;
         margin: 10px 0;
-        @include smallMobile{
+        @include smallMobile {
           width: 300px;
           margin: 0 auto;
         }
-        @include smallTablet{
+        @include smallTablet {
           width: 500px;
         }
         @include tablet_768 {
@@ -1868,7 +1916,7 @@ main {
       }
       img {
         @include smallMobile {
-          width: 300px;
+          width: 178px;
           margin: 0 auto;
         }
         @include tablet_768 {
@@ -1882,7 +1930,9 @@ main {
   width: 100% !important;
   max-width: 100%;
   margin: 30px 0 0 !important;
-
+  opacity: 1 !important;
+  transition: none !important;
+  transform: none !important;
   .footers {
     width: 100% !important;
 
@@ -1961,10 +2011,10 @@ main {
           padding: 0;
         }
         @include tablet_768 {
-          padding: 0 0 160px;
+          padding: 0 0 330px;
         }
         @include laptop {
-          padding: 0 0 170px;
+          padding: 0 0 340px;
         }
       }
       .footer-ul {
@@ -2023,11 +2073,11 @@ main {
         }
         @include tablet_768 {
           width: auto;
-          padding: 0 0 50px;
+          padding: 0 0 200px;
           gap: 32px;
         }
         @include laptop {
-          padding: 0 0 50px;
+          padding: 0 0 230px;
         }
 
         a {
