@@ -157,7 +157,7 @@ header.header {
             justify-content: center;
             flex-direction: column;
             background-color: white;
-            width: 80%;
+            width: 100%;
             border-radius: 6px;
             text-align: center;
             padding: 24px 0px;
@@ -185,11 +185,11 @@ header.header {
           background-color: snow;
           color: rgba(87, 90, 102, 1);
           outline: none;
-          &:focus{
+          &:focus {
             outline: none;
           }
-          i{
-            margin-left:5px;
+          i {
+            margin-left: 5px;
           }
         }
         .dropdown-content {

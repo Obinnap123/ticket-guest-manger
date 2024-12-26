@@ -329,7 +329,7 @@ header.header .headers .nav-bar .menu {
     justify-content: center;
     flex-direction: column;
     background-color: white;
-    width: 80%;
+    width: 100%;
     border-radius: 6px;
     text-align: center;
     padding: 24px 0px;

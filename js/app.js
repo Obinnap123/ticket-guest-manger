@@ -1,39 +1,3 @@
-// Reset body height dynamically
-// document.body.style.height = "auto";
-// document.body.style.minHeight = "100vh";
-
-// // Reset styles on the <html> element as well
-// document.documentElement.style.height = "auto";
-// document.documentElement.style.minHeight = "100vh";
-
-// const observer = new MutationObserver(() => {
-//   document.body.style.height = "auto";
-//   document.body.style.minHeight = "100vh";
-// });
-// observer.observe(document.body, {
-//   attributes: true,
-//   attributeFilter: ["style"],
-// });
-
-// document.querySelectorAll("button").forEach((button) => {
-//   button.disabled = false; // Removes the disabled state
-//   button.style.pointerEvents = "auto"; // Ensures pointer interactions
-//   button.style.opacity = ""; // Resets any visual "disabled" styles
-// });
-
-// setInterval(() => {
-//   document.querySelectorAll("button").forEach((button) => {
-//     button.disabled = false; // Undisable
-//     button.style.pointerEvents = "auto";
-//   });
-// }, 500);
-
-// document.querySelectorAll("button").forEach((button) => {
-//   button.addEventListener("click", () => {
-//     console.log("Button clicked:", button.textContent);
-//   });
-// });
-
 const hamburger = document.querySelector(".hamburger");
 const menuIcon = document.querySelector(".img-hamburger");
 const xIcon = document.querySelector(".x-icon");
@@ -43,55 +7,116 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const dropdowns = document.querySelectorAll(
-    ".login-dropdown, .sign-up-dropdown"
-  );
+// document.addEventListener("DOMContentLoaded", () => {
+//   const dropdowns = document.querySelectorAll(
+//     ".login-dropdown, .sign-up-dropdown"
+//   );
 
-  const handleClick = (dropdown) => (event) => {
-    event.stopPropagation(); // Prevent click from propagating to document
-    // Close other dropdowns before toggling the clicked one
-    dropdowns.forEach((d) => {
-      if (d !== dropdown) {
-        d.classList.remove("open");
-      }
+//   let isMobile = window.innerWidth <= 899;
+
+//   const handleClick = (event) => {
+//     const dropdown = event.currentTarget;
+//     event.stopPropagation(); // Prevent click from propagating to the document
+//     dropdowns.forEach((d) => {
+//       if (d !== dropdown) d.classList.remove("open"); // Close other dropdowns
+//     });
+//     dropdown.classList.toggle("open"); // Toggle the clicked dropdown
+//   };
+
+//   const handleOutsideClick = (event) => {
+//     // Close all dropdowns if click is outside
+//     if (![...dropdowns].some((dropdown) => dropdown.contains(event.target))) {
+//       dropdowns.forEach((dropdown) => dropdown.classList.remove("open"));
+//     }
+//   };
+
+//   const setupDropdownBehavior = () => {
+//     const newIsMobile = window.innerWidth <= 899;
+
+//     if (newIsMobile !== isMobile) {
+//       isMobile = newIsMobile;
+
+//       // Remove all existing click event listeners
+//       dropdowns.forEach((dropdown) => {
+//         dropdown.replaceWith(dropdown.cloneNode(true));
+//       });
+
+//       const updatedDropdowns = document.querySelectorAll(
+//         ".login-dropdown, .sign-up-dropdown"
+//       );
+
+//       if (isMobile) {
+//         // Mobile behavior
+//         updatedDropdowns.forEach((dropdown) => {
+//           dropdown.addEventListener("click", handleClick);
+//         });
+//         document.addEventListener("click", handleOutsideClick);
+//       } else {
+//         // Desktop behavior
+//         document.removeEventListener("click", handleOutsideClick);
+//       }
+//     }
+//   };
+
+//   // Debounce resize listener
+//   let resizeTimeout;
+//   window.addEventListener("resize", () => {
+//     clearTimeout(resizeTimeout);
+//     resizeTimeout = setTimeout(setupDropdownBehavior, 150);
+//   });
+
+//   // Initial setup
+//   setupDropdownBehavior();
+// });
+
+// const login = document.querySelector(".login-dropdown");
+// const loginButton = document.querySelector(".login-dropdown button");
+// const loginDropdown = document.querySelector(".login-dropdown");
+// const signUpButton = document.querySelector(".sign-up-dropdown button");
+// const signUpDropdown = document.querySelector(".sign-up-dropdown");
+
+// loginButton.addEventListener("click", () => {
+//   loginDropdown.classList.toggle("open");
+//   console.log("Dropdown opened");
+// });
+// signUpButton.addEventListener("click", () => {
+//   signUpDropdown.classList.toggle("open");
+//   console.log("Dropdown opened");
+// });
+
+// Select all dropdown buttons and their corresponding dropdowns
+// Create a reusable function for toggling a dropdown
+function setupDropdown(buttonSelector, dropdownSelector) {
+  const button = document.querySelector(buttonSelector);
+  const dropdown = document.querySelector(dropdownSelector);
+
+  if (button && dropdown) {
+    button.addEventListener("click", () => {
+      dropdown.classList.toggle("open");
     });
-    dropdown.classList.toggle("open"); // Toggle the specific dropdown
-  };
+  }
+}
 
-  const handleOutsideClick = () => {
-    dropdowns.forEach((dropdown) => dropdown.classList.remove("open")); // Close all dropdowns
-  };
+// Initialize dropdowns
+setupDropdown(".login-dropdown button", ".login-dropdown");
+setupDropdown(".sign-up-dropdown button", ".sign-up-dropdown");
+setupDropdown(".categories-dropdown button", ".categories-dropdown");
 
-  const setupDropdownBehavior = () => {
-    // Clear existing event listeners to avoid duplicates
-    dropdowns.forEach((dropdown) => {
-      dropdown.replaceWith(dropdown.cloneNode(true));
-    });
+// document.addEventListener("click", (event) => {
+//   if (!login.contains(event.target)) {
+//     dropdownContent.classList.remove("open");
+//   }
+// });
+// Select the dropdown button and dropdown content
+// const categoriesButton = document.querySelector(".categories-dropdown button");
+// const categoriesDropdown = document.querySelector(".categories-dropdown");
 
-    const updatedDropdowns = document.querySelectorAll(
-      ".login-dropdown, .sign-up-dropdown"
-    );
-
-    if (window.innerWidth <= 899) {
-      // Mobile view
-      updatedDropdowns.forEach((dropdown) => {
-        const clickHandler = handleClick(dropdown);
-        dropdown.addEventListener("click", clickHandler);
-      });
-      document.addEventListener("click", handleOutsideClick);
-    } else {
-      // Desktop view
-      document.removeEventListener("click", handleOutsideClick);
-    }
-  };
-
-  // Initial setup
-  setupDropdownBehavior();
-
-  // Re-apply event listeners on window resize
-  window.addEventListener("resize", setupDropdownBehavior);
-});
+// categoriesButton.addEventListener("click", () => {
+//   categoriesDropdown.classList.toggle("open");
+//   console.log("Dropdown opened");
+//   // event.preventDefault();
+//   // event.stopPropagation();
+// });
 
 // Sample Data for the Cards
 const feedbackData = [
@@ -140,48 +165,6 @@ T&AM is such a blessing!
     role: "Designer",
     company: "Creative Hub",
   },
-  //   {
-  //     category: "Great Quality",
-  //     testimonial:
-  //       "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
-  //     rating: 5,
-  //     picture: "https://via.placeholder.com/100",
-  //     name: "Alex Johnson",
-  //     role: "Designer",
-  //     company: "Creative Hub",
-  //   },
-  //   {
-  //     category: "Great Quality",
-  //     testimonial: `I had already prepared my bank account to get debited when I was going to try out T&AM for the very first time, but it turned out that I wasn't going to be debited as the platform is absolutely free to use with easy navigation & event set-up as an icing on the cake
-  //       I can't thank you enough T&AM, I've seen a lot from other paid platforms out there.
-
-  // `,
-  //     rating: 5,
-  //     picture: "https://via.placeholder.com/100",
-  //     name: "Alex Johnson",
-  //     role: "Designer",
-  //     company: "Creative Hub",
-  //   },
-  //   {
-  //     category: "Great Quality",
-  //     testimonial:
-  //       "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
-  //     rating: 5,
-  //     picture: "https://via.placeholder.com/100",
-  //     name: "Alex Johnson",
-  //     role: "Designer",
-  //     company: "Creative Hub",
-  //   },
-  //   {
-  //     category: "Great Quality",
-  //     testimonial:
-  //       "Engaging with the freelancers we found on the platform was a revelation. Their dedication to fulfilling our requests and offering innovative suggestions was remarkable and excellent.",
-  //     rating: 5,
-  //     picture: "https://via.placeholder.com/100",
-  //     name: "Alex Johnson",
-  //     role: "Designer",
-  //     company: "Creative Hub",
-  //   },
 ];
 
 // Function to Render Swiper Slides
@@ -359,13 +342,22 @@ function createCard(data) {
     link.href = icon.link || "#"; // Replace with the actual link, or use "#" if none is provided
     link.target = "_blank"; // Opens the link in a new tab
     link.style.marginRight = "10px";
-
-    const socialIcon = document.createElement("img");
-    socialIcon.src = icon.src;
-    socialIcon.alt = icon.alt || "Social Icon";
+    if (icon.iconClass) {
+      const iconElement = document.createElement("i");
+      iconElement.className = icon.iconClass;
+      iconElement.setAttribute("aria-label", icon.alt); // Add alt text for accessibility
+      iconElement.style.fontSize ="25px"
+      iconElement.style.color ="orange"
+      link.appendChild(iconElement);
+    } else if (icon.src) {
+      const imgElement = document.createElement("img");
+      imgElement.src = icon.src;
+      imgElement.alt = icon.alt;
+      link.appendChild(imgElement);
+    }
 
     // Append the image to the link
-    link.appendChild(socialIcon);
+    // link.appendChild(link);
 
     // Append the link to the socialIcons container
     socialIcons.appendChild(link);
@@ -427,9 +419,9 @@ const cardDataArray = [
         link: "https://www.instagram.com/ticket_and_attendee_manager/",
       },
       {
-        src: "../images/twitter-icon-orange.svg",
-        alt: "twitter-icon",
-        link: "https://x.com/Guestsmanager",
+        iconClass: "fa-brands fa-whatsapp",
+        alt: "whatsapp-icon",
+        link: "https://api.whatsapp.com/send?phone=+2348099618902+&text=Hi",
       },
       // { src: "https://via.placeholder.com/24", alt: "Twitter" },
     ],
@@ -459,9 +451,9 @@ const cardDataArray = [
         link: "https://www.instagram.com/ticket_and_attendee_manager/",
       },
       {
-        src: "../images/twitter-icon-orange.svg",
-        alt: "twitter-icon",
-        link: "https://x.com/Guestsmanager",
+        iconClass: "fa-brands fa-whatsapp",
+        alt: "whatsapp-icon",
+        link: "https://api.whatsapp.com/send?phone=+2348099618902+&text=Hi",
       },
     ],
   },
@@ -490,9 +482,9 @@ const cardDataArray = [
         link: "https://www.instagram.com/ticket_and_attendee_manager/",
       },
       {
-        src: "../images/twitter-icon-orange.svg",
-        alt: "twitter-icon",
-        link: "https://x.com/Guestsmanager",
+        iconClass: "fa-brands fa-whatsapp",
+        alt: "whatsapp-icon",
+        link: "https://api.whatsapp.com/send?phone=+2348099618902+&text=Hi",
       },
     ],
   },
@@ -521,9 +513,9 @@ const cardDataArray = [
         link: "https://www.instagram.com/ticket_and_attendee_manager/",
       },
       {
-        src: "../images/twitter-icon-orange.svg",
-        alt: "twitter-icon",
-        link: "https://x.com/Guestsmanager",
+        iconClass: "fa-brands fa-whatsapp",
+        alt: "whatsapp-icon",
+        link: "https://api.whatsapp.com/send?phone=+2348099618902+&text=Hi",
       },
     ],
   },
@@ -552,9 +544,9 @@ const cardDataArray = [
         link: "https://www.instagram.com/ticket_and_attendee_manager/",
       },
       {
-        src: "../images/twitter-icon-orange.svg",
-        alt: "twitter-icon",
-        link: "https://x.com/Guestsmanager",
+        iconClass: "fa-brands fa-whatsapp",
+        alt: "whatsapp-icon",
+        link: "https://api.whatsapp.com/send?phone=+2348099618902+&text=Hi",
       },
     ],
   },
@@ -583,9 +575,9 @@ const cardDataArray = [
         link: "https://www.instagram.com/ticket_and_attendee_manager/",
       },
       {
-        src: "../images/twitter-icon-orange.svg",
-        alt: "twitter-icon",
-        link: "https://x.com/Guestsmanager",
+        iconClass: "fa-brands fa-whatsapp",
+        alt: "whatsapp-icon",
+        link: "https://api.whatsapp.com/send?phone=+2348099618902+&text=Hi",
       },
     ],
   },
