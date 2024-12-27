@@ -347,7 +347,7 @@ function createCard(data) {
       iconElement.className = icon.iconClass;
       iconElement.setAttribute("aria-label", icon.alt); // Add alt text for accessibility
       iconElement.style.fontSize ="25px"
-      iconElement.style.color ="orange"
+      iconElement.style.color ="rgba(227, 149, 76, 1)"
       link.appendChild(iconElement);
     } else if (icon.src) {
       const imgElement = document.createElement("img");
