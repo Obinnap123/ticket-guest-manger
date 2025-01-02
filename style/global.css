@@ -1821,7 +1821,7 @@ main .fifth-section .swiper .swiper-wrapper .card {
 }
 @media only screen and (min-width: 1024px) {
   main .fifth-section .swiper .swiper-wrapper .card {
-    height: 350px;
+    height: 400px;
     width: 520px;
   }
 }
