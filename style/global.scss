@@ -587,27 +587,7 @@ main {
         }
       }
       .second-section-cards {
-        // img {
-        //   @include smallMobile {
-        //     width: 300px;
-        //   }
-        //   @include smallTablet {
-        //     width: 500px;
-        //   }
-        //   @include tablet_768 {
-        //     width: 600px;
-        //   }
-        //   @include tabletAndAbove {
-        //     width: 453px;
-        //   }
-        //   @include laptop {
-        //     width: 543px;
-        //   }
-        //   @include largerLaptop {
-        //     width: 571px;
-        //   }
-        // }
-
+        
         margin-bottom: 100px;
         @include tabletAndAbove {
           max-width: 970px;
