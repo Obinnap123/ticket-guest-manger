@@ -1757,25 +1757,25 @@ main .fifth-section .swiper {
   height: 100% !important;
   overflow: hidden !important;
 }
-main .fifth-section .swiper .swiper-wrapper {
-  display: flex !important; /* Ensure row layout by default */
-  flex-direction: row !important;
-  margin: 0 auto !important;
-}
 @media only screen and (min-width: 1024px) {
-  main .fifth-section .swiper .swiper-wrapper {
+  main .fifth-section .swiper {
     max-width: 970px !important;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main .fifth-section .swiper .swiper-wrapper {
+  main .fifth-section .swiper {
     max-width: 1150px !important;
   }
 }
 @media only screen and (min-width: 1440px) {
-  main .fifth-section .swiper .swiper-wrapper {
+  main .fifth-section .swiper {
     max-width: 1350px !important;
   }
+}
+main .fifth-section .swiper .swiper-wrapper {
+  display: flex !important; /* Ensure row layout by default */
+  flex-direction: row !important;
+  margin: 0 auto !important;
 }
 main .fifth-section .swiper .swiper-wrapper .swiper-slide {
   display: flex !important;

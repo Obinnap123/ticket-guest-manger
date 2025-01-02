@@ -86,21 +86,42 @@ hamburger.addEventListener("click", () => {
 
 // Select all dropdown buttons and their corresponding dropdowns
 // Create a reusable function for toggling a dropdown
-function setupDropdown(buttonSelector, dropdownSelector) {
-  const button = document.querySelector(buttonSelector);
-  const dropdown = document.querySelector(dropdownSelector);
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownParents = document.querySelectorAll(".categories-dropdown, .login-dropdown, .sign-up-dropdown");
 
-  if (button && dropdown) {
-    button.addEventListener("click", () => {
-      dropdown.classList.toggle("open");
-    });
-  }
-}
+  dropdownParents.forEach((parent) => {
+    const button = parent.querySelector("button");
+    const dropdownContent = parent.querySelector(".dropdown-content");
+
+    if (button && dropdownContent) {
+      if(window.innerWidth >=900) return;
+      button.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent event bubbling to the document
+        
+        // Close all other dropdowns
+        dropdownParents.forEach((otherParent) => {
+          if (otherParent !== parent) {
+            otherParent.classList.remove("open");
+          }
+        });
+
+        // Toggle the clicked dropdown
+        parent.classList.toggle("open");
+      });
+    }
+  });
+
+  // Close all dropdowns when clicking outside
+  document.addEventListener("click", () => {
+    dropdownParents.forEach((parent) => parent.classList.remove("open"));
+  });
+});
+
 
 // Initialize dropdowns
-setupDropdown(".login-dropdown button", ".login-dropdown");
-setupDropdown(".sign-up-dropdown button", ".sign-up-dropdown");
-setupDropdown(".categories-dropdown button", ".categories-dropdown");
+// setupDropdown(".login-dropdown button", ".login-dropdown");
+// setupDropdown(".sign-up-dropdown button", ".sign-up-dropdown");
+// setupDropdown(".categories-dropdown button", ".categories-dropdown");
 
 // document.addEventListener("click", (event) => {
 //   if (!login.contains(event.target)) {
@@ -346,8 +367,8 @@ function createCard(data) {
       const iconElement = document.createElement("i");
       iconElement.className = icon.iconClass;
       iconElement.setAttribute("aria-label", icon.alt); // Add alt text for accessibility
-      iconElement.style.fontSize ="25px"
-      iconElement.style.color ="rgba(227, 149, 76, 1)"
+      iconElement.style.fontSize = "25px";
+      iconElement.style.color = "rgba(227, 149, 76, 1)";
       link.appendChild(iconElement);
     } else if (icon.src) {
       const imgElement = document.createElement("img");
