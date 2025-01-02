@@ -215,6 +215,7 @@ function renderSwiperSlides() {
   });
 }
 
+
 // Function to Render Stars for Rating
 // function renderRatingStars(rating) {
 //   return Array(rating)
@@ -238,17 +239,20 @@ function initializeSwiper() {
   new Swiper(".mySwiper", {
     slidesPerView: 2.5,
     spaceBetween: 30,
+    centeredSlides: true, // Ensures the active slide is centered
+    initialSlide: 1, // Start at the second slide (index 1)
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
     breakpoints: {
-      320: { slidesPerView: 1 },
-      1024: { slidesPerView: 2 },
-      1200: { slidesPerView: 2.5 },
+      320: { slidesPerView: 1, centeredSlides: false }, // Disable centering for single slide view
+      1024: { slidesPerView: 2, centeredSlides: true },
+      1200: { slidesPerView: 2.5, centeredSlides: true },
     },
   });
 }
+
 
 // Initialize Everything
 document.addEventListener("DOMContentLoaded", () => {
