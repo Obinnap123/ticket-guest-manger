@@ -234,7 +234,7 @@ header.header {
           display: none !important;
           position: absolute !important;
           background-color: white !important;
-          min-width: 160px !important;
+          min-width: 0px !important;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
           z-index: 1 !important;
           border-radius: 5px !important;
@@ -587,7 +587,6 @@ main {
         }
       }
       .second-section-cards {
-        
         margin-bottom: 100px;
         @include tabletAndAbove {
           max-width: 970px;
@@ -2146,10 +2145,6 @@ main {
           justify-content: center;
           // margin-top: 20px;
         }
-        // @include tablet_768 {
-        //   position: relative;
-        //   left: 12px;
-        // }
         & img,
         i {
           display: inline-block;

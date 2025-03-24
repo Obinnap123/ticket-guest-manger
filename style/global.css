@@ -402,7 +402,7 @@ header.header .headers .nav-bar .sign-up-dropdown .dropdown-content {
   display: none !important;
   position: absolute !important;
   background-color: white !important;
-  min-width: 160px !important;
+  min-width: 0px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
   z-index: 1 !important;
   border-radius: 5px !important;
