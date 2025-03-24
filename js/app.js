@@ -7,82 +7,6 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const dropdowns = document.querySelectorAll(
-//     ".login-dropdown, .sign-up-dropdown"
-//   );
-
-//   let isMobile = window.innerWidth <= 899;
-
-//   const handleClick = (event) => {
-//     const dropdown = event.currentTarget;
-//     event.stopPropagation(); // Prevent click from propagating to the document
-//     dropdowns.forEach((d) => {
-//       if (d !== dropdown) d.classList.remove("open"); // Close other dropdowns
-//     });
-//     dropdown.classList.toggle("open"); // Toggle the clicked dropdown
-//   };
-
-//   const handleOutsideClick = (event) => {
-//     // Close all dropdowns if click is outside
-//     if (![...dropdowns].some((dropdown) => dropdown.contains(event.target))) {
-//       dropdowns.forEach((dropdown) => dropdown.classList.remove("open"));
-//     }
-//   };
-
-//   const setupDropdownBehavior = () => {
-//     const newIsMobile = window.innerWidth <= 899;
-
-//     if (newIsMobile !== isMobile) {
-//       isMobile = newIsMobile;
-
-//       // Remove all existing click event listeners
-//       dropdowns.forEach((dropdown) => {
-//         dropdown.replaceWith(dropdown.cloneNode(true));
-//       });
-
-//       const updatedDropdowns = document.querySelectorAll(
-//         ".login-dropdown, .sign-up-dropdown"
-//       );
-
-//       if (isMobile) {
-//         // Mobile behavior
-//         updatedDropdowns.forEach((dropdown) => {
-//           dropdown.addEventListener("click", handleClick);
-//         });
-//         document.addEventListener("click", handleOutsideClick);
-//       } else {
-//         // Desktop behavior
-//         document.removeEventListener("click", handleOutsideClick);
-//       }
-//     }
-//   };
-
-//   // Debounce resize listener
-//   let resizeTimeout;
-//   window.addEventListener("resize", () => {
-//     clearTimeout(resizeTimeout);
-//     resizeTimeout = setTimeout(setupDropdownBehavior, 150);
-//   });
-
-//   // Initial setup
-//   setupDropdownBehavior();
-// });
-
-// const login = document.querySelector(".login-dropdown");
-// const loginButton = document.querySelector(".login-dropdown button");
-// const loginDropdown = document.querySelector(".login-dropdown");
-// const signUpButton = document.querySelector(".sign-up-dropdown button");
-// const signUpDropdown = document.querySelector(".sign-up-dropdown");
-
-// loginButton.addEventListener("click", () => {
-//   loginDropdown.classList.toggle("open");
-//   console.log("Dropdown opened");
-// });
-// signUpButton.addEventListener("click", () => {
-//   signUpDropdown.classList.toggle("open");
-//   console.log("Dropdown opened");
-// });
 
 // Select all dropdown buttons and their corresponding dropdowns
 // Create a reusable function for toggling a dropdown
@@ -151,7 +75,7 @@ I can't thank you enough T&AM.
     picture: "../images/woman-pink.jpg",
     name: "Fumite",
     role: "Manager",
-    company: "Tech Co.",
+    company: "Hub Community",
   },
   {
     category: "Free To Use",
@@ -161,8 +85,8 @@ I can't thank you enough T&AM.
     rating: 5,
     picture: "../images/woman3.jpg",
     name: "Toyin",
-    role: "Engineer",
-    company: "Build Inc.",
+    role: "Event Manager",
+    // company: "Build Inc.",
   },
   {
     category: "So Affordable",
@@ -172,8 +96,8 @@ T&AM is such a blessing!
     rating: 5,
     picture: "../images/man1.jpg",
     name: "Simon Peter",
-    role: "Designer",
-    company: "Creative Hub",
+    role: "Praise Minister",
+    // company: "Creative Hub",
   },
   {
     category: "Easy Check In By My Event Attendees",
@@ -183,8 +107,8 @@ T&AM is such a blessing!
     rating: 5,
     picture: "../images/man2.jpg",
     name: "Theodore",
-    role: "Designer",
-    company: "Creative Hub",
+    role: "Event Manager",
+    // company: "Creative Hub",
   },
 ];
 
@@ -205,7 +129,7 @@ function renderSwiperSlides() {
           <img src="${data.picture}" alt="${data.name}" />
           <div class="client-details">
             <div class="client-name">${data.name}</div>
-            <div class="client-role">${data.role}, ${data.company}</div>
+            <div class="client-role">${data.role}${data.company ? `, ${data.company}` : ""}</div>
           </div>
         </div>
       </div>
